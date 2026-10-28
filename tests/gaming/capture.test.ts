@@ -21,13 +21,42 @@ type Internals = {
   screen: ScreenWatcher; host: WorldHost; maybeLook: () => Promise<void>
 }
 const forbidden = /powershell|Command failed|[A-Z]:\\|gaming-screen-|gaming-frames-|private-token/i
+function simulatedWindowsScreen(t: test.TestContext, options: ConstructorParameters<typeof ScreenWatcher>[0] & { runPowerShell: PowerShellRunner }): ScreenWatcher {
+  const screen = new ScreenWatcher(options)
+  // 捕获流程使用注入的离线 runner；仅模拟 Windows 就绪门禁，真实门禁另行验证。
+  t.mock.method(screen, 'blockedReason', () => '')
+  return screen
+}
+
+test('readiness preserves native platform and configuration guards without capture or vision calls', async t => {
+  const cfg = structuredClone(GAMING_DEFAULTS.watch); cfg.enabled = true; cfg.model = 'fake'
+  let captures = 0
+  const runPowerShell: PowerShellRunner = async () => { captures++; throw Error('Capture must not run') }
+  t.mock.method(globalThis, 'fetch', async () => { throw Error('Vision must not run') })
+  const screen = new ScreenWatcher({ cfg, apiKey: 'fake', runPowerShell })
+  assert.equal(screen.blockedReason(), process.platform === 'win32' ? '' : '只在 Windows 上能抓图')
+  assert.equal(screen.ready(), process.platform === 'win32')
+  if (process.platform !== 'win32') assert.equal(await screen.look('Endfield', '终末地', undefined), null)
+  for (const [options, reason] of [
+    [{ cfg: { ...cfg, enabled: false }, apiKey: 'fake', runPowerShell }, '看画面没开'],
+    [{ cfg: { ...cfg, model: '' }, apiKey: 'fake', runPowerShell }, '没配视觉模型名'],
+    [{ cfg, apiKey: '', runPowerShell }, '没配视觉模型的密钥'],
+  ] as const) {
+    const blocked = new ScreenWatcher(options)
+    assert.equal(blocked.blockedReason(), reason)
+    assert.equal(blocked.ready(), false)
+    assert.equal(await blocked.look('Endfield', '终末地', undefined), null)
+  }
+  assert.equal(captures, 0)
+})
+
 async function worldFixture(t: test.TestContext) {
   const dir = await mkdtemp(join(tmpdir(),'gaming-world-'))
   t.after(() => rm(dir,{recursive:true,force:true}))
   const cfg = structuredClone(GAMING_DEFAULTS)
   cfg.games = [structuredClone(game)]; cfg.watch.enabled = true; cfg.watch.model = 'fake-vision'
   let captures = 0
-  const screen = new ScreenWatcher({cfg:cfg.watch,apiKey:'test-key',runPowerShell:async()=>{ captures++; return '{"ok":false,"code":"NOHWND"}' }})
+  const screen = simulatedWindowsScreen(t, {cfg:cfg.watch,apiKey:'test-key',runPowerShell:async()=>{ captures++; return '{"ok":false,"code":"NOHWND"}' }})
   const world = new GamingWorld({cfg,dataDir:dir,timezone:'Asia/Shanghai',apiKey:'test-key'})
   const internal = world as unknown as Internals
   internal.tracker.current = () => ({gameId:game.id,name:game.name,minutes:1})
@@ -111,7 +140,7 @@ for(const code of ['NOHWND','NOT_FOREGROUND','MINIMIZED','CAPTURE_FAIL','CAPTURE
   test('multi capture '+code+' preserves safe reason without retry or vision call',async t=>{
     const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=3
     let calls=0
-    const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async()=>{calls++;return JSON.stringify({ok:false,code,error:'Command failed: powershell.exe D:\\private-token\\gaming-frames-'})}})
+    const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async()=>{calls++;return JSON.stringify({ok:false,code,error:'Command failed: powershell.exe D:\\private-token\\gaming-frames-'})}})
     t.mock.method(globalThis,'fetch',async()=>{throw Error('Vision must not run')})
     assert.equal(await screen.look('Endfield','终末地',undefined),null)
     assert.equal(screen.errorText(),captureErrorText(code));assert.doesNotMatch(screen.errorText(),forbidden)
@@ -119,17 +148,17 @@ for(const code of ['NOHWND','NOT_FOREGROUND','MINIMIZED','CAPTURE_FAIL','CAPTURE
   })
 }
 for(const output of ['Command failed: powershell.exe D:\\private-token','{"ok":false,"code":"D:\\\\private-token"}','null','[]','{bad-json']) {
-  test('unknown/malformed capture output never becomes a raw user error: '+output.slice(0,20),async()=>{
+  test('unknown/malformed capture output never becomes a raw user error: '+output.slice(0,20),async t=>{
     const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=1
-    const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async()=>output})
+    const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async()=>output})
     assert.equal(await screen.look('Endfield','终末地',undefined),null)
     assert.doesNotMatch(screen.errorText(),forbidden)
     assert.ok(screen.errorText())
   })
 }
-test('capture callback errors, including timeout, remain typed and sanitized',async()=>{
+test('capture callback errors, including timeout, remain typed and sanitized',async t=>{
   const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=3
-  const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async()=>{throw new CaptureError('CAPTURE_TIMEOUT')}})
+  const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async()=>{throw new CaptureError('CAPTURE_TIMEOUT')}})
   assert.equal(await screen.look('Endfield','终末地',undefined),null)
   assert.match(screen.errorText(),/超时/)
   assert.throws(()=>parseCaptureOutput('powershell.exe D:\\private-token'),CaptureError)
@@ -143,7 +172,7 @@ test('partial multi-frame failure discards all frames',async t=>{
 test('only post-capture image failure falls back to single; pinned prompt and temp cleanup preserved',async t=>{
   const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=3
   let calls=0,shot='';let request=''
-  const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async script=>{
+  const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async script=>{
     calls++
     if(calls===1) return '{"ok":true,"frames":[{"file":"not-existing-fixture.png","t":1,"hash":"00","luma":20}]}'
     shot=/\$Out = '([^']+)'/.exec(script)![1]!
@@ -159,7 +188,7 @@ test('only post-capture image failure falls back to single; pinned prompt and te
 test('vision HTTP failure neither leaks body nor recaptures',async t=>{
   const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=1
   let calls=0
-  const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async script=>{calls++;await writeFile(/\$Out = '([^']+)'/.exec(script)![1]!,Buffer.from('fixture'));return '{"ok":true}'}})
+  const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async script=>{calls++;await writeFile(/\$Out = '([^']+)'/.exec(script)![1]!,Buffer.from('fixture'));return '{"ok":true}'}})
   t.mock.method(globalThis,'fetch',async()=>new Response('powershell.exe D:\\private-token',{status:401}))
   assert.equal(await screen.look('Endfield','终末地',undefined),null)
   assert.equal(calls,1);assert.match(screen.errorText(),/HTTP 401/);assert.doesNotMatch(screen.errorText(),forbidden)
@@ -168,7 +197,7 @@ for(const composeOk of [true,false]) {
   test('successful multi capture '+(composeOk?'composes a grid':'uses the last existing frame after compose failure')+' with one vision request',async t=>{
     const cfg=structuredClone(GAMING_DEFAULTS.watch);cfg.enabled=true;cfg.model='fake';cfg.framesPerLook=2
     let calls=0,requests=0,usage=0,directory='';let body=''
-    const screen=new ScreenWatcher({cfg,apiKey:'fake',runPowerShell:async script=>{
+    const screen=simulatedWindowsScreen(t, {cfg,apiKey:'fake',runPowerShell:async script=>{
       calls++
       if(calls===1) {
         directory=/\$FramesDir = '([^']+)'/.exec(script)![1]!
