@@ -1,0 +1,36 @@
+{
+  "name": "cortico-world-mood-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "情绪天气 World：看她/他在不在电脑前、是在忙还是在玩，语气跟着变（Windows 专用，默认关闭）",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "mood",
+    "presence",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

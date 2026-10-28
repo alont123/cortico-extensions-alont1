@@ -1,0 +1,72 @@
+{
+  "tools": [
+    {
+      "name": "ritual_set",
+      "description": "记下一个纪念日：月-日 + 名字。到那天她会主动提一句。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "月-日，如 10-01"
+          },
+          "name": {
+            "type": "string",
+            "description": "这天是什么日子"
+          }
+        },
+        "required": [
+          "date",
+          "name"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "记一个纪念日。",
+        "en": "Records an anniversary."
+      }
+    },
+    {
+      "name": "ritual_list",
+      "description": "列出记下的纪念日。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "列出纪念日。",
+        "en": "Lists anniversaries."
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "ritual.morning",
+      "description": {
+        "zh": "到早上了。",
+        "en": "Morning has come."
+      }
+    },
+    {
+      "type": "ritual.night",
+      "description": {
+        "zh": "到晚上了。",
+        "en": "Night has come."
+      }
+    },
+    {
+      "type": "ritual.anniversary",
+      "description": {
+        "zh": "已登记纪念日到期；名称原文按 external 外部资料投递。",
+        "en": "A recorded anniversary is due; its original name is external source material."
+      }
+    }
+  ]
+}

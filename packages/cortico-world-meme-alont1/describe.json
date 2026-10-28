@@ -1,0 +1,130 @@
+{
+  "tools": [
+    {
+      "name": "meme_search",
+      "description": "查一个网络梗/缩写/黑话是什么意思、怎么来的。先查本地梗库，没命中才联网（受频率限制）。返回：全称、含义、出处、常见接龙、语气，以及来源链接。查到的梗可以用 meme_note 记下来，下次不用再查。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "要查的梗：缩写（如 KSKBL）、全称或一句描述。"
+          },
+          "web": {
+            "type": "boolean",
+            "description": "本地没命中时是否允许联网搜（默认 true）。"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "查梗",
+        "en": "Search meme"
+      }
+    },
+    {
+      "name": "meme_chain",
+      "description": "验接龙：给一个梗和（可选的）你想接的下一句，判断这个接法是真是假。只给梗名时，返回这个梗的常见下一句。别把「真的假的」这类当普通问句答，先用它验一下。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "梗名/缩写，比如 KSKBL。"
+          },
+          "candidate": {
+            "type": "string",
+            "description": "你想接的那一句；不填就返回常见接龙。"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "验接龙",
+        "en": "Verify meme followup"
+      }
+    },
+    {
+      "name": "meme_note",
+      "description": "把一个梗记进本地梗库（自己学到的/网上查到的）。记清了下次直接命中，不用反复查。记的是「在你们这儿这梗怎么用」，不是百科抄录。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "梗名或缩写（主键）。"
+          },
+          "full": {
+            "type": "string",
+            "description": "全称/完整说法。"
+          },
+          "meaning": {
+            "type": "string",
+            "description": "含义与用法（一两句，写清场景和语气）。"
+          },
+          "origin": {
+            "type": "string",
+            "description": "出处（可选，不确定可不填）。"
+          },
+          "followups": {
+            "type": "string",
+            "description": "常见接龙，逗号分隔；分不清真假就不用填（可选）。"
+          },
+          "source": {
+            "type": "string",
+            "description": "来源链接或出处（可选）。"
+          }
+        },
+        "required": [
+          "q",
+          "meaning"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "记梗",
+        "en": "Remember meme"
+      }
+    },
+    {
+      "name": "meme_stats",
+      "description": "看查梗用量：今天联网搜了几次、本小时几次、还剩多少额度。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "查梗用量",
+        "en": "Meme usage"
+      }
+    }
+  ],
+  "events": [],
+  "prompts": [
+    {
+      "key": "worlds.meme.envPrompt",
+      "title": "梗 · 环境提示词",
+      "role": "envPrompt",
+      "content": "## 梗\n\n你知道不少梗，但不是所有都懂。遇到**不确定的缩写、黑话、接龙**（尤其弹幕和评论区那种四个字母的），别装懂：\n\n- 先 `meme_search` 查一下：它会先翻本地梗库，没收录才联网，返回含义、出处、常见接龙和来源。\n- 想接下一句又拿不准，用 `meme_chain` 验：给一个候选句，它告诉你真的、假的、还是没记录。\n- 查到有意思的、群里常用的，用 `meme_note` 记进本地库，下次直接命中，不用再查。\n\n**会串才叫会玩梗。**\n\n- 一个梗要接得上上下文：别人抛出来的梗，你要接就接它的下一句或同源的梗，不是自己另起一个。\n- 一次只用一个梗，别堆。堆梗像报菜名。\n- 别人抛的梗你没跟上，直说「这梗我没跟上」或者问一句，比硬编一个来源强一百倍。\n- 用梗是调侃，不是科普：查到的出处别整段背，挑能逗的那一句用。\n- 分得清场合：跟你在玩的人可以互相抛梗；别人认真说事的时候别拿梗打岔。\n\n**别查太勤。**\n\n{{meme.usageLine}}\n\n查梗有额度：同一个梗一天最多查一次；没查到的就凭印象接，别连着查。额度用完工具会直接告诉你。\n"
+    }
+  ]
+}

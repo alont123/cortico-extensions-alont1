@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-clipboard-alont1",
+  "version": "0.1.2",
+  "type": "module",
+  "description": "剪贴板 World：读当前剪贴板里的文字（默认关闭，Windows 专用）。你刚复制的东西她能接住",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "clipboard",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "cortico-world-phone-alont1",
+  "version": "0.1.2",
+  "type": "module",
+  "description": "手机：MuMu 模拟器就是她的手机，随时能开、能看屏幕、能点、能装应用、能敲命令",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "phone",
+    "mumu",
+    "android",
+    "adb"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "手机",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

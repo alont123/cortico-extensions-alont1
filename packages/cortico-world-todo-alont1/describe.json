@@ -1,0 +1,102 @@
+{
+  "tools": [
+    {
+      "name": "todo_add",
+      "description": "往任务板记一条要做的事（答应谁的、哪天要做的）。due 可以不填。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "要做的事，一句话。"
+          },
+          "due": {
+            "type": "string",
+            "description": "什么时候要（如 明早5点 / 10-20 晚上），可不填。"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "记一条要做的事",
+        "en": "Add a todo"
+      }
+    },
+    {
+      "name": "todo_list",
+      "description": "看任务板：还没做的都在，按记下的顺序。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "all": {
+            "type": "boolean",
+            "description": "true 连做完的一起看。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "看任务板",
+        "en": "List todos"
+      }
+    },
+    {
+      "name": "todo_done",
+      "description": "把某条标记成做完了（要 id，来自 todo_list）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "条目 id。"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "标记完成",
+        "en": "Mark done"
+      }
+    },
+    {
+      "name": "todo_remove",
+      "description": "删掉某条（不想做了/记错了）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "条目 id。"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "删一条",
+        "en": "Remove a todo"
+      }
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cortico-world-meme-alont1",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "网络梗扩展：本地梗库 + 联网搜梗兜底，支持接龙真假判定与频率限制，让 bot 会接梗、不硬编、不刷屏",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "meme",
+    "梗"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "梗",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "ENV_PROMPT.md"
+  ]
+}

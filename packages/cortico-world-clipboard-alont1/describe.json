@@ -1,0 +1,21 @@
+{
+  "tools": [
+    {
+      "name": "clipboard_read",
+      "description": "读当前剪贴板里的文字。使用者说「我刚复制的那个」「剪贴板里那条」时用。只能读文字，图片和文件读不了。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "读当前剪贴板里的文字。",
+        "en": "Reads the text currently in the clipboard."
+      }
+    }
+  ],
+  "events": []
+}

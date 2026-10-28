@@ -1,0 +1,212 @@
+[
+  {
+    "name": "cortico-bot-xiaoshen-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-pYDVUg7mejwQ0jYLDtTMHkMzqNmZ0QOyLvILw4SIf1CjIBmXzJ3xVakdqmMEor1i7/sNDL1mAzWW7AwI5teOVQ==",
+    "shasum": "2dabee2e38f810d4ba8442a6f345554b7c5ae200"
+  },
+  {
+    "name": "cortico-frugal-alont1",
+    "version": "1.0.0",
+    "integrity": "sha512-h3b/FVXIuxgX+x/ZFr5dFNhS3794Uq6duxRbmnYaudrABYNO4Uqsoq+J27X3Wtgetqo2lsyTZrC5GPtTIw0grA==",
+    "shasum": "0fd0d19440ff825bd231fe38e2ec8b90cd4a7895"
+  },
+  {
+    "name": "cortico-world-affinity-alont1",
+    "version": "0.1.16",
+    "integrity": "sha512-21XeN2k3u5mobqecM0cBXOhik8ApHDEYpSNmkVDU9Km8LO+L8J1JXzSaioARChGrfob6NaiKzoU5zoqRz1u+Vg==",
+    "shasum": "8354cb7b1a07517669d4585c2b4009d9d0e9865a"
+  },
+  {
+    "name": "cortico-world-album-alont1",
+    "version": "0.1.13",
+    "integrity": "sha512-W8oTTnpsrEO35SDl5VFQzos+2CbUuFZvBSujd1UdhZomDkyIPWH6rUV2unbOqUboxqBr/owF6lXMDvSBQejJfA==",
+    "shasum": "6951dbb03c236ac2a904df36ad07203768b363a1"
+  },
+  {
+    "name": "cortico-world-alive-alont1",
+    "version": "0.1.12",
+    "integrity": "sha512-aikmvfCWs8E0MWJVh0dZ0Ju1zSCgW3fZcxz1GlyuifFeTIVo/EidFWbsWKmcdfPmi8jgoxUt4o65dIx+LU5Lxg==",
+    "shasum": "9d77c8a9da1a47862c1da64f3e8775d69aacacc2"
+  },
+  {
+    "name": "cortico-world-bili-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-M71Tp0Ur5haawVN2fRp8PeblA/fh2QLK6WpBV1SQH3Kifbf6o+UlIHgeWYdRxMw7RpTYcVsImQZptQ9EoGfMsw==",
+    "shasum": "5ea48f2d7962ed5bf932bd72fb10c1821c53dfd6"
+  },
+  {
+    "name": "cortico-world-clipboard-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-LfR/Z2LLLJavIOgOz6ezL19ZRvvv3MhQaIjuYIGCKwCeWAz0KHE+iXQxx2wTF+dMkJW55Aj/PZjkgau6B1AvWg==",
+    "shasum": "8353735132bebcb7fff511a0818e74d5d5bcbc51"
+  },
+  {
+    "name": "cortico-world-clock-alont1",
+    "version": "0.1.12",
+    "integrity": "sha512-fGBDnwSOxfZtEgoltitz9MoIl7lv66BUdgb4u3a5KByU3u12MBh8KaiYDAI9D/pdrp8hDIzWQNlNB4gKkcT/lw==",
+    "shasum": "ecddd44a6e28ed35a56fdc22b388f21a2f61b3a9"
+  },
+  {
+    "name": "cortico-world-cua-alont1",
+    "version": "0.2.2",
+    "integrity": "sha512-WcCoyJy7PzYGsMcazmGd3PLG9Oz8E7svJtjX4wNDI7rVh6He5SHPRrMJhGv65vPj7KmCTiu3vvUwClolT5TIuQ==",
+    "shasum": "478d638627a1113c752f6340971c3f8a83ee2be4"
+  },
+  {
+    "name": "cortico-world-diary-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-1LoO9l/h9+eSDKOYseg6IQq9JZlyc5ezkloaf1Iy7cFjjOw1zg1TNqMugbj9OFtsqVoulbSk/CBnUlKtSn3bRg==",
+    "shasum": "3aa28852c00fc82415ce6c8fb08a66039a68f181"
+  },
+  {
+    "name": "cortico-world-downloads-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-nBx9V8kdp+5dSHf8JoxB22QH1SYybsPhToeQQDGxzr9hHoilVETVhRZXH5nCiuYQN6RKK4NstpOXEr+fS1kd5g==",
+    "shasum": "3255595a6788d09e73239334e34a1e57c20eddea"
+  },
+  {
+    "name": "cortico-world-draw-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-6ysgnhObc/HVNvyQPsJl4Q1EeOjZLuiruPaWUbrt6m8gK/K590sBx1Q+XMemvgUkWJAKijnaNtk0oyVoRfd00w==",
+    "shasum": "a027edea90e51edadcf1775aeabd559e205f19d0"
+  },
+  {
+    "name": "cortico-world-gaming-alont1",
+    "version": "0.1.15",
+    "integrity": "sha512-XZQ0XvsPnlAQ8X4sIrMfCRglK5qPi696azt29mDEWH9gkelTU/vdjTjQ4JR33SbHAGLQIyMUzASQJ9tlK5FUGw==",
+    "shasum": "7fd97332d44ad4b9da28614b4bb7e0d175ef3a2c"
+  },
+  {
+    "name": "cortico-world-humanlike-alont1",
+    "version": "0.1.17",
+    "integrity": "sha512-dPlql0gRXkN3ymoks81phEUEpA7+ce5aShcaUhYZ8biCMD3bZAsZR2T1azGf7FebRcHmmWHVui/MSNQypIJ79w==",
+    "shasum": "484182cf6e9e20042ab102a28c0bad36a062cfa8"
+  },
+  {
+    "name": "cortico-world-imagekit-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-UgDPoaQQ7LGXSHX1nTaP9WmJePf2COyiBo2mz8vCHw0XzzElrhmvBW4Yyugf+IYV0u5KK0Hw7K+3C5/0er7lZg==",
+    "shasum": "7e0c7af69cb3c8076d4955a6a28f670adeace578"
+  },
+  {
+    "name": "cortico-world-learn-alont1",
+    "version": "0.1.13",
+    "integrity": "sha512-Xkh/YSykk+GOBJxVP3RdUH8h+wph7P31E0CN2ahdFszb22xatHUQQzVKU6J/BJvX7qMv1J5N3zd2k/UrDKgPlA==",
+    "shasum": "a6397d865d72e7833a4d2e2342302c4b5439d355"
+  },
+  {
+    "name": "cortico-world-life-alont1",
+    "version": "0.1.16",
+    "integrity": "sha512-twLBdHUE/jL0RAkMm8bARJW/iG4IGBXAJs4Q3uJiqgylxUX6bmQVmZh8AYy3qXCq2MOAUSxVztkN6m/y8VXmQA==",
+    "shasum": "746f8623218c0af2aefe228d8fbf82cfdf53742e"
+  },
+  {
+    "name": "cortico-world-lite-alont1",
+    "version": "0.1.12",
+    "integrity": "sha512-lXLC68HGk74daSaskoVGrEpM61hU6RHUdb9oOUByOhoRoMYhrYgQ7Stp1awilaBNlDIFa/LWHNgKmQxszAHs2Q==",
+    "shasum": "27349d2f80febe9f198acabf077731d1c0dc779c"
+  },
+  {
+    "name": "cortico-world-meme-alont1",
+    "version": "0.1.0",
+    "integrity": "sha512-cTIWLIxTBu158vX2QbzMS4zHnnd3zviFtzAV3aZssH3A9o0mpLCAk3L5WdiAzBMs5MDFLbBp+xFu8yUgxw09pg==",
+    "shasum": "a75294298bc6472bff1dc2bc91df49fa97ca76f2"
+  },
+  {
+    "name": "cortico-world-memory-doctor-alont1",
+    "version": "0.1.13",
+    "integrity": "sha512-49Na2pMi5DjcAo+42BT1apbK5t3hL4BCjTx1mYCz802YHZomu+yUbevYIfXdS/ihXs5xIjYI0kpXS2Rwd5/+vw==",
+    "shasum": "2172fa5897c06e898bc37d6a6518500e16089da3"
+  },
+  {
+    "name": "cortico-world-memsearch-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-RW8GCPNM4lHTmIDb/0w4pExjMfYUH4IkK0o9zY+WmBbhLVTpi5KOMu57DwsBOzK1rQAEzTpiFJba5IY1ULJriQ==",
+    "shasum": "b84424e2d396d58ed45dd610c96ce1d756d6d889"
+  },
+  {
+    "name": "cortico-world-mind-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-2RJq2OLrNftnc6NuoAXUFBl9r1lyJNTCgmAmqRyL9LpX/csoh/Ortc47TmC2bwvbDcHRoDLVAgKOeyuc36xZlA==",
+    "shasum": "0083fdec5a6dfd00d5ecbe15e0b4fc87f8939075"
+  },
+  {
+    "name": "cortico-world-mood-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-NgfMvHJDEd6pvPLM4SpDfOC+NqDjgOigaX63p3fIpD61P63Jj3xudzgltKq4GTGxLE/nXBEdwaNZU9HEb4YbbQ==",
+    "shasum": "d81f0355171298a9d2f2f0ffbd05ccbe72af930b"
+  },
+  {
+    "name": "cortico-world-phone-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-crOdvRykopOAIsaJ8H6N73u18VhO6Sim4vOpE5YEPyYGuy8DCBVP36EHO067NdcSSvJOIXU/LmGJlqIrZWlaDw==",
+    "shasum": "ab84bf43bb0f228157235c9c691bf1473908d1e5"
+  },
+  {
+    "name": "cortico-world-playground-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-EdG4i9W+mHOjXBcR+D9EsaWEf2Ce5UhHaJLwaHpkC9v/YJar1cNOHQoQUPh0m45YALggpPa1P98jzSCzGo16VQ==",
+    "shasum": "c22eeb1490f3982c77389a37da6c0ef9f2f90370"
+  },
+  {
+    "name": "cortico-world-qq-better-alont1",
+    "version": "0.1.68",
+    "integrity": "sha512-+dncXSyPv7eh+lAj9tPPivCw+1VUxfqBVAQR7PMGLLyMWUdn9mzeW0kYZ73VWiLR4B2ulluiNcbf/z1uiTEOWw==",
+    "shasum": "b469b01bcc9d18c9dd894902f9eff11a3b9a7068"
+  },
+  {
+    "name": "cortico-world-qzone-alont1",
+    "version": "0.1.13",
+    "integrity": "sha512-EzDueOMgFj0fo6Qv9WArYTbuqG+ZLQQ5nbO8i0HeSV++p5/1Dmd/MrlKrbs7QCm868uuon8iyq+BkLZmFDpitQ==",
+    "shasum": "74e124b753272be78d37b5486fec1fd8e25583e4"
+  },
+  {
+    "name": "cortico-world-real-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-o7DIlUbyy48Xb0QMXSqXGTOwULutvVOjGi/DyFExu2U1jw7qTbaeM9/RnkGfUvG4Uj9w5EpyfVFhICLEgQC1Pw==",
+    "shasum": "ce5e2277975804698fcd824b435e90f1feaebbf6"
+  },
+  {
+    "name": "cortico-world-ritual-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-5YIGZzysgUG2eZf3No3TJAcS6MVdTffhDjZx5VCk36FOMbcGTjsQdcuOvYkznG61tBhXrTczrniyF0eW4r40pw==",
+    "shasum": "ebf1964b85161277bdb5cd1839385196557ab5f8"
+  },
+  {
+    "name": "cortico-world-selfkit-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-jYiWLbxl+XGvQ38YAuCyjOLc4Q2obKO1kE0U33idm7xbObZQ3V8N9UDej8UEWDA5msCVA7XbyoloQaOjXytO2Q==",
+    "shasum": "35c348ac00b7a16b6846a166f4dd0591c9bd0426"
+  },
+  {
+    "name": "cortico-world-todo-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-wJHRxdmHPeZPcX3rl6nGdrsv28fr/V/pvKTWZfC9RO2/fLfc5SwO+oNrU7IecM+aj7p+7r1CAJrnnzJnz6zc5w==",
+    "shasum": "847c73301e801aab4c388ebe3f82ecd5488b602b"
+  },
+  {
+    "name": "cortico-world-together-alont1",
+    "version": "0.1.12",
+    "integrity": "sha512-B5WX857A1vRPdspH5pHEk+9jNGl0VjLzhDy2eB/t/neWNzR+JUclOV5q2WmFfbOmuEbRQ1zf48DZX5hXJ+yKsw==",
+    "shasum": "f3ea9688a196f9bf9704da460cbf00b5db20224c"
+  },
+  {
+    "name": "cortico-world-weather-alont1",
+    "version": "0.1.2",
+    "integrity": "sha512-/uX58pQabN21lmc7nPYhV4bcbdcw/Mb2JtvG5s0nEAovLNYVt9bNEpb/vniLpQIa+0sX4p80yx/7oItBo52Wdg==",
+    "shasum": "9d55d6f3f89c18608c9d52d19131e764a8cb23e3"
+  },
+  {
+    "name": "cortico-world-web-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-3k0MC3mWoQTMLznXcqqKGV2BWaCfWbCPLd4C/AjrV2jdbezGDhoKR71wjiDSCw/wyI6+rZfQzQL76I38PnG1hg==",
+    "shasum": "c1bd2a29218d64c303a0e8216bbc3b4c4cf1d829"
+  },
+  {
+    "name": "cortico-world-works-alont1",
+    "version": "0.1.1",
+    "integrity": "sha512-wd9U00RRbC/MxSHcmObcT07/3EWDpK7DRPoD3QnBoG6BuhSco7xouBorthEf3s+XpCkBgZwKrBQdmfJFJcLq8w==",
+    "shasum": "f9aa638823865057c99cf045186dd1c668cbaba5"
+  }
+]

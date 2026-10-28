@@ -1,0 +1,58 @@
+{
+  "tools": [
+    {
+      "name": "self_status",
+      "description": "看自己的运行状态：循环在不在跑、模型通不通、消息数/上下文、已经运行多久、有没有错误在刷。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "自己的运行状态",
+        "en": "Own runtime status"
+      }
+    },
+    {
+      "name": "self_log",
+      "description": "看自己最近的告警/错误日志（时间、来源、一句话）。觉得「不对劲」时先看这个。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "看几条，默认用配置值。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "自己的告警日志",
+        "en": "Own warning log"
+      }
+    },
+    {
+      "name": "self_worlds",
+      "description": "看自己挂了哪些世界/扩展、哪些没挂上。工具在不在手边一眼就知道。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "自己挂的世界",
+        "en": "Own mounted worlds"
+      }
+    }
+  ],
+  "events": []
+}

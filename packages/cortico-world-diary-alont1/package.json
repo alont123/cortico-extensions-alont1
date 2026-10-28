@@ -1,0 +1,36 @@
+{
+  "name": "cortico-world-diary-alont1",
+  "version": "0.1.2",
+  "type": "module",
+  "description": "截图日记 World：截一张当前屏幕存进当天日记，可以附一句。只截主屏、不主动传出去（Windows 专用，默认关闭）",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "diary",
+    "screenshot",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

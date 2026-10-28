@@ -1,0 +1,39 @@
+{
+  "name": "cortico-world-memsearch-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "记忆检索：在自己的记忆/笔记里按关键词找原话（带文件名和行号），比翻文件快",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "memory",
+    "search"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "记忆检索",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

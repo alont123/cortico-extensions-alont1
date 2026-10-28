@@ -1,0 +1,42 @@
+{
+  "name": "cortico-world-qq-better-alont1",
+  "version": "0.1.68",
+  "description": "QQ（OneBot v11 / NapCat）World：上游 cortico-world-qq-better 的本地副本，这台机器的改动都加在这里",
+  "type": "module",
+  "main": "./src/index.ts",
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cortico-world",
+    "qq",
+    "onebot",
+    "napcat"
+  ],
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "label": "QQ_bot",
+    "webUiClient": "dist/console.js",
+    "describe": "describe.json"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}

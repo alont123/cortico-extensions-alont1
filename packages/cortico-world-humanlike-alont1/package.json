@@ -1,0 +1,46 @@
+{
+  "name": "cortico-world-humanlike-alont1",
+  "version": "0.1.17",
+  "type": "module",
+  "description": "交情、学习、作息、时间、共同经历与惦记；提供记录写入和只读桌面及用量观察，外部材料与内部调度分别投递",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json",
+    "tags": [
+      "im",
+      "qq",
+      "internet",
+      "companion",
+      "memory",
+      "internal-state",
+      "sensitive-data",
+      "high-cost"
+    ]
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

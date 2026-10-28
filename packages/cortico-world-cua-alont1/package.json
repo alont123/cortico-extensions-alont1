@@ -1,0 +1,39 @@
+{
+  "name": "cortico-world-cua-alont1",
+  "version": "0.2.2",
+  "type": "module",
+  "description": "电脑操作：看见并操作这台电脑的主屏幕（截图/鼠标/键盘/窗口）。原生调用隔离在引擎子进程，与使用者共用电脑时会让路；默认只读，动手要主人显式打开",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "dependencies": {
+    "jpeg-js": "^0.4.4"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "ENV_PROMPT.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

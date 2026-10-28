@@ -1,0 +1,8 @@
+node_modules/
+scratch/
+data/
+*.db*
+*.corrupt-*
+*.tgz
+.env*
+reports/

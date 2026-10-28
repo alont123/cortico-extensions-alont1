@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-album-alont1",
+  "version": "0.1.13",
+  "type": "module",
+  "description": "相册 World：把收到过、发出去的图存成一份能翻的册子——按人、按时间、按会话都找得回来，看过还能自己写一句这是什么",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

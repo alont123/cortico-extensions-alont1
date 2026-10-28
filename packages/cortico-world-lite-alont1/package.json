@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-lite-alont1",
+  "version": "0.1.12",
+  "type": "module",
+  "description": "小模型专用 World：只给 4B 级小模型补两样东西——现在几点、以及记得他说过的事。3 个工具、提示词两百来字、没有任何主动推送与情绪机制，为的是不把小模型的上下文和指令空间挤爆",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

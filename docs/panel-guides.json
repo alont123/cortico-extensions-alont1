@@ -1,0 +1,480 @@
+{
+  "affinity": {
+    "title": "好感度",
+    "purpose": "记录交情、关系格子与情绪。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用扩展后按需要设置主人账号、初始分数和每日增量上限。",
+    "firstUse": "在对话中请助手先用 affinity_get 查看交情，再用 affinity_adjust 记录有依据的变化；affinity_list 看排行。",
+    "troubleshoot": "没有记录时先确认账号一致；配置分数不是对真实关系的证明。"
+  },
+  "album": {
+    "title": "相册",
+    "purpose": "按人物和时间寻找聊天中保存的图片，并给图片写备注。",
+    "setup": "启用扩展，确认当前部署的消息账本与图片文件可读。",
+    "firstUse": "让助手先用 album_scan 补索引，再用 album_list 筛选、album_view 查看、album_note 备注。",
+    "troubleshoot": "空相册先检查聊天中是否确有图片；缺失图片无法靠重新扫描还原。"
+  },
+  "alive": {
+    "title": "能动性",
+    "purpose": "记录想做的事，按时间和配额提醒，并提供桌面及用量查看。",
+    "setup": "启用后先设静默时段、每日提醒上限和控制台地址。自己的时间只在连续空闲达到配置窗口后推送；旧记忆目录配置已弃用。",
+    "firstUse": "请助手用 alive_want 记下一件事，alive_list 核对，到完成时用 alive_done；alive_cost 查看用量。",
+    "troubleshoot": "不提醒时检查到期时间、静默时段和每日配额；用量为空先查宿主账本。"
+  },
+  "bili": {
+    "title": "哔哩哔哩",
+    "purpose": "读取视频资料和可用字幕。",
+    "setup": "启用并确保网络能够访问视频站点。",
+    "firstUse": "在对话中提供视频链接或 BV 号，让助手用 bili_video 查资料、bili_subtitle 取字幕。",
+    "troubleshoot": "视频没有字幕或站点限制访问时可能无法读取，换有字幕的视频验证。"
+  },
+  "clipboard": {
+    "title": "剪贴板",
+    "purpose": "按需读取当前系统剪贴板中的文字。",
+    "setup": "在可访问本机桌面的环境启用，设置返回文字长度。",
+    "firstUse": "先复制一段非敏感文字，再让助手用 clipboard_read 读取。",
+    "troubleshoot": "没有文字时检查是否复制了图片、远程会话或系统权限是否影响剪贴板。",
+    "fields": {
+      "maxChars": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100000,
+        "title": "最多读取字数"
+      }
+    }
+  },
+  "clock": {
+    "title": "时间感",
+    "purpose": "告诉助手当前钟点、星期和时段，并可按配置报时。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用扩展，确认部署时区正确；选择报时模式与最小间隔。",
+    "firstUse": "问现在几点，让助手调用 clock_now；再观察配置的时段变化是否提醒。",
+    "troubleshoot": "时间不对先修部署时区；静默模式和间隔可能让报时暂不出现。"
+  },
+  "cua": {
+    "title": "电脑操作",
+    "purpose": "查看桌面窗口和截图，允许后操作键鼠。",
+    "setup": "在 Windows 桌面会话中启用；先保持 allowInput 关闭，只验证截图。",
+    "firstUse": "让助手用 cua_windows 列窗口、cua_screenshot 截图；准备好再打开允许输入并尝试简单操作。",
+    "troubleshoot": "引擎未就绪时检查日志与桌面会话；自由时间申请还需使用 cua_free_allow 批准。",
+    "remount": [
+      "enabled",
+      "freePlay.enabled"
+    ]
+  },
+  "diary": {
+    "title": "截图日记",
+    "purpose": "将当前屏幕截图和一句备注按日期存放。",
+    "setup": "启用并设置可写的输出目录、每日截图上限和正确时区。",
+    "firstUse": "请助手用 diary_snap 写一句今天的话并截图，再用 diary_today 或 diary_list 查看。",
+    "troubleshoot": "截图失败检查桌面权限；达到每日上限后会停止新增。",
+    "fields": {
+      "maxPerDay": {
+        "type": "integer",
+        "minimum": 1,
+        "title": "每天最多截图数"
+      },
+      "outDir": {
+        "x-path": {
+          "kind": "directory"
+        }
+      }
+    }
+  },
+  "downloads": {
+    "title": "下载记录",
+    "purpose": "观察指定下载目录中新出现的文件。",
+    "setup": "填写可读的下载目录并启用，设置扫描间隔。",
+    "firstUse": "把一份测试文件放进目录，稍候让助手用 downloads_recent 查看、downloads_stats 核对数量。",
+    "troubleshoot": "空结果先核对扫描目录；扫描只看配置的目录，不代表浏览器下载任务已完成。",
+    "fields": {
+      "dir": {
+        "x-path": {
+          "kind": "directory"
+        }
+      },
+      "scanSec": {
+        "type": "integer",
+        "minimum": 15,
+        "title": "扫描间隔（秒）"
+      }
+    }
+  },
+  "draw": {
+    "title": "画图",
+    "purpose": "通过 ComfyUI 的已安装模型生成图片。",
+    "setup": "先启动 ComfyUI，填写服务地址和已有模型文件名，再启用扩展。",
+    "firstUse": "先让助手调用 draw_status 检查服务与模型，再用 draw_image 描述一张简单图片。",
+    "troubleshoot": "连接失败查地址；缺模型查文件名；显存不足先缩小图片或调整文本编码器设备。",
+    "fields": {
+      "style": {
+        "enum": [
+          "anime",
+          "chibi",
+          "real",
+          "watercolor",
+          "ink"
+        ],
+        "title": "默认画风"
+      },
+      "textDevice": {
+        "enum": [
+          "default",
+          "cpu"
+        ],
+        "title": "文本编码器设备"
+      },
+      "width": {
+        "type": "integer",
+        "minimum": 256,
+        "maximum": 2048,
+        "multipleOf": 16,
+        "title": "图片宽度"
+      },
+      "height": {
+        "type": "integer",
+        "minimum": 256,
+        "maximum": 2048,
+        "multipleOf": 16,
+        "title": "图片高度"
+      },
+      "steps": {
+        "type": "integer",
+        "minimum": 10,
+        "maximum": 100,
+        "title": "采样步数"
+      },
+      "cfg": {
+        "minimum": 1,
+        "maximum": 10,
+        "title": "提示词强度",
+        "multipleOf": 0.1
+      },
+      "shift": {
+        "minimum": 1,
+        "maximum": 12,
+        "title": "偏移",
+        "multipleOf": 0.1
+      },
+      "timeoutSec": {
+        "type": "integer",
+        "minimum": 60,
+        "maximum": 1800,
+        "title": "生成超时（秒）"
+      }
+    }
+  },
+  "gaming": {
+    "title": "陪玩",
+    "purpose": "识别前台游戏并按配置观察画面或提醒。",
+    "setup": "先配置游戏库并保持主动搭话和看图关闭；确认 Windows 窗口识别后再开启需要的功能。",
+    "firstUse": "请助手用 gaming_windows 查看窗口、gaming_library 管理游戏库，再用 gaming_now 核对识别。",
+    "troubleshoot": "误认先查游戏库；自动看图时把游戏放前台。需要钉窗口可用 gaming_watch_window，target 填进程、title 填标题关键字，两项同时填写时都要匹配；先恢复最小化窗口。后台窗口只尝试读取窗口本身，不能用桌面画面代替；多帧抓图失败不会重复单帧。画面分析另需视觉端点与部署侧凭据，启用会产生模型调用。",
+    "remount": [
+      "pollMs"
+    ]
+  },
+  "humanlike": {
+    "title": "人味",
+    "purpose": "把交情、学习、作息、时间、共同经历、惦记和只读观察合在一个扩展。",
+    "setup": "【互斥使用提示】人味已内置好感度（affinity）、学习（learn）、作息（life）、时间感（clock）、相处（together）、心事（mind）、现实感知（real）。不要同时启用这七个对应的独立扩展（cortico-world-<名称>-alont1）。人味只有宿主扩展卡片上的一个总开关，内置模块随总开关一起运行。只开总闸，先调主人信息、作息和提醒上限。旧版数据迁移默认关闭，仅确认旧文件属于早期人味且备份后开启；完成后关闭。",
+    "firstUse": "先查看已有状态。新消息头可提供时间；需要精确当前钟点时再用 humanlike_clock_now。想安排提醒时，用 humanlike_mind_want 记一件事。",
+    "troubleshoot": "模块没有记录不代表离线；提醒要核对配额与静默时段。只读观察依赖当前部署的账本和桌面。",
+    "omit": [
+      "affinity.enabled",
+      "learn.enabled",
+      "life.enabled",
+      "clock.enabled",
+      "together.enabled",
+      "mind.enabled",
+      "real.enabled"
+    ]
+  },
+  "imagekit": {
+    "title": "图片与头像",
+    "purpose": "搜索、下载和查看图片，并通过对应服务设置头像。",
+    "setup": "启用并配置本实例的 HTTP 服务地址，检查文件大小和搜索结果上限。",
+    "firstUse": "让助手先用 image_search 找图，再用 image_download 下载、image_list 核对。需要换头像时明确提出 avatar_set。",
+    "troubleshoot": "下载失败检查链接和大小；换头像需要服务端已登录且具备相应接口。",
+    "fields": {
+      "maxResults": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "maxBytes": {
+        "type": "integer",
+        "minimum": 100000,
+        "maximum": 20000000
+      }
+    }
+  },
+  "learn": {
+    "title": "学习",
+    "purpose": "查找资料，把核实过的知识与使用语境记成笔记。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用并设置笔记总量、注入条数和搜索超时；自定义来源按字段说明填写。",
+    "firstUse": "请助手用 learn_search 查资料、learn_note 记结论，再用 learn_recall 查回；记错了用 learn_forget。",
+    "troubleshoot": "搜索空结果先查网络和来源；笔记是人工核对材料，不会自动保证网页内容正确。"
+  },
+  "life": {
+    "title": "生活状态",
+    "purpose": "按时间推进模拟作息、心情和精力，并可提出联系建议；模拟情节不代表现实经历。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。先设置主人信息与作息节奏，主动搭话保持关闭进行验证。",
+    "firstUse": "用 life_now 看状态；life_contact 登记候选QQ、分数及已确认的交流时间。准备好再开主动搭话。",
+    "troubleshoot": "不读取其他扩展账本；未登记候选、交流时间不明或概率未命中时不回退联系人。建议不等于发送，实际发言要使用当前可用渠道。"
+  },
+  "lite": {
+    "title": "轻量记事",
+    "purpose": "为小模型提供简短的时间信息和少量记事。",
+    "setup": "启用后选择时间与记事开关，设置笔记数和单条长度。",
+    "firstUse": "请助手用 lite_time 看时间、lite_note 记一条非敏感事项，再用 lite_recall 查回。",
+    "troubleshoot": "看不到旧记事先确认部署数据目录；关闭记事开关后相关工具不可用。"
+  },
+  "meme": {
+    "title": "梗库",
+    "purpose": "查梗、验证接法，并把有来源的梗记到本地。",
+    "setup": "启用并设置联网频率、每日和每小时上限。",
+    "firstUse": "请助手先用 meme_search 查一个完整词、meme_stats 看配额，需要记录时再用 meme_note。",
+    "troubleshoot": "联网结果为空检查网络与配额；接法校验需要完整缩写或全称。"
+  },
+  "memory-doctor": {
+    "title": "记忆体检",
+    "purpose": "只读统计明确配置资料目录的文件体积、增长和重复片段。",
+    "setup": "填写 sourceDir 后启用；旧显式 memoryDir 仍兼容。residentFilesJson 可指定需单独统计的常驻文件，默认不推断。",
+    "firstUse": "让助手用 memory_check 体检，再用 memory_find 定位某个关键词；整理需另行明确操作。",
+    "troubleshoot": "目录或常驻文件列表变更后重新挂载。扩展不读取 Persona 的路径配置，也不压缩、删除来源文件。",
+    "remount": [
+      "memoryDir",
+      "sourceDir",
+      "residentFilesJson"
+    ]
+  },
+  "memsearch": {
+    "title": "记忆检索",
+    "purpose": "只读检索明确配置的资料目录，返回来源和行号。",
+    "setup": "填写 sourceDir（相对部署目录或绝对路径）后启用；留空不读取。设置结果数、文件数量和单文件大小上限。",
+    "firstUse": "请助手先用 mem_stats 看覆盖，再用 mem_search 搜一个已知的具体关键词。",
+    "troubleshoot": "缺资料先查 sourceDir；链接、隐藏目录、node_modules 和 blobs 不扫描。mem_stats 可立即刷新文件覆盖；自然问句仍是词面检索。",
+    "remount": [
+      "sourceDir"
+    ],
+    "fields": {
+      "sourceDir": {
+        "title": "资料目录",
+        "description": "明确指定只读资料根目录；留空不读取。",
+        "x-path": {
+          "kind": "directory"
+        }
+      },
+      "maxResults": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "maxFileMB": {
+        "minimum": 0.5,
+        "maximum": 20,
+        "multipleOf": 0.1
+      },
+      "maxFiles": {
+        "type": "integer",
+        "minimum": 50,
+        "maximum": 3000
+      }
+    }
+  },
+  "mind": {
+    "title": "惦记",
+    "purpose": "记住想做的事与到期时间，并按配额提醒。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用后设置检查间隔、静默时段和每日提醒上限。",
+    "firstUse": "请助手用 mind_want 记一件具体的事、mind_list 查看，完成用 mind_done，取消用 mind_drop。",
+    "troubleshoot": "清单为空是正常空闲；到期没提醒时先查静默时间、每日配额和提醒间隔。"
+  },
+  "mood": {
+    "title": "情绪天气",
+    "purpose": "根据前台程序和键鼠空闲时长提供粗略活动状态。",
+    "setup": "在 Windows 桌面会话中启用，设置检查与事件最小间隔。",
+    "firstUse": "请助手用 mood_now 查看当前状态，切换程序后等待下一次检查。",
+    "troubleshoot": "系统取不到窗口时会无结果；推测的忙碌或游戏状态不代表人的真实心情。",
+    "fields": {
+      "tickSec": {
+        "type": "integer",
+        "minimum": 30,
+        "title": "检查间隔（秒）"
+      },
+      "minEventGapSec": {
+        "type": "integer",
+        "minimum": 60,
+        "title": "事件最小间隔（秒）"
+      }
+    }
+  },
+  "phone": {
+    "title": "手机模拟器",
+    "purpose": "启动并操作已安装的 MuMu 模拟器实例。",
+    "setup": "填写 MuMu 安装目录和实例序号，确认该实例可正常启动，再启用扩展。",
+    "firstUse": "请助手先用 phone_status 检查、phone_launch 启动、phone_screenshot 看屏幕，再进行简单点击。",
+    "troubleshoot": "找不到实例检查安装目录与序号；启动较慢时调整等待上限，关闭用 phone_close。",
+    "fields": {
+      "mumuDir": {
+        "title": "MuMu 安装目录",
+        "x-path": {
+          "kind": "directory"
+        }
+      },
+      "vmIndex": {
+        "type": "integer",
+        "minimum": 0,
+        "title": "模拟器实例序号"
+      },
+      "bootTimeoutSec": {
+        "type": "integer",
+        "minimum": 30,
+        "maximum": 600,
+        "title": "启动等待上限（秒）"
+      }
+    }
+  },
+  "playground": {
+    "title": "玩具世界",
+    "purpose": "运行短小 JavaScript 片段并查看保存的产物。",
+    "setup": "启用并设置单次执行超时。",
+    "firstUse": "请助手用 play_run 运行一段简单计算，再用 play_list 查看产物。",
+    "troubleshoot": "超时先缩短代码；动态代码生成和部分系统能力被禁用，子进程不代表完整恶意代码隔离。",
+    "fields": {
+      "timeoutSec": {
+        "minimum": 1,
+        "maximum": 30,
+        "title": "单次执行超时（秒）"
+      }
+    }
+  },
+  "qq-better": {
+    "title": "QQ 群聊",
+    "purpose": "连接本实例的 OneBot/NapCat，收发消息并维护监听名单。",
+    "setup": "先在 NapCat 登录账号，按正向或反向模式填写一致的连接地址与端口；凭据只在部署侧维护。状态和默认图库位于 dataDir/qqbot；旧共享图库需明确配置或手动迁移。",
+    "firstUse": "先检查 NapCat 连接与身份，再在监听名单页核对会话，收到一条测试消息后让助手用 qqbot_conversations 查看。私聊默认合并发送；群聊达到 120 字符才允许拆句。单次默认最多 2 条，可在拆条设置中调整。",
+    "omit": [
+      "memoryDir",
+      "emotion",
+      "proactive.systemPrompt",
+      "proactive.endpoint",
+      "proactive.apiKeySecret",
+      "proactive.model",
+      "proactive.warmupMin",
+      "proactive.warmupChance",
+      "proactive.unrepliedThreshold",
+      "proactive.silentHours",
+      "proactive.dedupWindow",
+      "proactive.topicSimilarity",
+      "qzone.systemPrompt",
+      "qzone.endpoint",
+      "qzone.apiKeySecret",
+      "qzone.model",
+      "qzone.imageMode",
+      "qzone.autoReplyComments"
+    ],
+    "troubleshoot": "回执会分别列出已受理、结果未确认和未尝试条数；已受理不代表对方已读。部分失败会停止后续条目，请先核对结果，勿整条重发。超出条数上限会整次拒绝，不截断正文。候选调度只提供事件，不会替 Persona 发言；空间发布必须显式给正文和配图。旧独立人格模型和自动情绪配置已停用。反向等待连接时检查地址、端口与 Token；名单支持逗号/空格分隔账号，私聊星号代表全监听；群管必须单独授权。"
+  },
+  "qzone": {
+    "title": "QQ 空间",
+    "purpose": "通过本实例 NapCat 发布、查看配额和删除说说。",
+    "setup": "填写本实例 HTTP 端点、可见范围、每日上限和静默时段。配图库默认 dataDir/qzone/stickers，可独立设置 stickerDir，不要求 QQ 扩展。",
+    "firstUse": "先让助手用 qzone_status 核对，再明确要求 qzone_post 发布测试内容，qzone_delete 删除指定说说。",
+    "troubleshoot": "账号不对先核查端点；发布失败查看服务登录和接口支持，发出的内容会真实对外可见。"
+  },
+  "real": {
+    "title": "只读观察",
+    "purpose": "查看桌面、账本花销、提示词前缀与当前配置摘要。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用，确认本实例控制台端口与账本位置。",
+    "firstUse": "请助手先用 real_cost 看用量、real_prefix 查前缀，再按需用 real_desk 看桌面。",
+    "troubleshoot": "前缀读不到检查控制台端口；没有账本时无法统计花销；价格表仅用于估算。",
+    "remount": [
+      "consolePort"
+    ]
+  },
+  "ritual": {
+    "title": "仪式感",
+    "purpose": "按本地时间提醒早安、晚安，并记住纪念日。",
+    "setup": "启用，核对部署时区并填写 24 小时制 HH:MM 时间。",
+    "firstUse": "早晚时间在配置里填写；请助手用 ritual_set 记录月-日和纪念日名称，再用 ritual_list 查看。",
+    "troubleshoot": "时间格式错误或时区不同会影响触发；检查间隔内有少量延迟属于正常。",
+    "fields": {
+      "morningAt": {
+        "title": "早安时间（HH:MM）"
+      },
+      "nightAt": {
+        "title": "晚安时间（HH:MM）"
+      }
+    }
+  },
+  "selfkit": {
+    "title": "自我运维",
+    "purpose": "只读查看本实例状态、近期日志和扩展挂载情况。",
+    "setup": "填写本实例控制台端口，启用并设置日志返回行数。",
+    "firstUse": "请助手先用 self_status 查看状态，再用 self_worlds 看扩展、self_log 读近期日志。",
+    "troubleshoot": "连接失败先查端口和控制台是否运行；本工具不负责自动重启部署。",
+    "fields": {
+      "consolePort": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 65535
+      },
+      "logLines": {
+        "type": "integer",
+        "minimum": 5,
+        "maximum": 100
+      }
+    }
+  },
+  "todo": {
+    "title": "任务板",
+    "purpose": "记录答应的事、可选到期说明和完成状态。",
+    "setup": "启用，确认部署数据目录可写。",
+    "firstUse": "请助手用 todo_add 记一条任务、todo_list 查看，再用 todo_done 标记完成；记错用 todo_remove 删除。",
+    "troubleshoot": "写盘失败不会回报保存成功；到期文字是任务说明，不等于自动闹钟提醒。"
+  },
+  "together": {
+    "title": "共同经历",
+    "purpose": "记录共同经历与还没聊完的话头。",
+    "setup": "【与人味重复，不要同时启用】已启用人味（humanlike）时，请停用本扩展；两者择一。启用，设置记录对象、保存天数和每日条数。",
+    "firstUse": "请助手用 together_note 记录一次经历，together_thread 留一个话头，聊完用 together_resolve 关闭；需要原文时用 together_recall。",
+    "troubleshoot": "旧记录可能按保存天数过期；达到每日上限时先核对配额。"
+  },
+  "weather": {
+    "title": "天气",
+    "purpose": "按需查询当前天气并给出简单穿衣与带伞建议。",
+    "setup": "启用并填写默认城市；临时提问也可指定别的城市。",
+    "firstUse": "在对话中说想查哪个城市，让助手调用 weather_now。",
+    "troubleshoot": "无结果先检查网络和城市拼写；扩展启动不代表天气站已连通。"
+  },
+  "web": {
+    "title": "联网检索",
+    "purpose": "搜索网页并读取选中的页面正文。",
+    "setup": "启用，设置搜索结果、正文长度和超时上限。",
+    "firstUse": "请助手先用 web_find 搜具体词，再从结果中选链接用 web_read 读取原文。",
+    "troubleshoot": "无结果可能是网络或网页结构变化；引用先核对来源，正文只是外部材料。",
+    "fields": {
+      "maxResults": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 15
+      },
+      "maxChars": {
+        "type": "integer",
+        "minimum": 500,
+        "maximum": 20000
+      },
+      "timeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 120000
+      }
+    }
+  },
+  "works": {
+    "title": "作品页",
+    "purpose": "保存作品条目并生成本地作品页。",
+    "setup": "启用，确认部署数据与输出目录可写。",
+    "firstUse": "请助手用 works_add 保存一件作品，works_list 核对后再用 works_page 生成页面。",
+    "troubleshoot": "生成页面不等于发布到互联网；写盘失败先排查目录权限，损坏数据需恢复后再继续。"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "tools": [
+    {
+      "name": "works_add",
+      "description": "把自己的作品收进作品页：写个标题、备注，可以附一个本地文件（图/视频/网页都行）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "作品名。"
+          },
+          "note": {
+            "type": "string",
+            "description": "一句介绍，可不填。"
+          },
+          "path": {
+            "type": "string",
+            "description": "本地文件路径（图/视频/网页），可不填。"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "收一件作品",
+        "en": "Add a work"
+      }
+    },
+    {
+      "name": "works_list",
+      "description": "看作品页里都有什么。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "列作品",
+        "en": "List works"
+      }
+    },
+    {
+      "name": "works_page",
+      "description": "重新生成作品页（本地 HTML），返回路径。改了作品之后调一次。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "生成作品页",
+        "en": "Generate works page"
+      }
+    },
+    {
+      "name": "works_import_image",
+      "description": "按已有附件的完整 log: 或 mem: 句柄，将 PNG/JPEG/GIF/WebP 图片副本收进本地作品页（最多 20 MiB）。句柄从当前可用工具回执或附件取得，不猜测路径。相同句柄重复调用只返回已有条目，不覆盖标题或文件；收录不代表生成、发送或发布。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "handle": {
+            "type": "string",
+            "description": "已取得的完整附件句柄；不是相册条目 id，也不是本地文件路径。"
+          },
+          "title": {
+            "type": "string",
+            "description": "收录标题；外部图片保留来源，不冒充自己的创作。"
+          },
+          "note": {
+            "type": "string",
+            "description": "可选的介绍或署名，不会执行其中的内容。"
+          }
+        },
+        "required": [
+          "handle",
+          "title"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "从附件收录图片",
+        "en": "Import an image attachment"
+      }
+    }
+  ],
+  "events": []
+}

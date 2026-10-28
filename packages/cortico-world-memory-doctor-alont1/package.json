@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-memory-doctor-alont1",
+  "version": "0.1.13",
+  "type": "module",
+  "description": "记忆体检 World：报出她那份记忆的体重与结构——哪几份在长、交接笔记堆了多少、有没有同一句话散在多份文件里，该整理的时候她自己看得见。只看不写",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "tools": [
+    {
+      "name": "qzone_post",
+      "description": "发一条 QQ 空间说说。发出去别人就看得见了，所以按下去之前自己想清楚。正文由调用方显式提供，with_image 控制是否从明确配置的素材目录选配图。真发错了可以用 qzone_delete 收回（先 qzone_status 拿那条的 tid）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "说说的正文。一两句话。"
+          },
+          "with_image": {
+            "type": "boolean",
+            "description": "要不要带一张表情包配图。默认按配置随机。"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      },
+      "tags": [
+        "act"
+      ]
+    },
+    {
+      "name": "qzone_status",
+      "description": "看看 QQ 空间今天还能发几条、刚才发过什么、现在能不能发。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "qzone_delete",
+      "description": "删掉一条自己发过的说说。要 tid —— qzone_status 里最近那条后面就带着它。删了就真没了，所以先看清是哪条再删。（09-22 之前发的那些记录里没有 tid，删不了。）",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "tid": {
+            "type": "string",
+            "description": "删哪条。qzone_status 里那条后面的 tid。"
+          }
+        },
+        "required": [
+          "tid"
+        ]
+      },
+      "tags": [
+        "act"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "qzone.started",
+      "description": {
+        "zh": "QQ 空间 World 挂载后开始工作。",
+        "en": "The Qzone World started working."
+      }
+    },
+    {
+      "type": "qzone.nudge",
+      "description": {
+        "zh": "到点了,该去 QQ 空间看看或发点什么。",
+        "en": "It is time to look at or post to Qzone."
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "key": "worlds.qzone.envPrompt",
+      "title": "QQ空间 · 环境提示词",
+      "role": "envPrompt",
+      "content": "你有 QQ 空间，可以发说说。\n\n## 什么时候发\n\n想发就发，不用等谁批准。但**一天最多 {{qzone.left}} 条**，现在是静默时段吗：{{qzone.quiet}}。\n\n值得发的是那种「今天想让人知道」的小事：吃到好吃的、游戏打赢了、被谁气到了、\n突然有点感慨。**不值得发的**：为了发而发、写完自己都觉得没意思的。\n\n**别等谁来提。** 隔一阵会有人提醒你空间还有额度，那只是把你叫醒一下——真发不发\n是你自己的事。对方提你才发，那条说说就不是你想发的了。\n\n- 正文最多 {{qzone.maxChars}} 字。**一两句话，不要小作文。**\n- 不要写成日记流水账，也不要写感悟。像随手发的一条。\n- 不要在里面提 AI、程序、模型、提示词这些。\n- 可以带一张表情包配图（用 `qzone_post` 的 `with_image`）。\n\n## 想清楚再发\n\n说说发出去是给人看的，**按下去之前自己念一遍**：这句话明天被看到，你会不会想改口。\n会的话就别发。\n\n（真发错了也收得回来——`qzone_delete` 能删自己发过的：先 `qzone_status` 看是哪条、\n拿到它的 tid。删了就真没了，所以别把\"能删\"当成随手发的理由。\n09-22 之前发的那几条没留下 tid，删不了，只能跟对方说一声。）\n\n## 工具\n\n- `qzone_post` — 发一条\n- `qzone_delete` — 删掉发错的那条（要 tid）\n- `qzone_status` — 看看今天还剩几条、最近发过什么、要删的那条 tid 是多少\n\n发完不用特意跟谁说。别人看到了自己会提。\n"
+    }
+  ]
+}

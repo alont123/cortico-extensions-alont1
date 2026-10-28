@@ -1,0 +1,37 @@
+{
+  "name": "cortico-world-downloads-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "下载管家 World：看下载夹最近下了什么、占多大；新东西落地时冒一句。不移动、不删除文件",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "downloads",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

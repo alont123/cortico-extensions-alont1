@@ -1,0 +1,335 @@
+{
+  "tools": [
+    {
+      "name": "bilibili_video_browser",
+      "description": "打开或关闭 B 站浏览器窗口(观众看到的画面)。窗口默认是关着的;open 打开并停在首页,close 关掉。操作员也能在 WebUI 开关,开关时你会收到事件。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "open",
+              "close"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "打开或关闭观众看到的 B 站浏览器窗口。",
+        "en": "Opens or closes the bilibili browser window the audience sees."
+      }
+    },
+    {
+      "name": "bilibili_video_open",
+      "description": "在窗口里打开一个页面:B 站视频(BV 号或网址,可带分 P)、上一次列表里的序号,或不给参数回首页。打开视频页只是打开,不播放;回执带标题、UP 主、时长、分 P、简介开头、有没有字幕、弹幕总数。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "BV 号、B 站网址,或上一次搜索/推荐列表里的序号(如 \"3\");省略回首页"
+          },
+          "p": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "分 P 序号,默认 1"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "打开一个 B 站视频页、列表里的一条或首页,回执带视频信息。",
+        "en": "Opens a bilibili video, an item from the last list, or the home page, and reports the video details."
+      }
+    },
+    {
+      "name": "bilibili_video_play",
+      "description": "从当前打开的视频页开始观看:网页全屏、播放,之后每隔几秒自动收到一张观察帧(画面拼图 + 这段的字幕和视频弹幕)。可从指定秒数开始。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "fromSec": {
+            "type": "number",
+            "minimum": 0,
+            "description": "从这一秒开始;省略则从当前位置"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "全屏播放当前视频,之后定时收到画面、字幕和弹幕。",
+        "en": "Plays the current video full screen; frames, subtitles and danmaku then arrive at intervals."
+      }
+    },
+    {
+      "name": "bilibili_video_pause",
+      "description": "暂停播放,观察帧停止;画面停在当前帧。",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "暂停播放。",
+        "en": "Pauses playback."
+      }
+    },
+    {
+      "name": "bilibili_video_seek",
+      "description": "跳到视频里的某一秒(或相对当前位置前后跳),继续播放。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "toSec": {
+            "type": "number",
+            "minimum": 0,
+            "description": "绝对位置,秒"
+          },
+          "bySec": {
+            "type": "number",
+            "description": "相对位置,秒,负数往回"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "跳到视频的某一秒,或前后跳一段。",
+        "en": "Jumps to a second in the video, or forward or back by an offset."
+      }
+    },
+    {
+      "name": "bilibili_video_look",
+      "description": "看清当前这一帧:取一张大图(默认整帧,可给区域放大)。不影响播放。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "区域左上角横坐标,0–1 的比例"
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "区域左上角纵坐标,0–1 的比例"
+          },
+          "width": {
+            "type": "number",
+            "minimum": 0.05,
+            "maximum": 1,
+            "description": "区域宽,0–1 的比例"
+          },
+          "height": {
+            "type": "number",
+            "minimum": 0.05,
+            "maximum": 1,
+            "description": "区域高,0–1 的比例"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "read",
+        "snapshot"
+      ],
+      "summary": {
+        "zh": "取当前一帧的大图,可放大局部。",
+        "en": "Takes a large image of the current frame, optionally zoomed into a region."
+      }
+    },
+    {
+      "name": "bilibili_video_quality",
+      "description": "看或改播放画质。不带参数列出播放器画质菜单里的档位和当前档;带 level 就在菜单里点那一档(如 \"720P\"、\"480P\"、\"自动\")。视频老是卡住时降一档。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string",
+            "description": "档位文字的一部分,如 \"720P\";省略只看"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act",
+        "read"
+      ],
+      "summary": {
+        "zh": "查看或切换播放画质。",
+        "en": "Shows or changes the playback quality."
+      }
+    },
+    {
+      "name": "bilibili_video_exit",
+      "description": "退出观看:退出网页全屏、暂停,回到可以逛页面的状态;页面留在这个视频。",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "退出全屏并暂停,回到可以浏览页面的状态。",
+        "en": "Leaves full screen and pauses, back to browsing the page."
+      }
+    },
+    {
+      "name": "bilibili_video_search",
+      "description": "在窗口里打开 B 站搜索结果页,回执是编号的结果列表(标题、UP 主、时长、播放量、发布时间)。之后 bilibili_video_open 给编号就能打开其中一条。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "搜索词"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "第几页,默认 1"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      },
+      "tags": [
+        "act",
+        "read"
+      ],
+      "summary": {
+        "zh": "搜索 B 站视频,回执是编号的结果列表。",
+        "en": "Searches bilibili and returns a numbered list of results."
+      }
+    },
+    {
+      "name": "bilibili_video_related",
+      "description": "当前视频页右侧的相关推荐,编号列表;之后 bilibili_video_open 给编号就能打开。",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "列出当前视频的相关推荐。",
+        "en": "Lists the current video's related recommendations."
+      }
+    },
+    {
+      "name": "bilibili_video_comments",
+      "description": "把页面滚到评论区并读取已加载的评论(热评在前):楼主、点赞数、正文。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "description": "最多读几条,默认 15"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act",
+        "read"
+      ],
+      "summary": {
+        "zh": "读取当前视频的评论,热评在前。",
+        "en": "Reads the current video's comments, top comments first."
+      }
+    },
+    {
+      "name": "bilibili_video_scroll",
+      "description": "滚动当前页面,单位是屏;正数向下。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "screens": {
+            "type": "number",
+            "minimum": -10,
+            "maximum": 10,
+            "description": "滚几屏,默认 1"
+          }
+        },
+        "required": []
+      },
+      "tags": [
+        "act"
+      ],
+      "summary": {
+        "zh": "上下滚动当前页面。",
+        "en": "Scrolls the current page up or down."
+      }
+    },
+    {
+      "name": "bilibili_video_snapshot",
+      "description": "截一张当前窗口的图(观众看到的画面),带网址和标题;用于看列表和结构化读取之外的内容。",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "tags": [
+        "read",
+        "snapshot"
+      ],
+      "summary": {
+        "zh": "截一张当前窗口的图,带网址和标题。",
+        "en": "Captures the current window with its URL and title."
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "bilibili-video.state",
+      "description": {
+        "zh": "浏览器窗口或播放状态变了:窗口开关、操作员换页或暂停继续、播放完、卡住加载与恢复。",
+        "en": "The browser window or playback changed: window opened or closed, the operator navigated, paused or resumed, the video ended, or playback stalled or recovered."
+      },
+      "trigger": "flush"
+    },
+    {
+      "type": "bilibili-video.scene",
+      "description": {
+        "zh": "观看时定时送来的一张观察帧:这段画面的拼图,以及这段的字幕和视频弹幕。",
+        "en": "A periodic observation while watching: a grid of frames from the last stretch, with its subtitles and the video danmaku."
+      },
+      "trigger": "debounce"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "worlds.bilibili-video.envPrompt",
+      "title": "B 站视频环境",
+      "role": "envPrompt",
+      "content": "## B 站视频(bilibili-video)\n\n你手边有一个 B 站浏览器窗口,观众看到的直播画面就是这个窗口。你在里面逛 B 站和看视频,观众跟你看同一个画面。\n登录身份:{{bilibiliVideo.identity}}。\n现在:{{bilibiliVideo.state}}。\n\n窗口默认关着。`bilibili_video_browser open` 打开(停在首页),`bilibili_video_open`、`bilibili_video_search` 也会顺手把它打开;`bilibili_video_browser close` 关掉。操作员也能在 WebUI 开关,开关时你会收到 `bilibili-video.state` 事件;窗口被手动关掉也会有事件。\n\n### 两种状态\n\n- 逛页面:`bilibili_video_open` 打开视频页或首页,`bilibili_video_search` 搜,`bilibili_video_related` 看相关推荐,`bilibili_video_comments` 读评论区,`bilibili_video_scroll` 翻页,`bilibili_video_snapshot` 看一眼窗口。打开视频页不会自动播放。\n- 看视频:`bilibili_video_play` 从当前视频页进入。进入后每隔约 {{bilibiliVideo.intervalSec}} 秒自动收到一条 `bilibili-video.scene` 事件:一张拼图(几格按时间从左到右、从上到下排,最后一格是最新画面,正文列出每格的时刻)、这段时间里检测到的画面切换与黑场、这段的字幕、这段的视频弹幕。`bilibili_video_pause`、`bilibili_video_seek`、`bilibili_video_look` 在看的时候用;`bilibili_video_exit` 回到逛页面。\n\n操作员也可能直接在这个窗口里换视频或暂停。那时你会收到 `bilibili-video.state` 事件说明换到了什么;换过的视频不会自动播放,想看就 `bilibili_video_play`。\n\n### 看视频时\n\n- 画面是你和观众共同看到的东西,不是讲稿:不用复述画面上有什么,像一起看片的人那样说话。没什么可说的那一轮就不说。\n- 观察帧里的时刻是视频内的时间,观众看到的画面比你收到的帧晚几秒。\n- 「视频弹幕」是这个视频当年观众留下的,不是直播间现在的观众;直播间的弹幕另有来源。\n- 字幕是 B 站的 CC 或 AI 字幕,AI 字幕有同音字错误。没有字幕的视频只有画面,画面里烧进去的硬字幕你可以直接读。\n- 画面切换、黑场是检测结果,写在正文里;看不清细节时用 `bilibili_video_look` 取大图。\n- 播放卡住超过 {{bilibiliVideo.stallSec}} 秒会收到 `bilibili-video.state` 事件,带缓冲位置和当前画质;恢复时再来一条。老是卡就 `bilibili_video_quality` 降一档,不带参数先看有哪些档。\n"
+    }
+  ]
+}

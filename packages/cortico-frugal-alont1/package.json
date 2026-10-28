@@ -1,0 +1,29 @@
+{
+  "name": "cortico-frugal-alont1",
+  "version": "1.0.0",
+  "description": "Cortico bot 省 token 体检：先按账本量出钱花在哪，再按规则收紧那些「一轮太贵」的配置项（只收紧、先备份、默认只看不改）",
+  "license": "MIT",
+  "author": "ALonT1",
+  "type": "module",
+  "bin": {
+    "cortico-frugal": "./bin/cortico-frugal.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "cortico",
+    "cortico-world",
+    "token",
+    "cost",
+    "frugal"
+  ],
+  "scripts": {
+    "test": "node --test tests/rules.test.mjs"
+  }
+}

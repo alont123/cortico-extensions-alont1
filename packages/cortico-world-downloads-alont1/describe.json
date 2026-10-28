@@ -1,0 +1,50 @@
+{
+  "tools": [
+    {
+      "name": "downloads_recent",
+      "description": "看下载夹里最近的新文件：名字、大小、改时间。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "看几个，默认 10，最多 30。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "看下载夹最近的文件。",
+        "en": "Lists recent files in the downloads folder."
+      }
+    },
+    {
+      "name": "downloads_stats",
+      "description": "下载夹里有多少文件、一共占多大。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "下载夹的数量和大小。",
+        "en": "Counts and totals the downloads folder."
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "downloads.new",
+      "description": {
+        "zh": "下载夹里多了新文件。",
+        "en": "New files appeared in the downloads folder."
+      }
+    }
+  ]
+}

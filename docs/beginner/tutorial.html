@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cortico 零基础入门手册</title>
+<style>
+:root{color-scheme:light dark;--paper:#fff;--ink:#233148;--muted:#5a697c;--line:#dce4ed;--accent:#165e8b;--soft:#edf5fa;--success:#edf6ef;--page:#f3f5f7}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:1rem}body{margin:0;background:var(--page);color:var(--ink);font:17px/1.9 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;overflow-wrap:anywhere}
+.shell{max-width:900px;margin:28px auto;padding:0 24px}header{border-left:5px solid var(--accent);padding:6px 18px;margin-bottom:22px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.06em;font-size:14px}header p{margin:5px 0;color:var(--muted)}
+nav,main{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px 40px;margin-bottom:22px}nav{padding:18px 28px}summary{cursor:pointer;font-weight:700;color:var(--accent)}nav ol{padding-left:1.5em;margin-bottom:0}nav li{margin:.35em 0}a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+h1{font-size:2.1rem;line-height:1.35;margin:0 0 24px;letter-spacing:-.03em}h2{font-size:1.5rem;line-height:1.5;border-top:1px solid var(--line);padding-top:36px;margin-top:46px;margin-bottom:20px;color:var(--accent)}h3{font-size:1.15rem;margin:30px 0 12px;line-height:1.6}p{margin:15px 0}li{margin:9px 0;padding-left:2px}strong{font-weight:700}code{font-family:Consolas,"Cascadia Code",monospace;font-size:.9em;background:var(--soft);border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}pre{background:#122334;color:#edf5fa;border-radius:10px;padding:18px 20px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}pre code{background:none;color:inherit;padding:0;font-size:.87em}.goal,.check{padding:14px 18px;border-radius:10px;background:var(--soft)}.check{background:var(--success)}
+table{border-collapse:collapse;width:100%;font-size:.94em}th,td{border:1px solid var(--line);padding:12px 14px;vertical-align:top;text-align:left}th{background:var(--soft)}.table-wrap{margin:20px 0}footer{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}.back{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+@media(max-width:600px){body{font-size:17px;line-height:1.85}.shell{margin:16px auto;padding:0 12px}header{padding-left:12px}nav{padding:16px 20px}main{padding:24px 20px;border-radius:12px}h1{font-size:1.8rem}h2{font-size:1.3rem;margin-top:36px;padding-top:28px}pre{padding:14px;font-size:15px}ol{padding-left:1.4em}table,tbody,tr,td{display:block}thead{display:none}tr{border:1px solid var(--line);border-radius:10px;margin:12px 0;padding:4px 0;overflow:hidden}td{border:0;padding:8px 12px}td::before{content:attr(data-label);display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:2px}td+td{border-top:1px dashed var(--line)}}
+@media(prefers-color-scheme:dark){:root{--paper:#172333;--ink:#e7edf5;--muted:#b2c0d1;--line:#35465b;--accent:#92c7ee;--soft:#23384b;--success:#1e3b30;--page:#0f1824}}
+@media print{:root{color-scheme:light;--paper:#fff;--ink:#000;--muted:#444;--line:#ccc;--accent:#224d6a;--soft:#f1f4f7;--success:#f1f5f1;--page:#fff}body{font-size:11pt}.shell{max-width:none;margin:0;padding:0}nav,header,footer{display:none}main{border:0;padding:0}h2,h3{break-after:avoid}p,li{orphans:3;widows:3}pre,table{break-inside:avoid}h2{margin-top:24pt;padding-top:10pt}pre{background:#f4f4f4;color:#000}}
+</style></head><body id="top"><div class="shell">
+<header><div class="eyebrow">CORTICO · 从零跟做</div><p>先会使用，再理解原理，最后自己写扩展。</p><p>可离线阅读 · 手机单栏 · 11 课与配套练习</p></header>
+<nav aria-label="课程目录"><details open><summary>选择你现在需要的一课</summary><ol><li><a href="#lesson-1">先读这一页：不用一口气学完</a></li>
+<li><a href="#lesson-2">第 1 课：先认清你手里的东西</a></li>
+<li><a href="#lesson-3">第 2 课：看懂文件夹、路径和命令</a></li>
+<li><a href="#lesson-4">第 3 课：打开控制台，让最简单的对话先通</a></li>
+<li><a href="#lesson-5">第 4 课：一条消息到底经历了什么</a></li>
+<li><a href="#lesson-6">第 5 课：配置是设置，JSON 只是写设置的一种方式</a></li>
+<li><a href="#lesson-7">第 6 课：只装一个扩展，走完安装到验证</a></li>
+<li><a href="#lesson-8">第 7 课：扩展怎么搭配，才不会越装越乱</a></li>
+<li><a href="#lesson-9">第 8 课：数据在哪里，备份要备什么</a></li>
+<li><a href="#lesson-10">第 9 课：做一个离线实验，亲眼看懂配置与工具</a></li>
+<li><a href="#lesson-11">第 10 课：遇到故障，按顺序缩小范围</a></li>
+<li><a href="#lesson-12">第 11 课：课堂复习、练习答案与下一步</a></li>
+<li><a href="#lesson-13">附录：来源与适用范围</a></li></ol></details></nav>
+<main><h1>Cortico 零基础入门手册</h1>
+<p>从“我不知道该点哪里”，到能安装一个扩展、看懂一次回复、独立描述一个故障。</p>
+<p>2026-10-28 · 新手跟做版。电脑上可以边看边操作，手机上先读概念和例子。本文的源码核对基线是 Cortico 本地 0.2.0 快照及 alont1 扩展源码；不是对所有宿主版本的承诺。界面按钮名称有差异时，以你安装版本的提示为准。</p>
+<h2 id="lesson-1">先读这一页：不用一口气学完</h2>
+<p>你不需要先学完编程。先做三件事：认出自己打开的程序，找到正在使用的配置，确认一个功能是否真的运行。</p>
+<p><strong>只想把现成程序用起来：</strong> 第 1 课 → 第 3 课 → 第 5、6 课 → 第 8 课。</p>
+<p><strong>想弄懂它为什么会回复：</strong> 第 1、4、7 课。</p>
+<p><strong>想自己写扩展：</strong> 先完成上面两条，再做第 2、9、10 课。第 11 课是课堂复习和后续学习路线。</p>
+<p>每课都有“做什么、看到什么算成功、卡住看哪里”。第一次只完成一个小目标。今天能装好并验证一个扩展，就已经完成了一次完整练习。</p>
+<p>全文约定：<code>C:\CorticoLab</code> 是你自己新建的练习文件夹；<code>C:\CorticoLab\Cortico-main</code> 是放源码的示例位置。它们不是程序自带目录，不存在时不能直接照抄命令。所有人名、任务和消息示例都是虚构的。</p>
+<h2 id="lesson-2">第 1 课：先认清你手里的东西</h2>
+<p class="goal"><strong>本课目标：</strong> 不把程序、模型、扩展和数据当成同一件东西。</p>
+<p>假设你希望一个角色在控制台跟你聊天，偶尔查看任务板。你会遇到下面这些名字：</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">名字</th><th scope="col">先用普通话理解</th><th scope="col">你会在哪里遇见它</th></tr></thead><tbody><tr><td data-label="名字">Coopanion / Coo</td><td data-label="先用普通话理解">用来启动、管理 bot 的桌面程序</td><td data-label="你会在哪里遇见它">桌面快捷方式、托盘、程序窗口</td></tr><tr><td data-label="名字">Cortico</td><td data-label="先用普通话理解">让消息、模型、工具和运行状态配合工作的框架</td><td data-label="你会在哪里遇见它">Coo 使用的 Core，或下载的源码目录</td></tr><tr><td data-label="名字">模型</td><td data-label="先用普通话理解">根据收到的内容生成回答或提出工具调用的软件服务</td><td data-label="你会在哪里遇见它">模型端点设置</td></tr><tr><td data-label="名字">扩展</td><td data-label="先用普通话理解">给宿主增加一种能力的代码包</td><td data-label="你会在哪里遇见它">扩展列表，例如任务板、天气</td></tr><tr><td data-label="名字">部署</td><td data-label="先用普通话理解">某一个 bot 的配置与运行数据所在位置</td><td data-label="你会在哪里遇见它">部署选择、数据目录</td></tr><tr><td data-label="名字">控制台 / WebUI</td><td data-label="先用普通话理解">用网页操作程序的界面</td><td data-label="你会在哪里遇见它">浏览器里的本机地址</td></tr></tbody></table></div>
+<p>不要现在背英文。先记一个例子：<strong>换模型</strong>是在换生成回答的服务；<strong>换扩展</strong>是在换可用能力；<strong>换部署</strong>可能是在换另一份角色数据。它们不是同一个操作。</p>
+<h3>跟着做：辨认你的使用路线</h3>
+<ol start="1"><li>看你平时怎样启动。双击 Coo 图标就能进入的，走“桌面程序路线”。</li><li>如果你有 <code>src</code>、<code>bots</code>、<code>package.json</code> 等文件，并通过命令启动，走“源码路线”。</li><li>在纸上写下：我用的程序名、程序版本、当前部署的显示名称。找不到版本时，先写“待确认”，不要猜。</li></ol>
+<p class="check"><strong>成功标准：</strong> 你能说出“我用 Coo 管理一个部署，给它安装任务板扩展，模型在端点设置里选择”。</p>
+<p><strong>卡住时：</strong> 如果文件夹里同时有多份 Coo、源码和备份，先确认平时使用的快捷方式指向哪里。不要因为另一个文件夹更新，就认为正在运行的程序也已更新。</p>
+<p><strong>练习 1：</strong> 我卸载了一个扩展，是否就等于删除了角色的全部记忆？先猜，再看文末答案。</p>
+<h2 id="lesson-3">第 2 课：看懂文件夹、路径和命令</h2>
+<p class="goal"><strong>本课目标：</strong> 知道命令在哪个文件夹执行，不因路径错误绕远路。只用桌面程序的读者也值得读前半课。</p>
+<h3>三个最常见的东西</h3>
+<p><strong>文件</strong>保存内容，例如 <code>config.json</code>。<strong>文件夹</strong>装文件，例如 <code>C:\CorticoLab</code>。<strong>路径</strong>说明东西在哪里，例如 <code>C:\CorticoLab\sample.json</code>。</p>
+<p>文件名后面的 <code>.json</code>、<code>.ts</code> 是扩展名。Windows 资源管理器中可以打开“文件扩展名”显示；Windows 11 通常在“查看 → 显示”里。这样不会把 <code>sample.json.txt</code> 误认成 JSON 文件。</p>
+<p><strong>PowerShell</strong>是输入命令的窗口。命令里的 <code>PS C:\...&gt;</code> 是窗口提示符，不是让你复制的内容。本文代码框里只放需要输入的命令。</p>
+<h3>跟着做：只查看，不修改</h3>
+<p>从开始菜单打开 PowerShell，输入：</p>
+<pre><code data-language="powershell">Get-Location</code></pre>
+<p>它会显示当前文件夹。接着输入：</p>
+<pre><code data-language="powershell">Get-ChildItem</code></pre>
+<p>它会列出当前文件夹里的内容。两条命令都不会启动 bot。</p>
+<p>如果你已在资源管理器中创建 <code>C:\CorticoLab</code>，输入：</p>
+<pre><code data-language="powershell">Set-Location -LiteralPath &#x27;C:\CorticoLab&#x27;</code></pre>
+<p>再运行 <code>Get-Location</code>，结果应变成这个练习目录。单引号把路径包起来，文件夹名有空格时也能作为一个整体传入。</p>
+<p class="check"><strong>看到什么算成功：</strong> 你能进入自己创建的文件夹，并看见里面的文件。</p>
+<p><strong>报“路径不存在”：</strong> 回资源管理器确认路径，不要反复输入同一条命令。<code>C:\CorticoLab</code> 只是示例，不会自动出现。</p>
+<p><strong>报“不是可识别的命令”：</strong> 说明当前环境找不到那个程序，或命令拼错。它与“Cortico 代码写错”是两类问题。</p>
+<h3>以后看到这些命令，先知道用途</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">命令</th><th scope="col">用途</th><th scope="col">会不会启动实际 bot</th></tr></thead><tbody><tr><td data-label="命令"><code>node --version</code></td><td data-label="用途">查看 JavaScript 运行环境版本</td><td data-label="会不会启动实际 bot">不会</td></tr><tr><td data-label="命令"><code>pnpm --version</code></td><td data-label="用途">查看依赖安装工具版本</td><td data-label="会不会启动实际 bot">不会</td></tr><tr><td data-label="命令"><code>pnpm install</code></td><td data-label="用途">下载项目声明的依赖，通常需要联网</td><td data-label="会不会启动实际 bot">不会直接启动 bot，但安装过程可能运行依赖的安装脚本</td></tr><tr><td data-label="命令"><code>pnpm start</code></td><td data-label="用途">运行项目定义的启动命令</td><td data-label="会不会启动实际 bot">在 Cortico 主仓会</td></tr><tr><td data-label="命令"><code>pnpm test</code></td><td data-label="用途">执行项目测试</td><td data-label="会不会启动实际 bot">本项目测试使用受控环境，不作为真实平台验收</td></tr></tbody></table></div>
+<p>初学时，每执行一条就看一次结果，不把一长串命令一起粘贴。错误出现后，从第一条错误开始看。</p>
+<h2 id="lesson-4">第 3 课：打开控制台，让最简单的对话先通</h2>
+<p class="goal"><strong>本课目标：</strong> 能打开正确部署的控制台，知道模型连接设置在哪里。下面是供你操作的步骤，本手册不会替你启动真实 bot。</p>
+<h3>路线 A：你已经安装了 Coo</h3>
+<p>如果你尚未安装 Coo，先从其发布者提供的可信发布页取得适合 Windows 的安装包，并按该版本安装说明完成安装。本手册没有核对 Coo 当前下载入口，因此不把同名搜索结果当成官方下载。也可以直接走下面有明确主仓地址的源码路线。不要把某个扩展的 ZIP 当作 Coo 安装包。</p>
+<ol start="1"><li>用平时的快捷方式启动 Coo，确认当前部署名称。</li><li>从程序提供的控制台入口打开网页。记下程序显示的实际地址，别把教程里的端口当成固定答案。</li><li>在控制台找到模型端点设置。端点就是程序把请求交给模型服务的地址与配置。</li><li>按你选择的服务提供方说明填写地址、模型标识和密钥。密钥是访问凭据，只填在程序的凭据设置中，不发到聊天或公开 issue。</li><li>保存配置。回控制台对话页，只做一次简单问候，例如“你好，今天先试一下文字对话”。这一步可能消耗模型服务额度。</li><li>查看是否出现回答，以及该次请求是否有明确错误。</li></ol>
+<p class="check"><strong>成功标准：</strong> 控制台打开，正确部署收到这条输入，模型请求成功，并在控制台看见回答。</p>
+<p>先不接 QQ、不加语音、不装一整套扩展。这样出问题时，你只需检查控制台和模型连接这两部分。</p>
+<h3>路线 B：你打算运行源码</h3>
+<p>源码是供运行环境执行的程序文件，不是下载后双击就能运行的安装包。还没有源码时，在浏览器打开主仓地址 <code>https://github.com/Pal-AI-Lab/Cortico</code>，确认页面上的仓库名是 <code>Pal-AI-Lab/Cortico</code>。在 Code 菜单中选择 Download ZIP；下载后右键 ZIP，使用“全部解压缩”，把解压结果放进自己建立的 <code>C:\CorticoLab</code>。不要在 ZIP 预览窗口里直接运行文件。</p>
+<p>解压出的文件夹名称可能带分支名；本文统一用 <code>C:\CorticoLab\Cortico-main</code> 作为示例。若你的名字不同，下面路径也要随之替换。主分支会变化，本次核对的命令基于本文说明的快照；下载后优先核对该副本的 README 与 <code>package.json</code>。npm 上名为 <code>cortico</code> 的包主要提供扩展开发所需的框架源码契约，不能用“安装该 npm 包”替代这里的宿主安装和启动流程。</p>
+<ol start="1"><li>在资源管理器确认这一层有 <code>package.json</code> 和 <code>bin</code>、<code>src</code> 文件夹。ZIP 解压后可能多包了一层文件夹，别在外层执行。</li><li>在 PowerShell 进入它，并查看运行环境：</li></ol>
+<pre><code data-language="powershell">Set-Location -LiteralPath &#x27;C:\CorticoLab\Cortico-main&#x27;
+node --version</code></pre>
+<p>本手册核对的版本要求 Node.js 22 或以上。Node.js 是执行 JavaScript 的程序。没有安装时，先通过 Node.js 官方安装程序安装受支持版本，再重新打开 PowerShell。</p>
+<ol start="3"><li>检查 <code>package.json</code> 中的 <code>packageManager</code>。本次快照指定 <code>pnpm@11.5.0</code>，不同快照可能不同。若已有 Corepack，可按仓库说明执行 <code>corepack pnpm install</code>。若没有 Corepack、但 npm 已可用，可为本次快照安装指定 pnpm：</li></ol>
+<pre><code data-language="powershell">npm install --global pnpm@11.5.0
+pnpm.cmd --version
+pnpm.cmd install</code></pre>
+<p><code>pnpm.cmd</code> 是 Windows 下的命令入口；它可以避免把执行策略错误误当成包安装错误。这里不需要修改 PowerShell 执行策略。公司管理电脑如限制安装，应使用其允许的安装方式。</p>
+<ol start="4"><li>依赖安装成功后，才运行：</li></ol>
+<pre><code data-language="powershell">pnpm.cmd start</code></pre>
+<p>本地启动器会选择或建立部署，并显示 WebUI 地址。首次无部署的常见流程会建立 <code>mybot</code>；默认控制台地址是 <code>http://127.0.0.1:7788/</code>，实际以启动输出为准。若已有运行中的正式实例，不要再在同一份数据上启动第二份；练习请用单独的源码副本和新部署。</p>
+<p class="check"><strong>成功标准：</strong> 启动窗口持续运行，浏览器能打开它显示的控制台地址。此时模型未配置也不奇怪，继续完成路线 A 的端点设置。</p>
+<p><strong>常见卡点：</strong> “地址占用”先检查是否已有实例；浏览器打不开先看启动窗口有没有退出；依赖下载失败先处理下载错误，不跳过继续启动。</p>
+<p><strong>练习 2：</strong> 浏览器能打开控制台，但模型请求返回错误，说明本机网页服务一定没有启动吗？</p>
+<h2 id="lesson-5">第 4 课：一条消息到底经历了什么</h2>
+<p class="goal"><strong>本课目标：</strong> 不再把所有故障都叫“AI 不理我”。</p>
+<p>我们用一句话走完整条路：<strong>“请看看任务板里有没有没完成的事。”</strong></p>
+<ol start="1"><li>你在控制台输入这句话。接收输入的模块把它交给运行系统。</li><li>系统记录并安排处理。程序暂停时，收到输入与开始处理可能不是同一时刻。</li><li>角色的运行逻辑准备这一轮给模型看的内容：有关的消息、当前可用工具、需要的角色信息。</li><li>模型可能决定调用 <code>todo_list</code>，也可能先回答或询问；可用工具不等于每轮必用。</li><li>系统把调用交给任务板扩展。扩展读取自己的任务数据，返回结果。</li><li>模型根据结果组织回答，再通过相应输出通道把内容发出来。</li></ol>
+<p>这时再认识四个专有名词，就容易多了：</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">专有名词</th><th scope="col">在上面例子里做什么</th><th scope="col">不负责什么</th></tr></thead><tbody><tr><td data-label="专有名词"><strong>World</strong></td><td data-label="在上面例子里做什么">接收某种环境输入、提供查看任务板或发消息等工具，并返回实际结果</td><td data-label="不负责什么">不直接替角色决定内心想法，不直接写 Persona 的 Memory</td></tr><tr><td data-label="专有名词"><strong>Core</strong></td><td data-label="在上面例子里做什么">安排处理、管理会话、派发工具调用、保存运行记录</td><td data-label="不负责什么">不决定角色应该是什么性格</td></tr><tr><td data-label="专有名词"><strong>Persona</strong></td><td data-label="在上面例子里做什么">决定怎么组织角色上下文、如何使用和维护 Memory</td><td data-label="不负责什么">不应该把 QQ 等平台细节写进通用 Core</td></tr><tr><td data-label="专有名词"><strong>Memory</strong></td><td data-label="在上面例子里做什么">保存这一个角色的长期内部状态，由 Persona 按自己的规则读写</td><td data-label="不负责什么">不等于所有日志，也不等于所有扩展的文件</td></tr></tbody></table></div>
+<p><strong>Bot</strong> 是把 Persona、Memory 和一组 World 组合起来的定义；<strong>deployment（部署）</strong>则保存某个实例实际使用的配置和数据。</p>
+<h3>用“办到哪一步”判断问题</h3>
+<p>模型说“我记住了”，不一定发生了保存。工具说“请求已发送”，不一定代表别人已读。判断成功要找对应证据：任务板查询结果、工具回执、平台上实际显示的消息。</p>
+<p><strong>练习 3：</strong> 对话中出现“已保存任务”，但没有任何 <code>todo_add</code> 的调用或其他持久化证据，你能确认任务已经写入吗？</p>
+<h2 id="lesson-6">第 5 课：配置是设置，JSON 只是写设置的一种方式</h2>
+<p class="goal"><strong>本课目标：</strong> 能看懂一小段配置，知道“已保存”和“正在生效”的区别。</p>
+<p>普通用户优先用控制台表单修改设置。只有说明明确要求、并且你知道目标部署目录时，才手动编辑 <code>config.json</code>。</p>
+<p>下面是<strong>练习用示例</strong>，不是让你覆盖正式配置的完整文件：</p>
+<pre><code data-language="json">{
+  &quot;worlds&quot;: {
+    &quot;clock&quot;: {
+      &quot;enabled&quot;: true,
+      &quot;announce&quot;: &quot;off&quot;,
+      &quot;announceGapMinutes&quot;: 30
+    }
+  }
+}</code></pre>
+<p>逐个读：<code>worlds</code> 是 World 配置所在的大项；<code>clock</code> 是时间扩展的标识；<code>enabled</code> 表示是否启用；<code>announce</code> 选 <code>off</code> 表示不主动报时；<code>announceGapMinutes</code> 的单位是分钟。</p>
+<p>JSON 的五个基本规则：</p>
+<ol start="1"><li>左右大括号 <code>{ }</code> 成对。</li><li>属性名和文字用英文双引号，例如 <code>&quot;announce&quot;</code>。</li><li><code>true</code>、<code>false</code> 是开关值，没有引号；<code>&quot;false&quot;</code> 是文字，意义不同。</li><li>数字 <code>30</code> 不加引号。相邻项用英文逗号隔开，最后一项后面不加逗号。</li><li>普通 JSON 不写 <code>// 注释</code>。说明文字放在文件外。</li></ol>
+<h3>跟着做：保存一项，再验证一项</h3>
+<ol start="1"><li>在正确扩展的配置页记录原值，例如主动报时原来是 <code>quiet-hours</code>。</li><li>改成希望的值，点击保存并等到保存成功。成功提示前不要立刻关页面。</li><li>刷新页面，检查值是否仍是刚才的选择。</li><li>看该项说明：写“热生效”的通常无需重启；写“重新挂载”或“重启”的，要完成对应操作。</li><li>通过实际状态或一次明确的功能检查确认生效。</li></ol>
+<p><strong>三个操作不要混用：</strong> 刷新网页只更新你看到的页面；重新挂载扩展会让该扩展停止后重新启动；重启 Core 会重建整个运行进程。重启 Coo 还涉及外层桌面程序。反馈问题时写清是哪一种。</p>
+<p><strong>重要的开关区别：</strong> 扩展卡片上的激活／停用负责启停；普通业务设置负责修改配置。在已修复的 alont1 面板中，不再用第二个根启用开关与宿主抢状态。配置里 <code>enabled</code> 的含义依然存在，但不建议新手同时手改它和点击界面开关。</p>
+<p class="check"><strong>成功标准：</strong> 刷新后配置还在；需要重载的项目完成重载后，功能表现与配置一致。</p>
+<p><strong>练习 4：</strong> 写着 <code>announceGapMinutes: 30</code>，为什么不能把它理解成 30 秒？</p>
+<h2 id="lesson-7">第 6 课：只装一个扩展，走完安装到验证</h2>
+<p class="goal"><strong>本课目标：</strong> 明白“安装了”“启用了”“能工作”是三次检查。</p>
+<p>本课用任务板 <code>cortico-world-todo-alont1</code> 举例。它提供查看、新建、完成和删除任务的工具。本课先只查看，不动已有条目。</p>
+<h3>开始前准备</h3>
+<p>写下当前宿主版本、扩展完整包名、准备安装的版本。阅读它的说明，确认宿主兼容。若没有独立测试部署，先完成第 8 课备份；不要把正式角色的数据当练习草稿。</p>
+<h3>跟着做：图形界面路线</h3>
+<ol start="1"><li>打开控制台的扩展列表，选择 World 类别，在搜索或手动包名安装入口输入完整包名。</li><li>核对作者、包名、版本和兼容提示，再安装。等待明确完成；下载完成但检查失败，不算安装成功。</li><li>若界面显示“待重启”，保存手头工作后，按宿主提示重启。<strong>磁盘上已有新版本，不等于当前进程已经加载它。</strong></li><li>找到任务板对应的 World 卡片，通过宿主激活入口启用。确认状态已启用，且没有启动错误。</li><li>打开配置页，先读页面上的中文使用教程。保留不理解的高级设置，只修改本次练习需要的项。</li><li>在对话中说：“请使用任务板的 <code>todo_list</code> 查看未完成事项，不新增、完成或删除任务。”模型调用工具可能消耗额度。</li><li>查看工具调用和回执。没有任务时，源码当前返回“没有没做完的事。”；有任务时应列出条目。文字回答本身不能替代工具回执。</li><li>刷新控制台，确认启用状态仍在。再按宿主提供的方式重载扩展；如果该版本没有单独重载入口，就在方便时重启 Core。回来看启用状态和只读查询是否仍正常。</li></ol>
+<p class="check"><strong>成功标准：</strong> 安装记录正确、实际运行状态启用、只读工具有回执、重载后状态保持。完成这四项，才开始增加第二个扩展。</p>
+<h3>仅给源码用户的命令行替代办法</h3>
+<p>图形界面能安装时，可以跳过本段。必须确认进入的是宿主实际使用的 <code>extensions</code> 文件夹；Coo 的数据目录可能另有位置，不能直接套用源码路径。</p>
+<pre><code data-language="powershell">Set-Location -LiteralPath &#x27;C:\CorticoLab\Cortico-main\extensions&#x27;
+pnpm.cmd add --ignore-workspace cortico-world-todo-alont1</code></pre>
+<p><code>--ignore-workspace</code> 表示不要把这次部署扩展安装混进外层开发工作区。如果目标文件夹不存在，回到控制台安装流程，不要在不明位置新建一个同名文件夹然后继续。</p>
+<h3>三种故障，分别处理</h3>
+<p><strong>找不到包：</strong> 检查完整包名和扩展市场网络，不要用相似名称替代。<strong>提示 API 不兼容：</strong> 对照宿主和扩展支持版本，不要只把清单里的数字改大。<strong>激活后立刻关闭：</strong> 查看此次激活报错，不要靠反复写 <code>enabled=true</code> 掩盖失败。</p>
+<h2 id="lesson-8">第 7 课：扩展怎么搭配，才不会越装越乱</h2>
+<p class="goal"><strong>本课目标：</strong> 能选择一组职责清楚的扩展，也知道互联应该改善什么。</p>
+<p>先写需求，再选包。例如“我希望它能看任务、查天气”，就从任务板和天气两个功能开始；不必因为包都在同一个仓库就全部开启。</p>
+<h3>人味与七个独立扩展：二选一</h3>
+<p>当前 alont1 人味 <code>humanlike</code> 已内置下列功能：</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">独立扩展标识</th><th scope="col">功能</th></tr></thead><tbody><tr><td data-label="独立扩展标识"><code>affinity</code></td><td data-label="功能">关系状态</td></tr><tr><td data-label="独立扩展标识"><code>learn</code></td><td data-label="功能">学习</td></tr><tr><td data-label="独立扩展标识"><code>life</code></td><td data-label="功能">作息与生活状态</td></tr><tr><td data-label="独立扩展标识"><code>clock</code></td><td data-label="功能">时间感</td></tr><tr><td data-label="独立扩展标识"><code>together</code></td><td data-label="功能">相处记录</td></tr><tr><td data-label="独立扩展标识"><code>mind</code></td><td data-label="功能">惦记与提醒</td></tr><tr><td data-label="独立扩展标识"><code>real</code></td><td data-label="功能">现实感知</td></tr></tbody></table></div>
+<p><strong>使用人味时，不要再同时启用这七个对应的独立扩展。</strong> 这不是“功能越多越好”，重复运行可能重复提醒或维护两份状态。当前提示不会替你自动停用，也不会自动把两份数据合并。</p>
+<p>如果只需要其中一种能力，可以选择对应独立扩展并停用人味。安装着但未启用，与正在运行，是不同状态。人味内部模块在当前修复版中随宿主总开关一起运行，不提供七个看似独立、实际上无效的子开关。</p>
+<h3>什么才算“单独可用，组合更顺手”</h3>
+<p>以任务板和天气为例：只装任务板，应仍能管理任务；只装天气，应仍能查天气；两者都装时，角色可以结合真实查询结果安排出门事项。</p>
+<p>合理的协作过程是：模型根据现有工具选择查询 → 收到天气事实 → 结合你的请求决定是否记任务。<strong>不能仅凭装了两包就自动声称能联动，也不能让一个扩展偷偷改另一个扩展的私有文件。</strong> 自动联动必须有实际实现、可见规则和关闭办法。</p>
+<p>你验收组合时问四件事：缺一包是否仍能正常运行？只读查询会不会意外发送消息？同一提醒会不会触发两遍？关闭联动后能否回到各自独立行为？</p>
+<p><strong>练习 5：</strong> 同时启用人味和独立时间扩展，是否必然让报时更准？</p>
+<h2 id="lesson-9">第 8 课：数据在哪里，备份要备什么</h2>
+<p class="goal"><strong>本课目标：</strong> 更新程序时保住数据，分享源码时不把私人数据带出去。</p>
+<p>把运行目录分成两类看。<strong>程序代码</strong>描述“它会做什么”；<strong>部署数据</strong>描述“这一份实例配置了什么、积累了什么”。重新下载代码通常不能找回旧数据。</p>
+<p>常见源码结构如下，具体位置由宿主配置决定：</p>
+<pre><code data-language="text">Cortico-main/
+  src/                  框架程序
+  bots/                 bot 类型的实现
+  extensions/           当前宿主安装的外部扩展
+  deployments/
+    练习部署/
+      deployment.json   选择哪种 bot
+      config.json       这一份部署的配置
+      workspace/        某些 Persona 使用的 Memory 目录
+      ...               运行记录及各模块的数据</code></pre>
+<p><code>workspace</code> 只是部分 Persona 的实现选择；Memory 不保证都叫这个名字。Coo 还可能把数据放在独立目录。<strong>先从当前程序的配置或启动输出确认实际数据根目录。</strong> 不要只凭某个目录名像“记忆”就认定它包含全部数据。</p>
+<h3>跟着做：一份可说明白的备份</h3>
+<ol start="1"><li>记录日期、宿主版本、扩展版本、实际部署目录。私人记录留在自己电脑，不放公开仓库。</li><li>使用宿主提供的正常停止／关机入口，等运行结束。只关闭浏览器标签并没有停止后台程序。</li><li>将确认过的完整部署数据复制到另一份带日期的备份目录；Coo 若有专用导出或备份说明，按它的范围操作。</li><li>确认备份中保留相同的主要文件和目录结构。不要在未确认数据布局时只挑一两个 JSON。</li><li>在独立测试位置验证恢复；不要直接覆盖仍在运行的原部署。数据库类文件和附属文件应作为整体处理。</li></ol>
+<p class="check"><strong>成功标准：</strong> 你能说明备份对应哪个实例、哪个日期、哪个版本，以及恢复时应放回哪个数据根目录。只看到一个 ZIP 图标，还不等于已验证可恢复。</p>
+<h3>Session 和 Memory 为什么不同</h3>
+<p><strong>Session（会话）</strong>是一次持续处理过程所用的上下文与记录；<strong>Memory</strong>是由 Persona 维护的长期内部状态。上下文变长后可能做交接；交接不代表角色必须失忆，但也不代表每句闲聊都自动进入长期记忆。</p>
+<p>工具查询的原始回执、模型生成的摘要、角色设定、真实发生的事情，要保留区别。摘要里写了一次“已经完成”，不能代替真实完成证据。</p>
+<p><strong>公开分享清单：</strong> 可以分享扩展源码、教程和合成测试；不要打包部署目录、真实对话、私人记忆、密钥、登录状态、<code>.env</code>、个人备份。</p>
+<h2 id="lesson-10">第 9 课：做一个离线实验，亲眼看懂配置与工具</h2>
+<p class="goal"><strong>本课目标：</strong> 不连接 QQ、不调用真实模型，也能观察一次确定的输入和结果。</p>
+<h3>实验 A：完全新手先检查 JSON</h3>
+<p>只需要安装了 Node.js。将本手册配套的 <code>exercises</code> 文件夹放到 <code>C:\CorticoLab\exercises</code>。里面有 <code>sample.json</code> 和 <code>read-config.mjs</code>。</p>
+<pre><code data-language="powershell">Set-Location -LiteralPath &#x27;C:\CorticoLab\exercises&#x27;
+node .\read-config.mjs</code></pre>
+<p>你应该看到：</p>
+<pre><code data-language="text">配置读取成功
+功能已启用：true
+示例问候：你好，先完成一个小练习。
+提醒间隔（分钟）：30</code></pre>
+<p>现在用文本编辑器打开 <code>sample.json</code>，把 <code>greeting</code> 后面的文字改成自己的练习句，保存，再运行同一条命令。输出应随之改变。</p>
+<p>最后，故意在副本里删掉一处双引号。再次运行，会收到“JSON 格式不正确”的提示。把引号补回，再次运行成功。这是在练习副本里观察错误，不是在修改正式配置。</p>
+<p><strong>这验证了什么：</strong> 程序读取文件、识别数据类型、使用配置值。<strong>没有验证什么：</strong> 它没有启动 Cortico、没有训练模型、没有把内容保存为角色记忆。</p>
+<h3>实验 B：实际运行 Cortico 的 World 模板测试</h3>
+<p>需要已经安装好依赖的独立 Cortico 源码副本。首次安装依赖可能联网；依赖备齐后的这组测试不需要模型、密钥或外部聊天平台。</p>
+<p>在源码根目录运行：</p>
+<pre><code data-language="powershell">Set-Location -LiteralPath &#x27;C:\CorticoLab\Cortico-main&#x27;
+node node_modules/vitest/vitest.mjs run templates/extension/world/tests/world.test.ts</code></pre>
+<p>本次核对的快照应通过 <strong>3 个测试</strong>。它们实际检查：</p>
+<ol start="1"><li>模板能按扩展契约被构造和检查。</li><li>模板挂载时发出一条 <code>example.started</code> 事件，交给记录事件的假宿主。</li><li>调用 <code>example_echo</code> 得到带配置问候的回执；修改问候配置后，回执随之变化。</li></ol>
+<p>“假宿主”是测试中记录事件的辅助对象。这里运行了真实 World 类和工具处理函数，但没有让真实模型决定调用，也没有对外发送消息。</p>
+<p class="check"><strong>看到什么算成功：</strong> 输出包含 <code>1 passed</code> 和 <code>3 passed</code>。本次编写手册时，这条命令已实际通过。</p>
+<p><strong>提示找不到 vitest：</strong> 先确认 <code>node_modules</code> 已安装，且当前目录确实是源码根。<strong>提示找不到测试文件：</strong> 说明你的源码版本或目录不同，先看模板的 README。不要为了凑出绿色结果创建一个同名空测试。</p>
+<h3>看一眼代码，不要求你立即会写</h3>
+<p>打开 <code>templates/extension/world/src/world.ts</code>，搜索 <code>example_echo</code>，再找 <code>handler</code>。<code>handler</code> 是实际处理工具调用的函数。它把配置里的问候与输入文字拼在一起返回。</p>
+<p>这说明三件事：工具名字告诉调用方选哪个动作；参数告诉工具本次处理什么；回执告诉调用方实际得到了什么。<strong>模型说一句“我调用了工具”，与代码真的执行 handler，是两回事。</strong></p>
+<h2 id="lesson-11">第 10 课：遇到故障，按顺序缩小范围</h2>
+<p class="goal"><strong>本课目标：</strong> 能提供别人看得懂、可以复现的问题描述。</p>
+<p>先问“最后一个确定成功的步骤是什么”。不要同时换模型、更新十个扩展、重装宿主；那样即使恢复，也不知道哪个动作起作用。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">你看见的现象</th><th scope="col">先检查什么</th><th scope="col">下一步保留什么证据</th></tr></thead><tbody><tr><td data-label="你看见的现象">控制台打不开</td><td data-label="先检查什么">程序是否仍运行，实际地址和端口是否正确</td><td data-label="下一步保留什么证据">启动窗口最早的错误及时间</td></tr><tr><td data-label="你看见的现象">控制台正常但模型不回复</td><td data-label="先检查什么">是否暂停，输入是否进入，模型请求是否报错</td><td data-label="下一步保留什么证据">对应输入、请求错误，去除凭据</td></tr><tr><td data-label="你看见的现象">扩展安装失败</td><td data-label="先检查什么">包名、版本、网络、兼容检查结果</td><td data-label="下一步保留什么证据">完整包名和安装提示</td></tr><tr><td data-label="你看见的现象">扩展已安装但没有功能</td><td data-label="先检查什么">是否实际启用，是否待重启，启动是否失败</td><td data-label="下一步保留什么证据">卡片状态与加载版本</td></tr><tr><td data-label="你看见的现象">按钮点了没反应</td><td data-label="先检查什么">是否需要先启用或保存，是否出现操作回执</td><td data-label="下一步保留什么证据">按钮名称、操作前状态、错误提示</td></tr><tr><td data-label="你看见的现象">刷新后设置丢失</td><td data-label="先检查什么">是否点过保存，是否保存到正确部署</td><td data-label="下一步保留什么证据">保存提示和刷新前后值</td></tr><tr><td data-label="你看见的现象">重载后扩展关闭</td><td data-label="先检查什么">当前磁盘启用状态、宿主激活结果、扩展版本</td><td data-label="下一步保留什么证据">明确重载的是扩展、Core 还是整个 Coo</td></tr><tr><td data-label="你看见的现象">同一句提醒出现两遍</td><td data-label="先检查什么">是否启用了重复扩展、重复实例或重复订阅</td><td data-label="下一步保留什么证据">两条提醒时间及启用列表</td></tr><tr><td data-label="你看见的现象">AI 说办完，现实没有变化</td><td data-label="先检查什么">是否真的调用工具，工具回执说了什么</td><td data-label="下一步保留什么证据">调用名称、参数的非敏感部分、回执</td></tr></tbody></table></div>
+<h3>可以直接复制的反馈格式</h3>
+<pre><code data-language="text">我想完成：在重载后继续使用任务板。
+宿主及版本：填写 Coo / Cortico 的实际版本。
+扩展完整包名和版本：填写实际安装版本。
+操作步骤：启用 → 保存某项设置 → 重载扩展。
+预期结果：重载后仍启用，可查询任务。
+实际结果：重载后卡片显示关闭。
+发生时间：填写日期和时间。
+第一条相关错误：粘贴已去除密钥和私人内容的原文。
+最小复现：只开这个扩展时是否仍发生。</code></pre>
+<p>“报错了”是有用的起点，但“安装完成后，点击启用，等待约 30 秒，显示连接超时”能让维护者更快找到对应记录。看不到详细错误时，直接说明界面只有简短提示，不需要编造错误码。</p>
+<h3>准备写扩展时，再加这三项检查</h3>
+<p>先从官方 <code>templates/extension/world</code> 复制模板到独立练习目录。读模板 README，按其清单统一改包名、World 标识、工具前缀和配置路径；不要只改文件夹名。</p>
+<p>在主仓根目录可运行 <code>pnpm.cmd check:extension &lt;你的包目录&gt;</code> 检查契约；尖括号部分要替换成实际目录，不是原样输入。检查会导入包代码，因此只检查你信任或正在开发的源码。</p>
+<p>然后在扩展包自己的目录按其 <code>package.json</code> 运行测试与类型检查。类型检查像检查形状和接口；行为测试检查输入后是否得到正确结果；真实平台验收则确认外部服务是否可用。它们各自能证明的范围不同。</p>
+<p><strong>本次快照提醒：</strong> World / provider / bot 的当前契约号是 6 / 6 / 7；源码还有上一版过渡逻辑。旧说明里的数字可能落后，开发时看模板和 <code>src/extensions/manifest.ts</code>，不要凭手册里的数字强行改清单。本地 <code>package.json</code> 虽列出 <code>dev:console</code>，此次核对没有找到它对应的脚本，所以本文不把该命令列为新手必做步骤。</p>
+<h2 id="lesson-12">第 11 课：课堂复习、练习答案与下一步</h2>
+<h3>十分钟复习卡</h3>
+<p>闭上前面的章节，试着完成这五句话：</p>
+<ol start="1"><li>我现在用的宿主是 ______，正在使用的部署是 ______。</li><li>当前扩展完整包名是 ______，安装与启用状态分别是 ______。</li><li>这一项配置保存后，需要 ______ 才会生效。</li><li>一次动作成功，我应检查 ______，而不只看角色说了什么。</li><li>更新前，我备份了 ______，知道恢复位置是 ______。</li></ol>
+<p>能回答这五题，就已经具备日常使用和向别人描述故障的基础。</p>
+<h3>练习答案</h3>
+<p><strong>练习 1：</strong> 不等于。扩展代码、扩展自己的运行数据、Persona 的 Memory 是不同东西；卸载后的数据处理还要看宿主和扩展说明。不能把“卸载扩展”当作已备份或已清空全部数据。</p>
+<p><strong>练习 2：</strong> 不是。控制台能打开说明网页服务至少能响应；模型服务连接、认证、模型标识或请求处理仍可能失败。</p>
+<p><strong>练习 3：</strong> 不能。需要对应的持久化动作与成功结果，并可通过后续查询确认。自然语言承诺不是落盘证据。</p>
+<p><strong>练习 4：</strong> 名字中的 <code>Minutes</code> 明确说明单位是分钟。改成 30 并不会变成每 30 秒触发。</p>
+<p><strong>练习 5：</strong> 不会。人味已有时间功能，重复启用可能增加重复状态和提醒，应选择一套。</p>
+<h3>从入门走向能独立修改</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">阶段</th><th scope="col">你要能做什么</th><th scope="col">推荐下一步</th></tr></thead><tbody><tr><td data-label="阶段">会使用</td><td data-label="你要能做什么">安装一个扩展、保存配置、验证重载后状态</td><td data-label="推荐下一步">重做第 6 课，留下自己的验收记录</td></tr><tr><td data-label="阶段">会排查</td><td data-label="你要能做什么">沿着输入、模型请求、工具、回执定位中断位置</td><td data-label="推荐下一步">第 4、10 课，加上主仓 <code>docs/runs.md</code></td></tr><tr><td data-label="阶段">会看代码</td><td data-label="你要能做什么">找到工具名、配置默认值、真正执行的函数</td><td data-label="推荐下一步">第 9 课与模板 <code>src/config.ts</code>、<code>src/world.ts</code></td></tr><tr><td data-label="阶段">会写扩展</td><td data-label="你要能做什么">新增一个职责清楚的 World，声明配置和工具，写行为测试</td><td data-label="推荐下一步">主仓 <code>docs/extensions.md</code>、<code>docs/worlds.md</code>、模板 README</td></tr><tr><td data-label="阶段">会维护组合</td><td data-label="你要能做什么">验证单装、组合、缺包、关闭联动、重载和版本升级</td><td data-label="推荐下一步">为每种组合保存测试结果，先做小组合再扩大</td></tr><tr><td data-label="阶段">能理解框架</td><td data-label="你要能做什么">解释 Core、Persona、Memory、World 的边界与取舍</td><td data-label="推荐下一步">主仓 <code>PHILOSOPHY.md</code>、<code>AGENTS.md</code>，再读详细框架手册</td></tr></tbody></table></div>
+<p>第一次不用背 API。能找到负责这件事的模块、看到真实结果、解释自己的修改，比记住一堆类名更实用。</p>
+<h2 id="lesson-13">附录：来源与适用范围</h2>
+<p>本文按以下实际文件核对，路径相对对应仓库根目录。涉及本机私人部署的配置、记忆和聊天内容没有作为教材材料。</p>
+<p><strong>Cortico 主仓：</strong> <code>README_zh.md</code>、<code>PHILOSOPHY.md</code>、<code>AGENTS.md</code>、<code>package.json</code>、<code>bin/cortico.mjs</code>、<code>docs/windows.md</code>、<code>docs/extensions.md</code>、<code>src/extensions/manifest.ts</code>、<code>vitest.config.ts</code>、<code>templates/extension/world/README.md</code>、该模板的 <code>src/world.ts</code> 与 <code>tests/world.test.ts</code>。</p>
+<p><strong>alont1 扩展仓：</strong> <code>docs/panel-restart-fix.md</code>、<code>docs/panel-guides.json</code>、任务板的 <code>src/world.ts</code>、时间扩展的 <code>src/config.ts</code>。这里的“当前修复版”指核对的源码状态，不自动等同于你电脑已安装的 npm 版本。</p>
+<p><strong>实际验证：</strong> World 模板测试 3/3 通过；配套 JSON 实验覆盖正确输入、格式错误、类型错误。没有为了编写教材启动真实 bot 或调用真实模型。安装与平台操作步骤是供读者在自己已确认的环境中执行的指南，不是本次已替读者完成的操作。</p>
+<p>拿到新版后，先核对宿主与扩展版本，再对照对应版本的模板和说明。本文可以帮助你理解变化；具体按钮、文件位置和支持契约以那一版程序为准。</p></main><footer><a class="back" href="#top">回到目录</a><p>离线文件无需加载外部字体、脚本或图片。</p></footer>
+</div></body></html>

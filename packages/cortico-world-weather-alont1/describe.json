@@ -1,0 +1,26 @@
+{
+  "tools": [
+    {
+      "name": "weather_now",
+      "description": "查现在天气：温度、体感、天气、湿度、风，并给出带伞和穿衣的提醒。想知道出门穿什么、要不要带伞时用。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "城市名（中文或英文），不填就用配置里的。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "查现在天气并给出带伞/穿衣提醒。",
+        "en": "Reads the current weather with umbrella and clothing advice."
+      }
+    }
+  ],
+  "events": []
+}

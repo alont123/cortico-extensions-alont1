@@ -1,0 +1,38 @@
+{
+  "name": "cortico-world-todo-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "任务板",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "todo"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "任务板",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

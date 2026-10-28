@@ -1,0 +1,39 @@
+{
+  "name": "cortico-world-web-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "联网：网页搜索（Bing）与读网页正文。让 bot 能查资料、看新闻、了解外面发生的事",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "web",
+    "search"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "联网",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

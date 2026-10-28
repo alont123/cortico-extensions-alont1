@@ -1,0 +1,2024 @@
+[
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "README.md",
+    "before": "20f37d1595bbaca9447d07b5e908e120d56d861424a448307a3ba06de782bee8",
+    "after": "b82b425690396d82a99fd6a4912a19750d64858916bed5b5f07175910cbf61ee"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "describe.json",
+    "before": "704a32e6cf3274be228cb1f619da7f011d96205d523729157dce074ae5fa7f84",
+    "after": "2d25b272e11778e4e844aaaa9a918d53cb720323db4d1ec368cac6a5f9a35a71"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "index.ts",
+    "before": "1e31275a86746916e2a86da08530c78ba2c96447304f87482cc5606b42bc1d27",
+    "after": "ca4c1b2877da59a4b632c1fda04ef2a5c13a5f5bab75a7dd5f74e751e4a0178f"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/CORE.md",
+    "before": "5ee7c8781ca5ca25ffa1d66168c4847ea05d2bfc6ac3207f5552b898fa6a616d",
+    "after": "567328db6c7b9fee463a9ef383ee78c75cf05fc1608690baa62d9d34954e1814"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/config.ts",
+    "before": "c368464c176435df28ef5d0c4972b95091ef543fe96cdf0dc4c64b43b97187af",
+    "after": "f86cabe5484689debe655afcd055729c9e3cd2275f88a013e278a90bfb929661"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/conversation-policy.ts",
+    "before": null,
+    "after": "66a035f24df67863535f3cdf883a3bf342392dd3da6ad577b9dee02cc44fe6c6"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/conversation-repetition.ts",
+    "before": null,
+    "after": "8b6aee40de7d5c8361f1e0d6a364038aa33513c9b86f474849399cdd8f8efac9"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/conversation-sources.ts",
+    "before": null,
+    "after": "8a097c542fc0a2f5d0217a31c1b6348ff1e9271f8abee036fff86e27d3aa27f2"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/dialogue-recovery.ts",
+    "before": null,
+    "after": "6538b4713092a3f83272c8acef9108f389eb062c0b7ca0a3aec7126e851ee99c"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/handoffNote.ts",
+    "before": "24f22639a670059d998e7cdb9e71f4170fa8598b82bae30e79fd8d21413889bc",
+    "after": "ef018417c5ad4dd78acab5f0cb7451cf4c78c750bfe52f0a5cc55143610ab5ad"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/heartbeat.ts",
+    "before": "95f85d2da870a2fec8c7d3af9cf638d66f1e35965cc49dd656c9ca0d374bbdf2",
+    "after": "e76b9ac8e938b08b156c62d204cd062c99ba3effbd2a6a6947014438a8cbfdee"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/memory.ts",
+    "before": "b6b16d1d8151021273152effd4772288f82283562a64df32c44f404f8b5b8932",
+    "after": "e456d13e82456a60364adaf64d5eb1eaa6da6655cb0ec29069662c3612f57e8e"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/persona.ts",
+    "before": "a93e891fa50b6ec4be0ec0910b5032a2442fb313274a2a255f6c7aedad260e9e",
+    "after": "8a0695c3266238c533b3af48c844a77e7e65a9e542c259c674e259a84baf034d"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/recent-ledger.ts",
+    "before": null,
+    "after": "59a286fd5fd438d61ff9ac8942795fa52877f7c58194add0f16685a6692b952c"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "persona/workspaceGit.ts",
+    "before": "e326a490010b48b82f99555422552a8c290ad62bfc3437f33db1198131b47f40",
+    "after": "5a24942447e881fdd50b5ddcd437c1fd1c8d4ed2c0dbe2c9ff4a40268d617f1e"
+  },
+  {
+    "package": "cortico-bot-xiaoshen-alont1",
+    "path": "webui/workspace.ts",
+    "before": "129b2f8e804b5bd3cd11dc684ef4c9ce6d1e8733836ad13a3057b6a4e2e91a30",
+    "after": "4c065f41f9dbbea28da169aa1cd32e94f99c927e90882c1647098eb9de6ce9e7"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "README.md",
+    "before": "27704413da9b998620d6207118e26cf607b3d7b9968a486188a2d297670bc52e",
+    "after": "00173e66958a2f92bfbe1395cb58807530dc9d286f8b11d35094254b06344547"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "bin/cortico-frugal.mjs",
+    "before": "a3221eeb29b5b20edbc070c563296d6e6efefa20efdfccd3317299287739d511",
+    "after": "ede2a804976424d8725359a14f6aeb5180c45aacd24e76cbcca93fe34b8bcd48"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "package.json",
+    "before": "04322a53334e10df28b0d5471864ae64dad13e249d821a93366de6e08d6d1172",
+    "after": "ee78c88133051c5547e8102be7b84821e46f25640f11796d65dcfce975455fbc"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "src/apply.mjs",
+    "before": "531ec54bd0887121a3f06585a1b83d14fbc62b913d1f66e2b36f79ecf44efb06",
+    "after": "aa9b8557aeee6900cc8fba24c93df4592c360c044534a9291034fa69df0a2e9e"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "src/find.mjs",
+    "before": "45113c589d9dc2b60b2ada54fd2fd30cd7ea4f6ff84947c90e0a450e734b0f5f",
+    "after": "cb5d2abf375434be954669594f63225c611f37d83aa3ccfccbe2e4e601db4e59"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "src/json.mjs",
+    "before": null,
+    "after": "30ad8d0f2e069a14f9183bebaf5b6e4f1eb18799c7926a48425683d0db8fb7de"
+  },
+  {
+    "package": "cortico-frugal-alont1",
+    "path": "tests/rules.test.mjs",
+    "before": "f5d4813436c0053e7f997e13b0785d6fd86ad04bc32ab457fd403c6b7337b67a",
+    "after": "15af0ddd4da4481f18f325a1d5d81c1a16ca305f9b0908d47ca855b8526b994a"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "README.md",
+    "before": "16c7fb222375e48201cec80f66fbc41454987562e1bd776a063952c6c182aeb7",
+    "after": "07aa11ad49cf2d099d5393ea7f454723ddf967cc5564d11a905e4f5fb5dd51f5"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "describe.json",
+    "before": "14126428d66f80d0772a470b7d87978c89928f545f3c57b05a6ab7cf2d6d7a9b",
+    "after": "db378b693b870450e299293e21380160f674564937374aaad064b4b8ff933aea"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "1a76b34ca0d1e5552ab9e85088ca8e96510d9126269cb9ed4e809609ddeb40dc",
+    "after": "9eeaf9ff6975080d4dadbe64e53411894cd202340d8510f91739c200e39f6275"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/config.ts",
+    "before": "ae3987cdc0b94426b083f3bdf515c8cd69723708f6b114cc63b667435aaf2cdc",
+    "after": "fe859c2a82ea9e9e50b13b9f5d82976eb88e23c8f415641f8a6cbdd07f088ee5"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/definition.ts",
+    "before": "53d486cbeb10ee27c164fc4b8f7fffe920696787e5c58b42cbf80a85de13ba8f",
+    "after": "4d4a23ae0d7e12e2096bb4866ca730f5afad00c3166674a5f8a13feea44b8bab"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "cec91b32e7258bc3c324998ad91ff62a9598bc56abf86e9aed89ede31cd2517e"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-affinity-alont1",
+    "path": "src/world.ts",
+    "before": "b59eee16af49c31f1afd6120fa309c590089c44c2c5a23e63ef420641f5965a0",
+    "after": "3d4cc038a53ae354e7c493a23b60d3ef4b95a8246aebdd16dea7058f9a73a866"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "README.md",
+    "before": "b023b9cf999a8d6bcbeb2a42730abcc1cfbda492ab29e9f5f3cf5ea6fdae2239",
+    "after": "f7a4275e7a80198be7ad3398c3de0397aba759e2a36d0e76d391df0160b076ee"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "src/definition.ts",
+    "before": "7edc6ed7d1ce793b58f241fde9a83614031067990ed033ee84fdad9f4cf00bb7",
+    "after": "4240bf9aa03490064c0bbff0c4fa266438292d027c06d68c2691e7f5d6e426bf"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "313fac335c5a7bddd2510c29952b1e5fbee113baef452ce50b28795ee0ec028c"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-album-alont1",
+    "path": "src/world.ts",
+    "before": "4622d27141a9ae6f029b7e0010ab6d7fe3d3cde1e820d77ab32707a82570efc1",
+    "after": "04563a382c7930ebb0d6c56fd687fb458f7876489fd04e8a183428811cbb6679"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "CHANGELOG.md",
+    "before": null,
+    "after": "30e5a43a8885a80316c51186a66172a61f2fd98009086718395e07c12e743ff1"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "README.md",
+    "before": "797271dcb8f822c0a1c8b51ff2b713aa4418d46d78f55c30b5d3c9c93d4d8376",
+    "after": "4213126dba3bba82369c42f74660238ade0785de2d5b37a4e6959d218b88541d"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "describe.json",
+    "before": "9ed1b75513d5bd5822789f57c72a6b84210e6c28904005008908b9442e17bff5",
+    "after": "2249797345f9d86de110b4296b3192a0c2d14b5d742165504e206dd78dedab34"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "package.json",
+    "before": "d5d4f39c4fde2224c3a77d1ceb3b3f1c46c0d7098ef9f0399b9665b58a4f1aaa",
+    "after": "5050d7ecf75ea7fe51fe605f4ca22d1b1bfdca6f2475b3d358d6e20aa6f2a6d9"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "1ab5de1126c845fee2e2d05bbcde3825948ac44b9c779ad7891dd64a83b66d4a",
+    "after": "455a8e52cd9ac3795e726ebb0db33b487f377ba0f48267ba7d12c905e4f4addc"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/config.ts",
+    "before": "efe5e5310aa8289b3a0a827fb90a5407db112b2f6b863a73b78f5c57659ce9ac",
+    "after": "2edc862e89ba1b2017e7cb9f0402f0a42b84339a9b74a3919a442aaea1a174c8"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/definition.ts",
+    "before": "b9baa51949d5857c23ed708189fa9c857f861e3868e061c14cf1f2daafce4612",
+    "after": "07a8a4641328bf8cfdf7b6a35a0b562706a7bf843d5706f7cba933fd1cbe5fdb"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "77c8ad063ef84d508d359e45404f23da3272eea4ea44ea73f19d1c178df2f21d"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-alive-alont1",
+    "path": "src/world.ts",
+    "before": "23457943ce4dc00d5bed467f11dc5fb3c07b3fd633adfbd556806c0f79ac076e",
+    "after": "ae44dc09399532a4f2c59462c59e705c0ee0617d4cf3a4ca55ea0a21be5972c1"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "README.md",
+    "before": "73a729deafe5f700555309e32882e35e542558f2a8b5eebf48c40f14c9cdb46f",
+    "after": "1b621c833aee48c8e7d3b6708414f2184f335f0aa5656a2652632b3faf7422ec"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "describe.json",
+    "before": null,
+    "after": "179080671f3f47153b55e2614bd042f4fa9e79a99b329a4af446e855368a8eb7"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "package.json",
+    "before": "3aa82b6ae2f1f406bd15ca020d60c5db0963ab0cf62d613ea93c0c188fea7203",
+    "after": "8084d394898942feb7edc1d9415779f1abda3ab81d9892dbcde9156b2566420f"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "src/definition.ts",
+    "before": "258dbb3fd2ac17f1091d2b8dc37f8cc65e868424d47e2ea02a49248538f5a00d",
+    "after": "5ded8fd75099a8269c900c4dec84214166364d4a58b0c632a9ac9cfae2b667c0"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "c8d1ffb9ee133f31a07b0da234302df44fd6d648599a048f97b2b573846e6c33"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-bili-alont1",
+    "path": "src/world.ts",
+    "before": "bd33c89083d2e3a2df1bf55a89271374103a3ae0b34fae7090ba75fd3706b726",
+    "after": "4c2f0fc4b4a1abbddc4cea86160bb64364ce3bb5074d15ccc1ad15bc07cb61a1"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "README.md",
+    "before": "5fa422a2899b8630d660092a98e5a3e7a2fc29e00b9479988bccd261cbfda835",
+    "after": "9d832094e5febfc5f5a015efa39c7c79fdc44b054327af42ded44184328c7046"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "src/definition.ts",
+    "before": "fcc96e3e16c27a57df4542f84d1da75fb00952292d690db41305ef8aec1c6737",
+    "after": "38e83b0a94e02f73e16ed1f63887065205cb9adf9c251ec4cee4a0a048f80bdd"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "819524dd821db5c5c1e47387990c6cd78324e8f422f9e25770d8ad547861cb47"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-clipboard-alont1",
+    "path": "src/world.ts",
+    "before": "0f6fa86c7c9d380b4f7140a0e2247222e5e608a19157d8961d5cbfe00975e52a",
+    "after": "86e789e5e10076e6c313febd18d68dd5cd759a342c9dd2290dbb31aeccbc5e28"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "README.md",
+    "before": "f32eb5833f0794265c904a0b9daaee2d7650ce69127e373413e1caa0fbb0088a",
+    "after": "7d2625701f67a804b6a3c1739f09c6e56d2e1615685fff7cec96cdd1dfcdde18"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "src/definition.ts",
+    "before": "05bb365bed62c650fb9eeba93f8e3571d498a5e37ed01ef8e1f708924ef943ba",
+    "after": "5b5cb8c5929c9bf1f424e76ecccabcd45953ed7f4b6de199da72653cbd548b09"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "307678689ba7fa3d24ca689a89b0fd4defffff5de68b4deca29f3a1d01defe54"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-clock-alont1",
+    "path": "src/world.ts",
+    "before": "1b0cc0b61a9cbe60189d434c7b32d96d11c14cb78976e312e4fec62ab93c26fe",
+    "after": "f0caa5ee7e3e7784e2c8c4345906bf0ba370f03cbbcf1a2b308e6c9def4aad8e"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "README.md",
+    "before": "9199bf6e3228d520c7bf0a2858a779ac5e35e11dabeb25c3c54627f1b7288eb7",
+    "after": "8813b00fa1a39bed6dfaff091947140e18d831546db907f05c3b1d5bfeb060dd"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "describe.json",
+    "before": "c6b341bfcfdf189905a1e30d5257ef01520fd3694400611d965b3608be49ac45",
+    "after": "be68d0b3cbf2284c9bbfc949e08273c77879ca712b4246230306db25ad82b109"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "package.json",
+    "before": "29d62488b2f503452f507c7eff6d6de0e73f244d3d488b634259d52ef16b181f",
+    "after": "326a30fbf7aedb89f20ed31c43692be9b37be88879417a02b1fa0d4f1e146790"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/config.ts",
+    "before": "b02651b640f50c4d07862ab5125425ee41fae4a29b0aa00cea5d1d9df4873589",
+    "after": "d47b74f4cb604e4a907b081ab6d72afebad2f8152d3a43c8aef1e6535b1f835e"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/definition.ts",
+    "before": "73b9218a166c8b5c97123f37e6fbdabdefe3bf5fffb318e340e9187f82545884",
+    "after": "1923481666d68bc3907947aa9a24ecd3cb32f187d5f92c89a4b22c0241e68c1b"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/engine-ipc.ts",
+    "before": "d170c7f88f1d0d4ac2cb104623e15d48fda0294dc29e2a7c9bd9be2dcc13d200",
+    "after": "e2c1f58fad8ef4769e7330d463ddff4df109e29b3626b026968658187eaad16c"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/engine/win32.ts",
+    "before": "04884c9b758927ea53ce17bc329fe23f2448c756fb9e4bfc7ad21fbcd6eb8d74",
+    "after": null
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "3370207596e44c8a15e4cd7614dd5e33c6644ddaa9940451bb094302d92dd4d4"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/tool-decls.ts",
+    "before": null,
+    "after": "a4f5ec4bda7e3c9bfcc71e5a3764e8369903f49d84b610d76d127112ef0fcf59"
+  },
+  {
+    "package": "cortico-world-cua-alont1",
+    "path": "src/world.ts",
+    "before": "8372c04757b9307865844633617ab9f14ca61621d907b70d770053608cb528cc",
+    "after": "bb25686771a90ad7faf0b7db906e5788751ff0f66dd75e2ccf9112ba13717dc5"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "README.md",
+    "before": "7b49efd4a8c5405cdd54a3ee85a218da70fbf9aeac600802e16c4a87ca85d9e1",
+    "after": "2f0cd0581df2450fac70c76b735e5dedb4535c5b76c1bcac4bd6189e17499bc2"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "src/definition.ts",
+    "before": "e105a0b3844a8eda2b8e1f2222e450b22647a6c1616c15924a3bf5db68d0d08d",
+    "after": "e394ddfc5eab79977a786e5d6b19730222239381fa975ee52a0dda7ee9108bf1"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "0ef99fd60aa6e3e52f664442fcd1e5635519961c11f243e6c23a3e69b9ed6e36"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-diary-alont1",
+    "path": "src/world.ts",
+    "before": "13f2fc3e832bfe0b241e918201d0a752ed71289ebc2d2dd0c56b61893edd00c5",
+    "after": "da7a686ab612ef15edc1e6b9af27d17897786387a3d8d540e13ca71c0ebe13e8"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "README.md",
+    "before": "8ff31df82f8502f20f5926451a3725c632ca7f348b103c64b21a92a6da60f101",
+    "after": "1ded6f0a0004604d905b8bab8f64a76aa58cf8cd52712f67da61963c7c74819c"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "src/definition.ts",
+    "before": "737cd7b3091b3cd7dcbc768ba17846c72cb7cac34cd82c13ab36e0a0375de03a",
+    "after": "5b41ace1309c5b19fc1b56c0617128b47ed7f37e9e999afa6cef1844d70d8ecd"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "c95884ccb55297d5e6b6e716f26c4b3468d6a3467061a101dae48b348f964622"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-downloads-alont1",
+    "path": "src/world.ts",
+    "before": "1c0a73c863cb70bdf27f4319e19c9da7688176d26ed30975a98ba6d9ea86bd7c",
+    "after": "814f43d03d17ba4520eadf88336f3cfc202f65d060c98e627dc9afbbc0a6afc4"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "README.md",
+    "before": "be514a4b6284154db00e73ded751b7e99464b91aec1ca1cfbd5084ba2a1561e5",
+    "after": "f0f4cc50caf5a4edca83bb7dbe2cf7340abda7a452a244942a4b2cbf1f097a67"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "describe.json",
+    "before": "983a46089140e5f67986edc5c48f348e66c67ff14d094c213e6b3d31775f7899",
+    "after": "a6c3dec7775883cce7d5296afb3ffe941f9b46c175fbb6adbdd9d631b58a46b6"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "src/definition.ts",
+    "before": "81b9b06283889170faf3fb3334c3f810645e962e9b8eb829c33d615a6063a349",
+    "after": "5fc5e7d4b40b9c6afb6d211288bfb1e75b84a71b1214bbd3a5658ecaf1c52317"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "fdfff1d715374c6bbfdc097e4eae21fd94a59aca9b0db252b156502ed728fd11"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-draw-alont1",
+    "path": "src/world.ts",
+    "before": "3e1dcd9e21ffbce7e8526d7b6168e4beff722d14c29fcca2e6e3c7b4905f009c",
+    "after": "ba82014fd5f17d5605ea00417ad56b4cd550a1892e5c2c3c85471e2bfbf73475"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "CHANGELOG.md",
+    "before": null,
+    "after": "c1d29acd5fa5a715299c8a0023c5835fe9485f104484e1e0c035d9b765384993"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "README.md",
+    "before": "d0803ea2fddb13c3a24dcf6097612063518297015ad749a4b9ba8d2702e02889",
+    "after": "62855e0d1da8525a19d102298f3a92926d08cff9df356f1dafb43da64c481232"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "describe.json",
+    "before": "f06c9a188f6fe5c0ad22f508eed89f93a87dbbc98365bba646d9b621f3844838",
+    "after": "b410f9bd50e158096440dee0157013c2a517b0cdbb4d63c792c92844746162fb"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "package.json",
+    "before": "54688a96ba7b6bd3b3c73c3d87bdcb79a71e6c54f5562dc4576af78c1f46de67",
+    "after": "13e1c9831aeb942cd7e5d1a7bcf3499d418d49cbed465ea7e90dee24e7925348"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "586d66674837f83af4e050cf9b9001996cd3241f670476bf87c993199d701314",
+    "after": "4f7eb75f9dc583078a26723bf98422d405522f2fb1d1ba4a497cf6ef46347438"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/capture.ts",
+    "before": null,
+    "after": "77ee4a937e262620357f7ffad7168e3ecbfcbbefe03669c8749f317bd47fa023"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/config.ts",
+    "before": "6c177ae5b480d0b403f4ee9b493f6ceea39970005e6ace3a1d3f93e709ee3b7a",
+    "after": "3a074ec3bd33a7670e00c24dc8ed3c73a72cf3c7739f9fd00ff1765685c37086"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/definition.ts",
+    "before": "cb482518de2b938a31c6faf327189f401b3971b8025f6976782b66d0b0e1e698",
+    "after": "1ff81d6dc98f5a6d9c134f836e0daf22b68e1db56cb3f12d2a443090353286c2"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/games-lib.ts",
+    "before": "f34d18eabafd629dcb232898a85dd28441a4e225029d51e8dd0a71f78d8a5733",
+    "after": "685651dfa09b7230bae052515c8892f42d64a6760532233cc8c86f11bd6bed0f"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "998e1f30cc00ea97335ed7a5f4e00551f0b4ea5444930dd8e05da8e51b5fd1a8"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/proc.ts",
+    "before": null,
+    "after": "bab86aca617e311444aceb3718377ac33372f9bf69768774993e1c6a566899b8"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/screen.ts",
+    "before": "c038b286f9690d346bfa015893c05321231937fa0df23e31147a297bc2637928",
+    "after": "4ec6ae1c8d96d5cd9502b32cbc45742ea153b12f15a5790b4aabe42c2fac3a6b"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/storyboard.ts",
+    "before": "9d490d644dff1cc1fbccc6955cd71f9821b99263efa1fbdf4650a5baae19a677",
+    "after": "f6102e61224f3ee629859f154bcd3dee3f9d82091ba0fa8682bc089614c1bbe7"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/tracker-logic.ts",
+    "before": "46d98c0e33e67e9f74010df4f01ecaef3d82da8789f61a9b10009211f8e6852c",
+    "after": "1950fcb6905db4f65f05fc750ed3b3f9568c1b9f9483c98ee0109c438c8c279a"
+  },
+  {
+    "package": "cortico-world-gaming-alont1",
+    "path": "src/world.ts",
+    "before": "f15de848438ee2313110676cfde6b23ef82584e6ad2642fa58fa5a11f59c9b59",
+    "after": "893827a90f35b1e5c161900f6e99900ba96d266d1a93a49e21a97ae14fcdf9d1"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "CHANGELOG.md",
+    "before": null,
+    "after": "35d53daad6e5f4934cbc8652f5b0055cb0b84e81efed7f2abc30e4066b90e210"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "README.md",
+    "before": "1b5969edecc0f462110a81d840ec8dc9a1d3162961daacab922b624a03dff706",
+    "after": "531c7cd4c71eef5847124967c6a0d063ca1cf8346d4f4d8bc951aafa9162c1e4"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "describe.json",
+    "before": "b1bdff14faed79a5db2b027ca8be4515bd4f647b77a82d6463dbb2725117d566",
+    "after": "764784d040b8cc0a76576ae0ab5ce5dac5e28033fc28895759b9d2710b5a77c3"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "package.json",
+    "before": "8b4602c4e5505861f2884eed429ed9a07075cafc30d3175d3744c500c8f7852f",
+    "after": "fd990e9a0bed0d8ff19bd085c4ceb7535571fdf062c3c53e707701ec74e4c0fb"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "c93bf4d2d29a2bc983ab3270345dd9440c34d9f072f0bc2b6bcb061a26a249d6",
+    "after": "c4f4cde08c0be75158757c74c2087ad245909f47b48eb0f77d4498b6185a865f"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/config.ts",
+    "before": "b853572d9826ed18047b6a2b6637900f10f97d69fd1fb375ab32155159744c04",
+    "after": "53e4d2a79b5ce9c20e587c72a3fd46b7d8db8b7fc7752f00374f6e9ff2dc0796"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/definition.ts",
+    "before": "f55ec56191676516567161342dec8363d2e47f53a599a3a7ba81b70c9eb8145f",
+    "after": "1cf14cf8388649544812aea2ce5d7aa6bc4e552965ecf12947a1440ee441421b"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/migrate.ts",
+    "before": "79fd55f56585fbd6194757c13353d9ff19e56d7e4b0462197ee55370e42b59e0",
+    "after": "bfe0a65425b015c08ce8323a76770a5d25b400e75475b42b7c8b18b3ba103b4b"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/affinity/config.ts",
+    "before": "0cacaa1c9f0522527cec54ad31949ab541df59b02a3e1ed53fac35aabc8b1bf6",
+    "after": "43ed796752c39252218cab5ee2861cdd007f52db91edd342577e08ab8d489724"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/affinity/world.ts",
+    "before": "7601fe5fda4e247718d4657fd3355903982eb5b007eaa8962d711bb36e44e40a",
+    "after": "f0160b624c6a8d9b8fcfc1405eacaf586b16bc8c37c9ff1a64b4a0616d378237"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/clock/config.ts",
+    "before": "7d89bbad364b272b18fe833f0582a4cb5654bbbf4d02016a3b3055db91a49698",
+    "after": "36f90ca3fa46d2a4e72d9b7d48aba37590582c97eee2e3c6484670944f8e758c"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/clock/world.ts",
+    "before": "ddb6b7eb3121c3b8a6eb8a511eda4f30682f138d197aea2be3bf5bc5f6908468",
+    "after": "01c5b4a35db5f603e71db48e316aecc3e92f36723f4a00968a6ec0f1c889b737"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/learn/config.ts",
+    "before": "2b53e728b57d8b9f143fb3e917a0e1a540a097545f721129f80d500ad6ea9e19",
+    "after": "0b2bb11eb7172043e39e5bc40e16b0b331653e1af6180775de854b4e18ed712f"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/learn/world.ts",
+    "before": "43162227ae0a46cefcb2e253875a5c1c1f7c8797a7197367700ea19f7b8eef44",
+    "after": "077c0bcb1e3fbe0205bbefe4550c001cb927c0df3ae669fbef79447c700db09a"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/life/config.ts",
+    "before": "0e3ef80da6a1bd539f932470989610c1e9ccd0634e3d22cb1e02c4924f63aba7",
+    "after": "585cf330f51fb9ef2457acc9813cdbecc2a21dd6869da15b92b2db151dc271b1"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/life/world.ts",
+    "before": "9049e5a7e187fa3e185ffc004ed87ba19159b363fc47ffc23902be5672e558ae",
+    "after": "f7ef704831e5635c09bfe0487181bad74b4b0738bd6f5497e1ec8e2c2b319d0f"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/mind/config.ts",
+    "before": "4bf954fa84ac20683e40f7b749023732aa163bd62dc0012eede43b65639a12db",
+    "after": "823b6fe2651f0509dd0ba1511664d0c018a3a45f59aa71afbb6c904a42b2c1f5"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/mind/world.ts",
+    "before": "c58d6a33184910795cd5af519af4913ac53ac359c2dd47eece112daa32ab498f",
+    "after": "9cf3073692d473ee45e15c970f07661785b35c936ddc74f7380434b418720cc7"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/real/config.ts",
+    "before": "ad8c5ad3a67202851f3447ce14cea2bb9e20ece0d59a69304e055d6afb56b1ef",
+    "after": "74af020f808e0ec828bbc30c125fd6f142142aa8be168659feb8e29b867ba8ed"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/real/world.ts",
+    "before": "56d309657de962fc325affdbebc95312588a99034ce171c93613af29c2c11d7a",
+    "after": "a7f0592a91002857dba0363b3ee48a272cf4c21ec9c89c37ab65b08b29bb1ac0"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/together/config.ts",
+    "before": "cc7833d22d21e4d7c3bba2b252e793348f63c90371575cdcfed446e112791566",
+    "after": "49da819cd9211da4dd95bdf1e880e456aaa4d9830ef5fce93355502671eaf3c0"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/modules/together/world.ts",
+    "before": "73114854059e4e874258b3820c767f3730ce6094bacf1c08019b40c85729371d",
+    "after": "4e56c29d35016c97cc60941f3e00fba2a88430a6583ded53065b95143a0db7da"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "567d9769045afb9cd5e270c86c8e3a80a0f19981a713d55ae73a0cc1763e0f50"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-humanlike-alont1",
+    "path": "src/world.ts",
+    "before": "f662f13ef1ae115140d5f02003182d3a9ad9cac41ab5c80ac6a518751eba0a51",
+    "after": "d5439e189e73d2629af553e4df342e7a2eb58fd2f0cf9b60151fbd006f31c109"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "README.md",
+    "before": "5bc56661349fd281c269f15ac8d1b388578b7d8aa851de44e697df17e2c14330",
+    "after": "0f937918e942c22215b4c4391d806ee476e181c9f3737d8e8a5d56b5408f1552"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "describe.json",
+    "before": "e53123c8b8b83f197e4be7790455c7498204b0cabdcbee13126d3048303e8d34",
+    "after": "c9c30eb00e548ff8f725228efa2ea37b6908ecd91624eaba1cc6b2f6bc5ef20e"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/definition.ts",
+    "before": "52ba813010a4d6c993d9cebc5c301e19de4f757d705d7b010d313d006e9dcc3b",
+    "after": "9833ac2b3c710fa4ae1188848b5f322eec26d2751e275fc6ae922a73953da02e"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/http.ts",
+    "before": null,
+    "after": "67b9bf54d7c110fe6377a0db32958ea1072de4e47d573806ec3cb6298fea2c43"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "4714a70b388516656b2024f634f06455be282721c47951e3b7fb90160733da76"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-imagekit-alont1",
+    "path": "src/world.ts",
+    "before": "a89a0feb3656a6d1eda9a30dc4cdd025fce042fb2e7a0f137b3e0b9c83ab499a",
+    "after": "2059498da6f7d6046c579c3c3f20da6435a7d2b056ea3a5f54b39bc2cda7f42d"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "README.md",
+    "before": "99df25970b262de6079bb8ba03a42493a2e2eb63ae644d586c3c1fbcdf958f7a",
+    "after": "ee6d24c5d72a27c43d9db91879d978b56a0532ed7c9fdc0e13053164b45f12aa"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "describe.json",
+    "before": "9d61cfb4309c5d14c299a7e5929d788e43c77a0e19c54c7266e21c9126c28080",
+    "after": "c518d7537268a59483c45de1669fd655c6b93c29c88a6a836a3e27199e0c8269"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "9b47e302e30105c814f7beb000322482f5ba6333ac234284eac88b340214bcc1",
+    "after": "9ce346709ee44037417c6be3d375248bf594e324c5c6ac9f0c624c15bef2fd83"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/config.ts",
+    "before": "2f777a2f0433e6c64dd9119d7be2d136cc4543ea2c2f59c16ae2df9e10a7407e",
+    "after": "280e0d9e2c8e7eac9ac61b1257056a8e9f3aee1a538cef6c8e0eb84e9df905b5"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/definition.ts",
+    "before": "766aa32e69175fcaa729e698a7b6114fb1ce7fa04afb8f8b5bcc207a27e0cfa2",
+    "after": "0c65623b0f4411eed054391a5e66ba1c10e58456a1d71e72e8178657bb9bd24c"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "49b2b1a62434b6a57471a2c19f002a149febfe1d15551cc4659111006574ec8b"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-learn-alont1",
+    "path": "src/world.ts",
+    "before": "0386d7cef6176e48415d56e95dd00588166177e6de399fd37f641aeda9e29dbe",
+    "after": "025bae851b40f2f592fd7fe926171db50bbb3e3a8bc6d59fcb508c4ea7ea5541"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "README.md",
+    "before": "d4078f7a618d367ba3fcc87160e489795f3306b73bc9df1a9d0dbcb7d1f69e53",
+    "after": "b798ac51b83a763120fa5896677285a0b451f5bd5e6d3ab1eb2d6c4f7a4555ec"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "describe.json",
+    "before": "34626dd846f066133835acd332834cf486b3b7e2ed16680d61499a71b07fc028",
+    "after": "0796b5c8fa2f27c3435a0c4e075f77b88bce575efefd034d1968d8d67c34734b"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "771747b5b80839989698d10e297a80b44e3ac638a7e63bd7629d0a0c87cb0d2b",
+    "after": "9e9cdf3d1deb4bb9ec99ec20c687467acdc88bc82eaa6ca28437853d6b5ca9b5"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/config.ts",
+    "before": "eefd29aeaa0fba4ee29fd614c5433aae01f29592c868dd406260d10a396c922d",
+    "after": "59a1f071a35bfa0681093992d988ae372493f7d991a0d0be1d84e2a9bc91bcc8"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/definition.ts",
+    "before": "18805502f66b50d82aa5d9d8df2e1041bea85b4220e95e872a493f0fd04f6e1c",
+    "after": "e3a16402e75d96d1d5ad1d773e242a232ccae58af98e284149e115566aa44700"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "313f8a35541c12a6701eafc5b5a1ee5ac579c24ec98338959ffa38c9b487de97"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-life-alont1",
+    "path": "src/world.ts",
+    "before": "7d4c8bf4e0ba6babc360abfce0a1543af15886b020712799eba0922bf5bc3f55",
+    "after": "6229397e94d64251cfe90389e8313583179ed0c893ae51fda6c24151d99e0fe5"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "README.md",
+    "before": "bada8bdc626b55222227f0f68c1d1a1eb9ea326416e2bbb239d902729572af6e",
+    "after": "548746a123c0186d6eeec272d80b240f0f71e6c217ede8e8840372182949d020"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "describe.json",
+    "before": "c2c5a49eb190551534377ac328eaed41538c3aadccb6369d16858617bdad12ba",
+    "after": "b683e391a87692c537cc5d2bf4f918fda8cade9cf4bd65ab9ad3c401178c38ff"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "dfd22270dc667ae8ebda6c39a841f1bb44d686afc8b5ff54cef6077fb7bcf1e8",
+    "after": "f9d0d74fbfb68e6cb2c139e756979f7a3c8059e304d14731034968579aa56e4d"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "src/definition.ts",
+    "before": "f1a6783e7cdb53743614eda59d3e2094de68ca30cf086adceeda66a42085d439",
+    "after": "3ad037cb07dd59c50ab3e81c141ee044921ce01f0d8358aa085bb12c0aaba4c5"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "b42a9529171c7f6d922d83d00e037a2a8dfed436b64e67d4817e357dbd30af19"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-lite-alont1",
+    "path": "src/world.ts",
+    "before": "f48c2ede3fbbb3a2eb27623b4d7379eec032355e2422ff4412f486e8cbb9f5c8",
+    "after": "8bf3845b66fd3b746611398e94228605e52b3ddd97f088637b5abc88133a4dab"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "describe.json",
+    "before": "ec183e59245ff8ff0cc1f8ab7d874bf9472ef29b993d585ff0c86480f7faf213",
+    "after": "30dad90d276854dc0284294807e631a8d72da85bd70d953a81d0976f39862d92"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "src/definition.ts",
+    "before": "f1dcf4c334ffb5319215aaa06a3b9a4c3f790590bed52ff1dc62fbc69c824fec",
+    "after": "f491981fca8ceb7dff95319c630f9ea2a73db9d29659caa7eb1ee0a023d0ba7a"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "b51a60c219b2d447551d4150c655a4f881ecd0aa9894a2c4118a3572673e722b"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-meme-alont1",
+    "path": "src/world.ts",
+    "before": "7412da36aff8c261b14c51805831a6944be07c90066912746f36cf8b40b04188",
+    "after": "9a49e48f81fbbb7c1070b2570ddb8df9cac7d76595e7aaaaacc9a6e7161e2576"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "README.md",
+    "before": "691512be36dee330675cca5a1b920001a09ac1427a0a7541ca40f1ae6f580ee4",
+    "after": "13fa9d7c8f1837a26581d872d7b2090f321a49f44b9be2823acb784ecbc89361"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "describe.json",
+    "before": "ec4b4ac927b335866a561fe20f3e5a8403f2da67bdbd9d3a2d85a5620488eadd",
+    "after": "2c8d8500723acf1502c07b842e639b3f5f28445ac29a43aa0eed8655d7e6b43d"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "9ba3e4f4eccd62b703fdcd241c6725aaaa3f70d9d5f5cfac71cd4aa15e51f99c",
+    "after": "dc56e89cfe24fb4a5b20fb5dc3d435e2cfdad039ddeb7fac77e56e2d649d4fd5"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/config.ts",
+    "before": "575abd5139ce233230b52aaac492aad649932c273a3b69085fb8996a213678de",
+    "after": "eb63c02d38bc844bf0a526ee1c1e1f77fb2a90141179d05e40aa0c90a2f445fe"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/definition.ts",
+    "before": "83f5bb0784c4ec3c88d07eb5ecac61f9906f8b6cc3f485400ceec0f11aaad99b",
+    "after": "91a42ecc7a19d02971d5481ab6c4ff9d445698d1d091d5d5bdbb7a2374496c6d"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/examine.ts",
+    "before": "1f9150b1b2a62c37ca8ca42055de064457971811b62fec7d7a668648357750b3",
+    "after": "1512c96dbf5538937803f4dbfaae295ef92ec9b86aea557b4f129415836e1f9e"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "3d6df0b3c708173d906dbe1af6e6e5804dd88bf458dcefc8811b775a8ba15dd1"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/source-files.ts",
+    "before": null,
+    "after": "5431b1cafdfe65607ee168235b73dc2cdb41a242d80a0cb03692152b0f4316c0"
+  },
+  {
+    "package": "cortico-world-memory-doctor-alont1",
+    "path": "src/world.ts",
+    "before": "10796a84306c6be91a6c6b02d6f19637bb6beffa7805bcba78d7e68f36e6b049",
+    "after": "34a289ed1cb8501b3d9d7fdef16d2edcbf5c1aacea3627d771335b60d446d6f9"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "README.md",
+    "before": "1ed96d252bba7a2fb573ba2a41354f4b94dc2951d299c3e53cc2257c0c97088b",
+    "after": "2d645e49b63e87e82954d8337f504d2584c2c5f85c70fa0250c248b74de9222b"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "describe.json",
+    "before": "942dc586bb3daff279aecc79d159b36db32d00a1d151746f545e41b7925059ad",
+    "after": "7348f54018b1157571c5ac727cc8cce96ebc4b5a15260093f6d6afc10def0f13"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/config.ts",
+    "before": "2d420c4d147464f3da063bd4170a4519d70791a74663b30a18521dc6295d49ac",
+    "after": "d05c2bfa905f48a1f5e26c629c1f647c6f3df37e047ad2757f99d515eb03e24b"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/definition.ts",
+    "before": "3c466023befebed2ad520504e5f1388f23e5702ba872441e084631cbfcaffa75",
+    "after": "edf8afdef2553be632090bf03f7cfeea493109dbe3ac4f50b44746326b99cd8d"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "19d53f5dea7d10bf664251c8968e9fcc1e30bc04713d38238168bc71ec029e99"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/source-files.ts",
+    "before": null,
+    "after": "5431b1cafdfe65607ee168235b73dc2cdb41a242d80a0cb03692152b0f4316c0"
+  },
+  {
+    "package": "cortico-world-memsearch-alont1",
+    "path": "src/world.ts",
+    "before": "5e9b52f83ea00ef3ea34966c5d5a4b7b9ac09a288a5fcae2421460eb1ccc5ff5",
+    "after": "093115053e5a38ae235bb0d6609238c17d6ec468e3ee43bae2b2b5cb8972d586"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "CHANGELOG.md",
+    "before": null,
+    "after": "3e92089aaa94ea5fea3e663f21f5dc67556ce99b009651be839061a34e36b809"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "README.md",
+    "before": "702f2b9d1282b80ec749ac77fb4031a043d9965907e7c94aeeae5a790be8c40c",
+    "after": "a722930fdb83386e43d0f31ffaea9f817aa5cb83876c2d3de240a014b3329bfa"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "describe.json",
+    "before": "1757166a1b4464de6e00958d4ef7b9b5b29594c6a4991cbfbdc8f47525dc5d9e",
+    "after": "67f6a4382fda1f0a654b14f8cb005571dc663a22d29788d8f10e34fcee77b47d"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "package.json",
+    "before": "7d3c9686c4875fa0537f5470518b87252ec5cce4867f83f90dad7842412705a7",
+    "after": "6fb88928f1c02897f22fd77fa812e506ffbdee4d2bb061982e9eac5a66cf7d37"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "e33e26b96c0cd79a7bbbe169b62ea2376619fdb3b0e8fe51ccb93cec6545963c",
+    "after": "1e1f3a9fed5e748bff187d0fbe3aa33bb290132164cac5deeb766f2a20f5426e"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/config.ts",
+    "before": "66c0e4487b4c803f0a77fe30d1e35a6d812afb52f0ed60bffa9fe499c6ce5428",
+    "after": "bba24c29255be9138d0ae9e79d3a5e8fb69c8510b9270401904da600ac55c99b"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/definition.ts",
+    "before": "50ac755baa107ec7d9d304ccd56e4867e9b9ba06b4d0b503b07cc7a4450e0237",
+    "after": "3f50ebfc324e9efe514268cc6b0d7f5f8d6f5f90ce92bef0ba5ac4baffc74ffe"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "647074186344cc8c1fb01c66a3ea8e082b89b0681471b2c6356a686c9ceede75"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-mind-alont1",
+    "path": "src/world.ts",
+    "before": "78e26525de9ac6ee8b5dc3427fa2eb0dc0d8a755e9e5c2f2d3577cab023a59d3",
+    "after": "4b7183cac0d99ecd658d6a216cef212fd28d51bc6aaa5e2d478d2a94ab5e5789"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "README.md",
+    "before": "705d49ea57755ac1947461ec5d91d4362ac3c4d5fd03a038cdf17b1475cebfd3",
+    "after": "e57bbe191e7547160bf20114dbb885b39f019f747b7b5a762b88417a2993db67"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "src/definition.ts",
+    "before": "64ac48c46a32962c38c5440481122f47785064c0bfce026af58fc86cf8ee411e",
+    "after": "9fd68924ee9cab342839f079072180def60355e77d7312f8c85102de6c5f0a83"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "86992ba4e8f1faf71b82cf0e4ee69c7f2bf07faefaa15ce4928e3f35dc9e351d"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-mood-alont1",
+    "path": "src/world.ts",
+    "before": "9d15bff484dd6c377af29063ca55ba3e859615878881dc0791d8184fc878acff",
+    "after": "005ce2ebcfb75e37d409f08ce03deee9a2f1f0cdc7f8539a5c033d660fa3a4d7"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "README.md",
+    "before": "b9542c94a786e1021ef75cc1e9997e9570b1305d3a53a0f25e8f4c1f00ab10a2",
+    "after": "0151887addb2bd5dde35488d17c4b09e5388ce3045c176b599ead7dc9a597a8b"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "src/definition.ts",
+    "before": "831a2baf4fbc1c517bb5a3270bc50ba990a607b6b3f7fbc81e3282d8e139ebb8",
+    "after": "86fb85972516f55ef45fdac3fa9b9210b7793f1b722afe0db53d89e34a6d0557"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "38eca2f2c384fe7174d128f59449311aa4049b2daa15f6359b06af91a193fc96"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-phone-alont1",
+    "path": "src/world.ts",
+    "before": "7dd5eba4c808b143bd0ce5268326abc3b9c00d6b797e83bf567033211d250bbf",
+    "after": "aa72f66a4febbe6d656007f16255d93cede3ec64fcc239d6a1d552efa223a1a8"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "README.md",
+    "before": "a7dec4b29581373d3562d8e5f31ff63fc5660c76860cb5aa73ff5388e1188401",
+    "after": "b3b82b6525ef3f96a1eca421016de18c8d083e7b9a00fde48ccb10145442fa5f"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/definition.ts",
+    "before": "b23c4f786250398e7ee7551b72f9a0d3598e6c251d754dd70eaaa726f071957b",
+    "after": "341c25dac4fcc9979136a9f663a49f8ac6dcd86db7555e02bbf9cb2a844ec341"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "9f0882542ae40e66451c3579e4edad10b068548bca5670350c4876e4da6b89ad"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/runner.mjs",
+    "before": null,
+    "after": "75d6d07a23f12b97ff235492b108dd5bc22aa89ebe86d1da125c6ee7b7d04403"
+  },
+  {
+    "package": "cortico-world-playground-alont1",
+    "path": "src/world.ts",
+    "before": "e85139c77b85ae43b50ba14c478a79ce37b784e428bfb838d1e51230c506897b",
+    "after": "a3cb0acfb594846edc12780cf6174eb64712cdafd21dfecaed49fdae5a49c02b"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "ENV_PROMPT.md",
+    "before": "e1b827bc5bd40f03bd1e3998ff34ac517767345efec956b07723029ec4bacf65",
+    "after": "2ba12c5c458c02b8b90ac33d67333b977b09de7488d9d1d7624ebd3a609b9fbf"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "README.md",
+    "before": "b4c9014f1d5d43292aea5ba876ef7b40ac4b040dbad427406acfa3f5138958a1",
+    "after": "7cab7e18f345bf82afa59049648b339066b9dffc9422c74c91e595cd4430e0a2"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "describe.json",
+    "before": "ddbfb8066a1a62243c834b58e4c0332eb131c9329ecf0f4282470f85ef340c41",
+    "after": "bb6ccb2ad3f73b4b4b89939f2eedfc3a41c6eecf57848e85d2fc49940958aac5"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "dist/console.js",
+    "before": null,
+    "after": "40173496be7bcfd0aeaa80f27b83897af553dd04e419a37b1ee4acec62798aa2"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "package.json",
+    "before": "2aa975680657f01cf81c2113896cb5532378e2ca1ba8c79370bc7ef03aba99a3",
+    "after": "0e95576a87303dcad3485d01ebd3913f4fcf1a3d51a79b6f80496131adebb62a"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/additional-tools.ts",
+    "before": null,
+    "after": "58e494fe10547644f76ccedabeca481639498c94a5d4cb1959dac4be19560a9a"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/config.ts",
+    "before": "ca6e5af63cc29c78e2130edbf0e75dca9eabcde5cf581ac1adc481f823791e9d",
+    "after": "0c3fa42073ddca7cb0d125f8eb1d6f2170ac6517429b4b7c67a34843e7975616"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/definition.ts",
+    "before": "1975fda795318f72643b13b6fef34a900d6ce07bcc321095280852380a6a596c",
+    "after": "0573beb91311d79dfaa4ec9c9caa7cbe3c4e3980eab70f0d737c73bcc92ba59e"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/groups.ts",
+    "before": "2c9279bb314e08e947287e421aecfbd6f9f33658c54902093248193cd2fdfc6c",
+    "after": "046f64d1153b2a5fca774648007138dc0f45158a8878edec5e1c1dc52636a9b2"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/history-tools.ts",
+    "before": "b2df77f6f60a99779192a9bc347d3430c32cb2af5afb3ef7f4b0435a7a27d113",
+    "after": "70a358c8a20890e723e636e24da5f5cad1113bbd8e5c982d01285e7560712933"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/http.ts",
+    "before": null,
+    "after": "a722ce7f2de75acd435864b02b52de957b7e28af86164212b93d8447f595f3a2"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/normalize.ts",
+    "before": "f47ebaebebcb82690405b954f8d0705e7bb9baa8dc8d01e288e99f944df1f350",
+    "after": "96e993e926d65c24d714f6830b36bbcf87ef5434718f17d15551076735517d8c"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/notebook.ts",
+    "before": "ed5eb738afb0ba483449d095093e3617df0e7d5ca2cca98bd1cfd8e5ea35d40d",
+    "after": "fe66f10878f63d112a282f09c8f522493eb1b95821fa482cb4dfd471f05d351a"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "ea7a3b0ee5be7191d08d34978bb7116f1d2f74dd2665310ce40aa779b6a64676"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/people.ts",
+    "before": "a27f5244a3d00db91558c332dfc07843fcef39274828fb96b66ef09910756e66",
+    "after": "522f8dfb1cc592f61fe2ec33560d17075e298804da00b58959fd1ec218f805fe"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/proactive.ts",
+    "before": "3aa449a4808f1a9252e1acd7775af42fb3035fb1c61bb710296a1312448639e3",
+    "after": "85d69821ba54e88e831e0a1d86314c28539a6954ec1f4677580fa81859e40b88"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/qzone.ts",
+    "before": "d56f2cc75be514ef9442668375b2e9bd942615c3671b02bd4c2fa4c80a3ecef5",
+    "after": "e6cc2cc756c315ec67d83861c96b243d19f9bb7ad6c2776c581560e788011bb6"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/sticker.ts",
+    "before": "3a5007de75c1a0df7b464782b8bb6f430323a188fd6230ae7fa2d7b15b9b5ee4",
+    "after": "960dd352672c5804fc0e64bc8d4b9a324a05b68f4bbe0c4646ac8f14e69a7dfc"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/types.ts",
+    "before": "e118da2acabdedb86c41e07494c477e3f0e9979022c482dddcdbc9de6c26dde5",
+    "after": "910bd50de9c12807be0c6e9c6104d1a68afc519593ef4a4df5d0b7d150c8611a"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/vision.ts",
+    "before": "ad56b328850f2561095f318e5b8f5c40700de342dbfb1368f0078d2a971b18f2",
+    "after": "5caa69f74546c752e926911b40000f5dea0f103c56453b0834628dc0a953e29d"
+  },
+  {
+    "package": "cortico-world-qq-better-alont1",
+    "path": "src/world.ts",
+    "before": "4a8fa498463e3314558f10663cf9a5f25c511e93fb977924b5e5038bb5b8a923",
+    "after": "962f2040e791701a1f45c00c9090d8a1df2320ce974a1ef55bbad8a135e93897"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "README.md",
+    "before": "e73a96a91fa09c7786c1c9bd9a61e97e3ff0b16c0e7a1b9c3e8b8f4e9782d751",
+    "after": "23c07f24061b7805b5936711aee8fb878c0399c835d1720887d87525d25af8b6"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "describe.json",
+    "before": "76ef63480c05d75a3c545ecab7d415278e87c422501e89d4b2abf019fb072cfd",
+    "after": "8252da061e64f28dd23e96ad9998921d8556d4b76bc1e9c4bdadfc588c593c98"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "src/config.ts",
+    "before": "0dc5e49e69be84831bc7bc5257af56fbedb0b947360ea50eaf122f22c6c22900",
+    "after": "2b1c94b2cc73184ca0f481ecb796daf5a04c7d6da328b07fd9c1e5dbf502ee6a"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "src/definition.ts",
+    "before": "8f4fde6189ca9ff1c44619b5c79646ce4719fcd5d3291f5fe3d32825545b44eb",
+    "after": "5c101133a373c987f8fbce27588f1e124093fa0fb0230e0b1c66c898375a3224"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "dfe16042ae5e5d19f7c84b8fe8004e70837e01c3bbcbfa09bf5d3cd097cab55c"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-qzone-alont1",
+    "path": "src/world.ts",
+    "before": "eb0b7f06fa82dd0bba34fca028f4df8303c0f6c6814330e5a1d833743f3c59b6",
+    "after": "a91a0511fe02bf1e4f4447708f1db170309fcc843f8eb7e5389876e74220f041"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "README.md",
+    "before": "2872e6a359e53ca2ab715d2aa8a4aabc99ed84567913d2738a6c50e66066afef",
+    "after": "21c452ac75307dc46a3da162e8a7c4f8acea6c725f1d2b1730c0f10bf34de608"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "src/definition.ts",
+    "before": "f57b8f35065ca993e59c4320ee4f433d23a3a7fe628f5de5248dd110da60cf3b",
+    "after": "914a5a0d6ac3616cfa7dafb1f276f37314f8aafaf0267e8f1b79e54d70279551"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "01d649ba31986e08aa41f987d47541ea3db8d42fa79e2e0dc7f53c525a83b288"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-real-alont1",
+    "path": "src/world.ts",
+    "before": "c78958e2f436669f36145dc88de080dc52c5dfea47a4c7aabd7cd06e6561a2d9",
+    "after": "b91c95e0ba01a15670355cba025d41204d9e9817fc4dad5bfb085edfd927d3da"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "README.md",
+    "before": "98376e15c6ef70cd546c95c4572949c980ac98c55f36b94c6b981dd9e2a7b297",
+    "after": "568a2c0ff6297c55a214c07a8560b6cdd6463f318f0f04f7b6e4cb1e7674de8f"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "describe.json",
+    "before": "dfa316a877c50dcba293f3115b442d18d0ec709e2f03fe6f6c8b5deff7706099",
+    "after": "cdf2c71af680a36dd4754c1de073e3f93c74dd9f43f45c5c9129d921b459ea34"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "src/definition.ts",
+    "before": "351f299dbdc9ab1445b3e8f24a488988126946574fbd163e2a34345e8bb5917a",
+    "after": "5dd955886093cb0241916b305a2d9241d6382f79f3aec96673bac8e7aaacd590"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "c5f8e1b054414eda57b83d134bdfa3ff5ec1173b3668fe3e2b9d608124b5aa8a"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-ritual-alont1",
+    "path": "src/world.ts",
+    "before": "099ea03d1f7e68e4ab7751b3e33228ee62108062b9d0aa3ecaba2e509b524902",
+    "after": "7986f08170b03889622b2b7ea478bff43db7dd7aa0d5a83b70781a27a31daf17"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "README.md",
+    "before": "7c74bef790b42ff9ff068a9dfadc1becd2b7e7fed3c6a38ff147237ed27ac684",
+    "after": "c6cc263926905f479b19f32a735b46b085a2565d26d0ddc24f1a669835e8cf15"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "src/definition.ts",
+    "before": "b8d92e00573c945f5051aac758713d4b554f5d6a73333bd4efd177bb08ce4959",
+    "after": "17d14fbb894916453e7bed7ce4b00c1c422d010a37f45a8fd50f416f46cabeac"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "75f7af2173f5dadb4e719eb76c56da493060cd9da70d61e4c3cc9c1bf3cb693e"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-selfkit-alont1",
+    "path": "src/world.ts",
+    "before": "7991a5ceaca3c48cd4a72048ea6113eb5e002d4896936736a9e2ad430967a4e6",
+    "after": "c053b4c40aa4d66d36352c94463bd956ef72fd81dac1fbc4e57a86df5c695c36"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "README.md",
+    "before": "55bbf4bc054c882297448112c5774a6765fa6d69c65914d50c6e382f5039311c",
+    "after": "3fc51a02d2c7e417a0620be0f7a0b414e2f50005d598e73cbbcba1b7091e8f2a"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "src/definition.ts",
+    "before": "c21c8256c89a7c6cf52b81e0fe2f5cc85a5762dd4d574b6545bcb2ff4e983e4e",
+    "after": "823aa4c380c5aa1ebaa8147fc6a9335558744058c263db88dfaa88e92f546352"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "94a1aa9ca164b6ad2cfff4a00d0ee1b057bfb712740a94e69734638e2c9fd1e7"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-todo-alont1",
+    "path": "src/world.ts",
+    "before": "4456cff9965ffccf8b8af1f9ff9c25829b9d967969e75de5ee774c1647a7f699",
+    "after": "7ed55adb3390dba91c74af5728d49510a3a5eddd47fde5dc2c7682d8b82c87eb"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "README.md",
+    "before": "514c62ad9727c36017d5fc77bc4696fba59332a444d266fe0f1453dc539f50ca",
+    "after": "e7e9ceb462170a7fbba87389cb8da3444b7e35b3b7dbf12c5e5f113ecbdf5cc7"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "describe.json",
+    "before": "089c062e39ef6e5f560c9dca2d09e797ed10e2ae50eefb36761b1e2fea4f9991",
+    "after": "517128ae164f616439294dea5b4ca7fbc6bab9d6583f4ed3d15c71a034089811"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/ENV_PROMPT.md",
+    "before": "79fff58ee81f2dd07ef308474ab4e9e7c2b35f12614e23c8a61f11ce921f97bb",
+    "after": "1aec0a4e1da7729f8a60156534eb4ddadeda2557015edaacf89bfef4723712f6"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/config.ts",
+    "before": "b7e3ca3e7f248cc3e27e712c2d9415822e0ebf79d12b6e8b9b8c4f4aa869da42",
+    "after": "a195ec085d6412f484abbbfe92a7b199313e419bcffd14eca636cca3b9874fc7"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/definition.ts",
+    "before": "ac4af5a206abc256510157c5e32483e6a6bf58ed293ce40f14518954ea5b9c9d",
+    "after": "aabaeeb25986c91491b14ba6627f633f550fa8290c623a9e828ffcf7e5f81f1c"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "ff5b43cf9a35740f0d324a1f2d673dacda8d4288ba11cd1e6479f1f61389b801"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-together-alont1",
+    "path": "src/world.ts",
+    "before": "a0943da295a53478c262e94425ba1472986d176939567a2b2c9805360e8d6509",
+    "after": "d5f180847406492c0e80cfc7ac2fed5c169b9e6064fb758eda74a9f56919184d"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "README.md",
+    "before": "dc7bdf479444b8c8aeedeaee53e664ac2e870a20c373a485715ffab301a52ede",
+    "after": "537c3194d6e5417d6e74b7fc83e849e621eb06da782fd265cceac6057b923a4b"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "src/definition.ts",
+    "before": "351130641be04aac6114bb9948866e2f0c48065d79b58d4d12c20b8924d2f172",
+    "after": "e8f46878947ea4a2225cae268a944e0a301fc62ea47985bfa44f72e62c7e0c0c"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "a48400b1fb2db23b9a2fbb080f29dc68fac155bd2633dec4230a6b36b48dd059"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-weather-alont1",
+    "path": "src/world.ts",
+    "before": "285f806ad617c7975d292285caef18ba35e40344fc09e64b3d9028fb9d300fcb",
+    "after": "b3b9405b23f98b4247f0ca0b16f06bb04343ff9763c506f7d6c2129f87a0bc8a"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "README.md",
+    "before": "4de1427f7e6ee73acb54787a408ba2003aec67ff0282c42edf37f269bde5808f",
+    "after": "8d8151164d60cacb466186e5494c8449c028b5a54f2fc421359dca3f54d87a9d"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/definition.ts",
+    "before": "dff4204689933e12186ea5d40b142a0b95943f3d9f5102584d7cd7ac51020972",
+    "after": "2937728417ef70052b51d2d5b25e86c39e58d5d28da39d8de562651f914127bb"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/http.ts",
+    "before": null,
+    "after": "67b9bf54d7c110fe6377a0db32958ea1072de4e47d573806ec3cb6298fea2c43"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "c5699601999df923bbbb74c7b7e264d343fc481e8a2d8e33815ff0bf5c3695d4"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-web-alont1",
+    "path": "src/world.ts",
+    "before": "c58e3ebbdb5c8a0ef5ad85c0c3440f36f84d8b904775508e67dd87e0a23254d9",
+    "after": "1a3ff0ced5ca6fd7eb20f6800ed8a1f36846980cf2181ff3244d5e21705cc3fa"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "ENV_PROMPT.md",
+    "before": "86bacd4e0e39d1f5ef5dc692f9516f597706eb43fb85dc981bb0c8aadcf49d31",
+    "after": "4afe316ff8319f92b940fdf76cee105477a257a3f5c1bbe89ebd694d63296d4a"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "LICENSE",
+    "before": null,
+    "after": "f26d8bbaef51417839f990856fd82696ab62f715bcd788a704109e4a7f6662f8"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "README.md",
+    "before": "07119f262cb1a4aec9567c72abefbfe41ee776b99fd887fb24676fabc47d096c",
+    "after": "80bb779de7b610553ff9ca63c871c15b83a4d8240bb882da4924556c08462d91"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "describe.json",
+    "before": "21a856f08a7562b333c9fcd6b6f0c5e36256b066ace6af4441ec01f7ccf07757",
+    "after": "5861579a2ec0972fbfbf77fd24c8b3d27147f9c9e3841b2eee66fd3b8bf47dbf"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/definition.ts",
+    "before": "971b52edf7884c36686e0d9e41a4279dfa5523fba6bbbe4796a34adfcaac19ef",
+    "after": "ca33f46ec7496e3f5be5727ea625d42d5df83121c82c5a9118c4d11f8a1b6f48"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/import-image.ts",
+    "before": null,
+    "after": "9e7ec8cceb92aa521aa0a67e2ad76df21ad3c126ac02c417182e9521a6280782"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/panel-guide.ts",
+    "before": null,
+    "after": "a798f16d3b45f41359755d5cd44ab9fb2a51a0dab990d38ad7e5e4cc124f9315"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/panel-runtime.ts",
+    "before": null,
+    "after": "fde32b555d390ad7e4555c48e399ae37302800f2f02e31a3f13be2d4f349ec56"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/panel.ts",
+    "before": "02029776672984c9bfcd54ab1269151734dff0fe611ae923be47029da8a2e3b1",
+    "after": "5e64bd3090b41c83761082bc22a6a2f3ec05160891fcc93cf3d5caf4c8eced1f"
+  },
+  {
+    "package": "cortico-world-works-alont1",
+    "path": "src/world.ts",
+    "before": "957b7dd13a6464ecd93ee0c7aec994135f88b31b3a6871a9e8c92b0d4d55a29a",
+    "after": "2f9df43b3c86f8b4b474d155a97ce653d8bbf25cfc1e175c7ea46c9f475e4dc1"
+  }
+]

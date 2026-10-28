@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-learn-alont1",
+  "version": "0.1.13",
+  "type": "module",
+  "description": "联网学习 World：遇到不懂的词自己上网查（B站/贴吧/萌娘百科），提炼出用法再记；也能记人和关系",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "bili_video",
+      "description": "看一个 B站视频的信息：给 BV 号或视频链接，返回标题、UP 主、简介、时长、分P、播放/点赞数。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "BV 号或视频链接。"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "B站视频信息",
+        "en": "Bilibili video info"
+      }
+    },
+    {
+      "name": "bili_subtitle",
+      "description": "拉一个 B站视频的字幕（有的话），返回字幕文本前几千字；没有字幕会直说。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "BV 号或视频链接。"
+          },
+          "part": {
+            "type": "integer",
+            "description": "第几个分P，从 1 开始，默认 1。"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "B站字幕",
+        "en": "Bilibili subtitles"
+      }
+    }
+  ],
+  "events": []
+}

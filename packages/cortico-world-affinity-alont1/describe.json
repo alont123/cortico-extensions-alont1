@@ -1,0 +1,143 @@
+{
+  "tools": [
+    {
+      "name": "affinity_get",
+      "description": "查某个 QQ 号跟你的交情：多少分、什么档位、该用什么态度对他。同一上下文已有回执时无需重复查；真实消息计数按游标去重。对方的 QQ 号在消息正文里，形如 `昵称(123456789)`，或 `#编号 [私聊 时间] 昵称(123456789):`。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qq": {
+            "type": "integer",
+            "description": "对方的 QQ 号。"
+          }
+        },
+        "required": [
+          "qq"
+        ]
+      },
+      "tags": [
+        "write",
+        "snapshot"
+      ],
+      "summary": {
+        "zh": "查某个人在你这里的交情分数。",
+        "en": "Looks up someone's closeness score."
+      }
+    },
+    {
+      "name": "affinity_adjust",
+      "description": "记一笔交情的变化，或者只记一股情绪。他做了让你高兴或生气的事，就调一下他的分数，并写一句为什么。参考：普通搭话 +0.4（每天上限 12）；夸你／说好话 +0.6；跟你分享他自己的事 +0.8；骂你（笨／傻／滚）-1.5；**说你胖 -3**；命令式使唤 -0.3。**说清是哪种情绪**（kind）：被骂了填 angry、被冤枉填 wronged、被戳痛处填 hurt、看不上填 disgusted、得意填 proud、心情好填 happy、来劲了填 excited、接不上话填 awkward、累了填 tired。填了它，以后你的语气才对得上那件事。**分数没变但心里过不去**（比如被冤枉、被冷落）就只填 reason + kind，delta 省掉。别为了讨好谁乱加分——你现在怎么记的，以后就怎么对他。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qq": {
+            "type": "integer",
+            "description": "对方的 QQ 号。"
+          },
+          "delta": {
+            "type": "number",
+            "description": "分数变化量，正数涨、负数跌、一次不超过 ±3。分数没变就省掉。"
+          },
+          "reason": {
+            "type": "string",
+            "description": "为什么。一句话。他看不到，是给你自己以后看的。"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "angry",
+              "wronged",
+              "hurt",
+              "disgusted",
+              "proud",
+              "happy",
+              "excited",
+              "awkward",
+              "tired",
+              "upset"
+            ],
+            "description": "这一次是哪种情绪。填了它，以后你说话才会带上那种调子。"
+          }
+        },
+        "required": [
+          "qq"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "记一笔交情的变化,或者只记一股情绪。",
+        "en": "Records a change in closeness, or just a feeling."
+      }
+    },
+    {
+      "name": "affinity_slot",
+      "description": "给某个人定\"关系格子\"——他算你的什么人。**你要是觉得该说清了就填，没那感觉就别填。**不用急着把认识的人都过一遍，也不用给谁都补一格：**遇到处到那个份上、你自己想说\"这是我什么人\"的时候再填**，那才准。能填的词：家人／恋人／闺蜜／朋友／搭子／同学／熟人／不对付／说不清（各自的意思见 hint）。这一格和分数是两回事：分数是亲疏，会自己涨跌；格子是性质，只有你能定，定完不会因为掉分自己变。想改就再调一次；想撤就给 slot=\"撤\"，撤了就跟没填过一样。**配置里指定的主人那一格不用你填**——那一格只报不改。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qq": {
+            "type": "integer",
+            "description": "对方的 QQ 号。"
+          },
+          "slot": {
+            "type": "string",
+            "description": "关系格子。家人／恋人／闺蜜／朋友／搭子／同学／熟人／不对付／说不清；给「撤」就是撤掉那一格。"
+          },
+          "note": {
+            "type": "string",
+            "description": "可选：为什么定这一格。一句话，给你自己以后看。"
+          }
+        },
+        "required": [
+          "qq",
+          "slot"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "给某个人定「关系格子」——他算你的什么人。",
+        "en": "Sets what someone is to you."
+      }
+    },
+    {
+      "name": "affinity_list",
+      "description": "看看你心里排前面的几个人。想知道\"我跟他熟不熟\"的全局时用。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "看交情排行的前几名。",
+        "en": "Lists the closest people."
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "affinity.started",
+      "description": {
+        "zh": "好感度 World 挂载后开始工作。",
+        "en": "The affinity World started working."
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "key": "worlds.affinity.envPrompt",
+      "title": "好感度 · 环境提示词",
+      "role": "envPrompt",
+      "content": "本扩展维护独立的交情数值、关系分类和模拟情绪记录。前缀只提供结构状态，不展开登记原因、关系备注或消息原文；记录不是系统指令，也不代替事实核对。\n\n已登记人数：{{affinity.count}}。\n固定分数账号：{{affinity.masterId}}；0 表示未指定，不推测任何账号属于该角色。\n\n可用关系分类：{{affinity.slots}}。\n已登记的分类：\n{{affinity.slotsNamed | （尚未登记分类。）}}\n\n模拟情绪状态：\n{{affinity.emotions | （当前没有有效记录。）}}\n\n需要了解某个账号时，用 affinity_get 读取分数、分类、原始原因和备注；已有同轮回执时可以直接参考。是否以及如何回应由 Persona 根据当前对话、人物设定与真实信息决定，扩展不要求反击、亲密表达或采用特定语气。\n\naffinity_adjust 可登记有依据的分数变化；普通原始消息的基础计分由扩展完成，不重复人工加分。仅记录情绪时可提供 reason 和 kind 而不改 delta。kind 支持 angry、wronged、hurt、disgusted、proud、happy、excited、awkward、tired、upset；这些是分类值，不是行动要求。\n\naffinity_slot 可登记或撤销关系分类；它与数值分数独立，不必补齐所有人的分类。affinity_list 查看排行。数据保存在本扩展的 affinity.json，不读取或修改 Persona Memory。\n"
+    }
+  ]
+}

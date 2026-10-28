@@ -1,0 +1,243 @@
+{
+  "tools": [
+    {
+      "name": "phone_status",
+      "description": "看手机（MuMu 模拟器）在不在：开机没有、屏幕多大、电量多少。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "手机状态",
+        "en": "Phone status"
+      }
+    },
+    {
+      "name": "phone_launch",
+      "description": "开手机。没开机就先开，等开机完成再返回；已经开着就直接返回状态。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "开手机",
+        "en": "Launch phone"
+      }
+    },
+    {
+      "name": "phone_screenshot",
+      "description": "截一张手机屏幕给自己看（返回图片）。看 App 里现在是什么样、点了有没有反应都靠它。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "手机截屏",
+        "en": "Phone screenshot"
+      }
+    },
+    {
+      "name": "phone_tap",
+      "description": "点一下屏幕某处。坐标来自 phone_screenshot（左上角原点）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "x": {
+            "type": "integer"
+          },
+          "y": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "点屏幕",
+        "en": "Tap"
+      }
+    },
+    {
+      "name": "phone_swipe",
+      "description": "在屏幕上滑一下（滑动/拖拽）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "x1": {
+            "type": "integer"
+          },
+          "y1": {
+            "type": "integer"
+          },
+          "x2": {
+            "type": "integer"
+          },
+          "y2": {
+            "type": "integer"
+          },
+          "ms": {
+            "type": "integer",
+            "description": "滑多久，默认 300 毫秒。"
+          }
+        },
+        "required": [
+          "x1",
+          "y1",
+          "x2",
+          "y2"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "滑动",
+        "en": "Swipe"
+      }
+    },
+    {
+      "name": "phone_text",
+      "description": "往输入框里打字：英文/数字走 input text；中文/日文等 Unicode 会自动切到 ADBKeyboard 打进去，打完再切回原来的输入法。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "输入英文",
+        "en": "Type ASCII"
+      }
+    },
+    {
+      "name": "phone_key",
+      "description": "按一个键：home / back / menu / recent / power / wake / sleep / volume_up / volume_down / enter / up / down / left / right。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "按键",
+        "en": "Press key"
+      }
+    },
+    {
+      "name": "phone_apps",
+      "description": "看看手机里装了哪些自己下的应用（包名）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "已装应用",
+        "en": "List apps"
+      }
+    },
+    {
+      "name": "phone_open",
+      "description": "打开一个应用（给包名，phone_apps 里有）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "package": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "package"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "打开应用",
+        "en": "Open app"
+      }
+    },
+    {
+      "name": "phone_sh",
+      "description": "在手机里直接跑一条 adb shell 命令（手机里没有限制，想干嘛都行）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "cmd": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cmd"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "跑 shell",
+        "en": "Run shell"
+      }
+    },
+    {
+      "name": "phone_close",
+      "description": "把手机关掉（关模拟器）。一般不用关，除非要释放内存。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "关手机",
+        "en": "Shutdown"
+      }
+    }
+  ],
+  "events": []
+}

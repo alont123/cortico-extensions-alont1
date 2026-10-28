@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "diary_snap",
+      "description": "截一张现在的屏幕，存进今天的日记；可以附一句今天的话。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "type": "string",
+            "description": "今天的一句话，可选。"
+          }
+        }
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "截屏存进今天的日记。",
+        "en": "Saves a screenshot into today's diary."
+      }
+    },
+    {
+      "name": "diary_today",
+      "description": "看今天日记里有没有图，以及当时写的话。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "看今天的日记。",
+        "en": "Reads today's diary."
+      }
+    },
+    {
+      "name": "diary_list",
+      "description": "最近几天的日记（按天）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "days": {
+            "type": "integer",
+            "description": "看最近几天，默认 7，最多 30。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "最近几天的日记。",
+        "en": "Lists recent diary days."
+      }
+    }
+  ],
+  "events": []
+}

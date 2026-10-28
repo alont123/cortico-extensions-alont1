@@ -1,0 +1,38 @@
+{
+  "name": "cortico-world-selfkit-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "自我运维：看自己的运行状态、最近日志、世界挂载情况。只读，不替主人做重启",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "diagnostics"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "自我运维",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

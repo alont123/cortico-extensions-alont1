@@ -1,0 +1,43 @@
+{
+  "name": "cortico-world-alive-alont1",
+  "version": "0.1.12",
+  "type": "module",
+  "description": "能动性 World：让 bot 自己排期想做的事（到点把它写下的原话还给它）、有自己的时间、每天回顾一次，并看得见你在桌面上干什么、花了多少钱、它眼前那份规矩是怎么拼的——全部只读",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json",
+    "tags": [
+      "companion",
+      "memory",
+      "internal-state",
+      "sensitive-data",
+      "high-cost"
+    ]
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

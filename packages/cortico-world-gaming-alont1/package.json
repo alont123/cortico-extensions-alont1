@@ -1,0 +1,48 @@
+{
+  "name": "cortico-world-gaming-alont1",
+  "version": "0.1.15",
+  "type": "module",
+  "description": "陪玩 World：读前台窗口知道你（主人）在玩哪款游戏、玩了多久，还能定期看一眼游戏画面——一局打完、局中击杀或买到新装备时递一句给你，平时安静地看着",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json",
+    "tags": [
+      "game",
+      "internet",
+      "companion",
+      "sensitive-data",
+      "high-cost",
+      "external-setup"
+    ]
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "tsx tests/logic-test.mjs && tsx tests/screen-test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "os": [
+    "win32"
+  ]
+}

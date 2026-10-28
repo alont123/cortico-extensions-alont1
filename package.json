@@ -1,0 +1,30 @@
+{
+  "name": "cortico-extensions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-packages.mjs",
+    "pack:all": "node scripts/pack.mjs",
+    "panels:check": "node scripts/audit-panels.mjs --check",
+    "panels:sync": "node scripts/sync-panel-runtime.mjs",
+    "panels:preview": "node scripts/preview-panels.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "cortico": "0.2.1",
+    "esbuild": "^0.28.2",
+    "jpeg-js": "^0.4.4",
+    "jsdom": "26.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "ws": "^8.18.0"
+  }
+}

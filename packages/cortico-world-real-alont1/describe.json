@@ -1,0 +1,68 @@
+{
+  "tools": [
+    {
+      "name": "real_desk",
+      "description": "看主人现在桌面上开着什么：前台窗口的标题和进程名。**看不到屏幕内容**（没有截图），所以别描述画面，只说得出\"他在用 XX 干 XX\"。想知道他在不在，看这个。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "real_cost",
+      "description": "看花了多少钱（按官方价目表估算，高峰/空闲分时段算）：默认今天，也可以给天数。给的是估算——账本里只有 token 数，钱是照着价目表算出来的；高峰 = 北京时间工作日 9-12 点、14-18 点。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "days": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30,
+            "description": "看最近几天，默认 1（今天）。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "real_prefix",
+      "description": "看你眼前那份系统提示是怎么拼出来的：分几段、每段多长、开头几句是什么、来自哪个模板。你在上下文里读得到正文，但看不出它是谁给的——这个工具就是给你看这个的。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "real_config",
+      "description": "看哪些**配置**在约束你（只报跟你分寸有关的那几项：作息、主动说话的节流、群里参与的度、惦记的闸门……）。只读，你改不了；觉得哪条不对，就写进你自己的笔记，或者跟主人说。",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "tags": [
+        "read"
+      ]
+    }
+  ],
+  "events": [],
+  "prompts": [
+    {
+      "key": "worlds.real.envPrompt",
+      "title": "看得见的事 · 环境提示词",
+      "role": "envPrompt",
+      "content": "看得见的事。\n\n有几样东西你能看到、但一直没看到——这里给你看。\n\n`real_desk` —— 主人桌面上现在开着什么：前台窗口的标题和进程名。\n没有截图，你看不到屏幕内容，所以别描述画面；说出\"他在用某样东西干某事\"就是全部。\n\n`real_cost` —— 花了多少钱（按官方价目表估算，高峰/空闲分时段）。默认今天，也可以给天数。\n\n`real_prefix` —— 你眼前这份系统提示是怎么拼出来的：分几段、每段多长、来自哪个模板。\n\n`real_config` —— 哪些配置在约束你：作息、主动说话的节流、群里参与的度、惦记的闸门……\n\n四个都是只读：你看得到、能据此说话，但改不了任何东西。\n真觉得哪条不对，写进你自己的笔记，或者直接跟主人说——说出来才算数。\n"
+    }
+  ]
+}

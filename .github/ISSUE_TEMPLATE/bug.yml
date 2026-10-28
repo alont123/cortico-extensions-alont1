@@ -1,0 +1,30 @@
+name: Bug 反馈
+description: 装扩展/用扩展时遇到的问题
+labels: [bug]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: 扩展包名与版本
+      placeholder: cortico-world-qq-better-alont1@0.1.68
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Cortico / Coopanion 版本
+      placeholder: Cortico 0.1.8 / Coopanion 0.1.18
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象与复现步骤
+      description: 做了什么、期望什么、实际什么；报错原文请脱敏。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志/截图（可选，注意脱敏）
+      render: text

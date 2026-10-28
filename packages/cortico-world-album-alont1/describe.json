@@ -1,0 +1,125 @@
+{
+  "tools": [
+    {
+      "name": "album_list",
+      "description": "翻自己的相册：把收到过和发出去过的图列出来，按时间倒序。可以按人（`person`）、按会话（`conversation`）、按时间段（`since`/`until`）筛，也可以只看你写过备注的那些（`noted_only`）。列出来的每行开头是 id——想看哪张就把 id 交给 album_view。**先 list 再 view**：一次别翻太多，翻之前先想清楚要看哪几张。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "person": {
+            "type": "string",
+            "description": "可选。发言人的账号或名字（先用 album_people 看有哪些人）。"
+          },
+          "conversation": {
+            "type": "string",
+            "description": "可选。会话，形如 group:123456 或 private:123456。"
+          },
+          "since": {
+            "type": "string",
+            "description": "可选。这个时刻之后（YYYY-MM-DD 或 ISO）。"
+          },
+          "until": {
+            "type": "string",
+            "description": "可选。这个时刻之前（YYYY-MM-DD 或 ISO）。"
+          },
+          "noted_only": {
+            "type": "boolean",
+            "description": "可选。只列你写过标题或备注的。"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "可选。最多列几条，默认按配置。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "album_view",
+      "description": "翻开相册里的某几张，真的看到图（不是看路径）。ids 用 album_list 给的那些 id。一次最多几张按配置定——想看很多张就分几次，或者先按人／时间筛一遍再翻。看完可以顺手用 album_note 写一句这是什么，下次找起来就快了。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ids": {
+            "type": "array",
+            "description": "要看的 id 列表（album_list 里每行开头那个）。",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "ids"
+        ]
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "album_note",
+      "description": "给相册里的图写一句这是什么，或者改掉之前写的。你写的标题与备注只有你自己看得到，用来下次快速认出来——写\"谁给的、什么场合、为什么留着\"，比写图里有什么更有用。note 留空字符串 = 清掉这条备注。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ids": {
+            "type": "array",
+            "description": "要写的 id 列表。",
+            "items": {
+              "type": "string"
+            }
+          },
+          "title": {
+            "type": "string",
+            "description": "可选。一句短标题。"
+          },
+          "note": {
+            "type": "string",
+            "description": "可选。备注。空字符串 = 清掉。"
+          }
+        },
+        "required": [
+          "ids"
+        ]
+      },
+      "tags": [
+        "write"
+      ]
+    },
+    {
+      "name": "album_scan",
+      "description": "往册子里补图。平时不用调——收到新图时会自己补。只有两种情况要手动：一是册子里看着少了（比如某段时期的图没进来），二是你想确认\"到底存了多少张\"。all=true 从头扫一遍（不会重复记）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "all": {
+            "type": "boolean",
+            "description": "可选。true = 从头重扫；不给 = 只补新的。"
+          },
+          "people": {
+            "type": "boolean",
+            "description": "可选。true = 顺便列一下册子里出现过哪些人。"
+          }
+        }
+      },
+      "tags": [
+        "read"
+      ]
+    }
+  ],
+  "events": [],
+  "prompts": [
+    {
+      "key": "worlds.album.envPrompt",
+      "title": "相册 · 环境提示词",
+      "role": "envPrompt",
+      "content": "你在攒一本相册：别人发给你的图、你自己发出去的图，都会进册子。\n\n**找旧图用它。** 想不起\"他上次发的那张\"是什么样的时候，用 `album_list` 筛一遍\n（按人、按时间、按会话都行），再用 `album_view` 真看一眼——\n**看过了你才算看见了**，光看文件名不算。\n\n**顺手写一句。** 翻到有点意思的图，用 `album_note` 写一句这是什么、谁给的、什么场合。\n你写的只有你自己看得到，下次找起来就快。写\"他拿去当头像那张\"比写\"一只猫\"有用。\n\n册子里现在 {{album.count}} 张，最近这几张：\n\n{{album.recent}}\n"
+    }
+  ]
+}

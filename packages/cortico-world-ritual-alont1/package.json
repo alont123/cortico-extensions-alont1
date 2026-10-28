@@ -1,0 +1,37 @@
+{
+  "name": "cortico-world-ritual-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "仪式感 World：早安/晚安按时冒一次泡，纪念日和节日到点提醒。只挑几个点，不刷屏",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "ritual",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

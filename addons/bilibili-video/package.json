@@ -1,0 +1,66 @@
+{
+  "name": "cortico-world-bilibili-video-alont1",
+  "version": "0.2.5",
+  "private": true,
+  "type": "module",
+  "description": "Cortico World: watch a bilibili video in a logged-in browser, with frames, subtitles and the video's own danmaku delivered as events. 此乃直播测试验证之后的world，和其他 Persona / 非直播场景的兼容性有待测试。",
+  "author": "Phantivia",
+  "contributors": [
+    "ALonT1"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phantivia/cortico-world-bilibili-video.git"
+  },
+  "homepage": "https://github.com/Phantivia/cortico-world-bilibili-video#readme",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "bilibili",
+    "video"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.5.0",
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "B 站视频",
+    "webUiClient": "dist/webui.js",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "describe.json",
+    "scripts/start-browser.ps1",
+    "scripts/start-browser.cmd"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:webui": "node scripts/build-webui.mjs",
+    "build:console": "pnpm run build:webui",
+    "test:edge": "tsx scripts/edge-smoke.ts",
+    "prepack": "node scripts/build-webui.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^25.12.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/qrcode": "^1.5.5",
+    "cortico": "^0.2.0",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}

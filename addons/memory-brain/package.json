@@ -1,0 +1,47 @@
+{
+  "main": "./src/index.ts",
+  "name": "cortico-world-memory-brain-alont1",
+  "type": "module",
+  "cortico": {
+    "api": 6,
+    "kind": "world",
+    "describe": "describe.json",
+    "tags": [
+      "memory",
+      "diagnostics",
+      "experimental"
+    ]
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "build": "node --import tsx scripts/describe.mjs",
+    "pack": "node scripts/pack.mjs",
+    "benchmark": "node --import tsx scripts/benchmark.mjs",
+    "benchmark:layers": "node --import tsx scripts/benchmark-layers.mjs"
+  },
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "experimental"
+  ],
+  "description": "实验性：本地只读记忆索引、中文检索、实体画像、间隔复习与审计",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "0.2.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "version": "0.3.1",
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "cortico-world-real-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "看得见的事 World：他自己桌面上在干什么、花了多少钱、以及她自己眼前那份规矩是从哪来的——都是只读，不带截图、不给写权限",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

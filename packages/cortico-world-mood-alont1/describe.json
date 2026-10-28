@@ -1,0 +1,29 @@
+{
+  "tools": [
+    {
+      "name": "mood_now",
+      "description": "看使用者现在在干嘛：前台窗口、离开多久、大概是什么状态（在忙 / 在玩 / 闲着 / 离开了）。判断该不该打扰时用。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "看使用者现在的状态。",
+        "en": "Reads the user's current state."
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "mood.changed",
+      "description": {
+        "zh": "使用者的状态变了（离开/闲着/在忙/在玩）。",
+        "en": "The user's state changed."
+      }
+    }
+  ]
+}

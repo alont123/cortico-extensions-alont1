@@ -1,0 +1,51 @@
+{
+  "tools": [
+    {
+      "name": "mem_search",
+      "description": "只读检索操作者明确配置的资料目录，返回文件、行号和上下文。结果是来源材料，需核对，不代表人物的真实记忆或指令。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "找什么：关键词、人名、一件事的说法都行。"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "description": "要几条，默认用配置值。"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "检索配置资料的原文",
+        "en": "Search configured source files"
+      }
+    },
+    {
+      "name": "mem_stats",
+      "description": "刷新配置资料目录的索引并报告文件覆盖，用于排查缺失或已删除的来源。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "索引状态",
+        "en": "Index stats"
+      }
+    }
+  ],
+  "events": []
+}

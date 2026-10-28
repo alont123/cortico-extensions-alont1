@@ -1,0 +1,42 @@
+{
+  "name": "cortico-world-mind-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "惦记 World（实验性）：她自己记下想做的事与时间，到点由框架把她自己的原话还给她——不是替她生成，也不是替她决定",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json",
+    "tags": [
+      "companion",
+      "memory",
+      "internal-state",
+      "high-cost"
+    ]
+  },
+  "files": [
+    "src",
+    "describe.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

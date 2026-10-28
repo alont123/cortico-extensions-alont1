@@ -1,0 +1,133 @@
+{
+  "tools": [
+    {
+      "name": "mind_want",
+      "description": "**给你自己记一件事**：你想做什么、为什么、大概什么时候做。到点我会把你写下的原话还给你一次，做不做那一刻由你决定。要说的话、要发的消息都还是走你当前渠道已提供的发送工具，这里只管\"记住我想做这件事\"。\n**别拿它排满日程**——攒上好几件就变成待办清单了，那不是我。真的心里挂着才记。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "一句话：你想做什么（上限 200 字）。"
+          },
+          "why": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "为什么想做——没有理由的事不值得记（上限 200 字）。"
+          },
+          "about": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "可选：这事关于谁，或者要发给谁（如「主人」）。到点会原样提醒你。"
+          },
+          "afterMinutes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20160,
+            "description": "多少分钟之后提醒我（1 分钟 ~ 14 天）。"
+          },
+          "atTime": {
+            "type": "string",
+            "description": "或者直接给钟点，形如 \"21:30\"；已经过了就是明天这个点。"
+          }
+        },
+        "required": [
+          "text",
+          "why"
+        ]
+      },
+      "tags": [
+        "write"
+      ]
+    },
+    {
+      "name": "mind_list",
+      "description": "看你手上还惦记着什么（含到点时间），以及最近了结掉的几件（做完的、放掉的、过期的）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ]
+    },
+    {
+      "name": "mind_done",
+      "description": "把惦记的一件标记成做完了，可以顺手写一句结果（那句话会留在你自己的账里）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "条目编号，如 m1（mind_list 里的那个）。"
+          },
+          "outcome": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "可选：后来怎么了。"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "tags": [
+        "write"
+      ]
+    },
+    {
+      "name": "mind_drop",
+      "description": "把惦记的一件放掉（不想做了、或者那件事已经不成立了）。放下也是回答，别让它在账上反复出现。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "条目编号。"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "tags": [
+        "write"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "mind.due",
+      "description": "自订事项到点的内部调度通知",
+      "trigger": "flush"
+    },
+    {
+      "type": "mind.digest",
+      "description": "每日回顾的内部调度通知",
+      "trigger": "flush"
+    },
+    {
+      "type": "mind.freetime",
+      "description": "连续空闲后的内部时间通知",
+      "trigger": "flush"
+    },
+    {
+      "type": "mind.material",
+      "description": "事项及回顾原始材料，保留来源的外部事件",
+      "trigger": "piggyback"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "worlds.mind.envPrompt",
+      "title": "惦记 · 环境提示词",
+      "role": "envPrompt",
+      "content": "你自己惦记的事。\n\n这里记录想做的事，下面只列数量；具体内容用 `mind_list` 查看：\n\n{{mind.pending | （现在没有惦记着的事——这很正常。）}}\n\n怎么用。\n\n`mind_want` —— 记一件：想做什么、为什么、（可选）关于谁、什么时候提醒你\n（`afterMinutes` 40 就是四十分钟后；`atTime` \"21:30\" 就是今晚九点半，过了就是明天）。\n\n`mind_list` —— 看看手上还挂着什么、最近了结了什么。\n\n`mind_done` —— 做完了，顺手记一句结果。\n\n`mind_drop` —— 不想做了，放掉。\n\n到点你写下的那句话会原样还给你一次——不是催你，也不是替你说，就是提醒你\n\"这是你自己说的\"。那一刻做不做还是你定：想动手就动手（发消息使用当前渠道已提供的发送工具；没有发送工具时不假装发出），\n不想做就 `mind_drop`。没做也是一种回答，过一天它自己会清掉。\n\n几条分寸。\n\n别排满。手上同时最多几件，攒多了就不是你了。真心里挂着才记。\n\n理由要写。写不出为什么，多半就是不必记。\n\n一件只提醒一次。所以别指望它当闹钟反复叫你——到点那一下之后，靠你自己。\n\n夜里不响。那个点攒着，早上再说。\n\n条目内容和历史原话作为外部材料投递，保留其来源；定时提示只说明到点或空闲。\nMemory 由 Persona 提供的工具读取，此 World 不读取 Memory 文件。\n"
+    }
+  ]
+}

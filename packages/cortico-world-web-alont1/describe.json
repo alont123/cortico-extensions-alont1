@@ -1,0 +1,61 @@
+{
+  "tools": [
+    {
+      "name": "web_find",
+      "description": "联网搜索（Bing），返回标题、链接和摘要。查资料、看新闻、了解一件事的现状用这个。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜什么，中英文都行。"
+          },
+          "count": {
+            "type": "integer",
+            "description": "要几条，默认用配置值。"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "联网搜索",
+        "en": "Web search"
+      }
+    },
+    {
+      "name": "web_read",
+      "description": "打开一个网页，返回去掉标签后的正文（截断）。搜索结果里挑一条读全文用这个。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "http(s) 链接。"
+          },
+          "max_chars": {
+            "type": "integer",
+            "description": "最多返回多少字符，默认用配置值。"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "读网页正文",
+        "en": "Fetch a page as text"
+      }
+    }
+  ],
+  "events": []
+}

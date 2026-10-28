@@ -1,0 +1,49 @@
+{
+  "tools": [
+    {
+      "name": "play_run",
+      "description": "在自己的玩具目录里跑一小段 JS：不联网、不碰外面文件，最多几秒。console.log 的输出会回来。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "JS 源码。"
+          },
+          "name": {
+            "type": "string",
+            "description": "存成什么文件，默认 toy.js。"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "在玩具目录里跑一小段 JS。",
+        "en": "Runs a small JS snippet in the play folder."
+      }
+    },
+    {
+      "name": "play_list",
+      "description": "看看玩具目录里有什么。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "列出玩具目录。",
+        "en": "Lists the play folder."
+      }
+    }
+  ],
+  "events": []
+}

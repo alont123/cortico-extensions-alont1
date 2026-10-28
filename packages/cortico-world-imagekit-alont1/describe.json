@@ -1,0 +1,98 @@
+{
+  "tools": [
+    {
+      "name": "image_search",
+      "description": "搜图片，返回若干张图的直链（可直接给 image_download）。用来给自己找头像、配图。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜什么，中英文都行。"
+          },
+          "count": {
+            "type": "integer",
+            "description": "要几张，默认用配置值（最多 20）。"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "搜图片直链",
+        "en": "Search image URLs"
+      }
+    },
+    {
+      "name": "image_download",
+      "description": "把一张图下载到本扩展的数据目录（只收图片，限大小），返回路径。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "图片直链（image_search 给的那种）。"
+          },
+          "name": {
+            "type": "string",
+            "description": "存成什么名字，可不填。"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "下载图片到扩展数据目录",
+        "en": "Download an image into extension data"
+      }
+    },
+    {
+      "name": "image_list",
+      "description": "看看本扩展 avatar 目录里已经有哪些图。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "列已下载的图",
+        "en": "List downloaded images"
+      }
+    },
+    {
+      "name": "avatar_set",
+      "description": "把自己的 QQ 头像换成指定图片（OneBot v11 set_qq_avatar，SnowLuma / NapCat 都走这个接口）。本地路径或 http(s) 链接；不填就用最近下载的那张。换头像是公开的，别人看得见，换之前想清楚。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "本地路径或图片链接。不填就用 avatar 目录里最新的一张。"
+          }
+        }
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "换 QQ 头像",
+        "en": "Set the QQ avatar"
+      }
+    }
+  ],
+  "events": []
+}

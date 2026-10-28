@@ -1,0 +1,20 @@
+{
+  "name": "cortico-bot-xiaoshen-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "./index.ts",
+  "description": "小深人格的 Cortico bot 扩展（默认种子已脱敏，可替换）",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": ["cortico-bot", "cortico", "persona"],
+  "engines": { "node": ">=22" },
+  "cortico": {
+    "kind": "bot",
+    "api": 7,
+    "displayName": "小深",
+    "describe": "describe.json",
+    "tags": ["companion", "internal-state"]
+  },
+  "files": ["index.ts", "persona", "webui", "dist", "README.md", "describe.json"],
+  "devDependencies": { "cortico": "^0.2.0" }
+}

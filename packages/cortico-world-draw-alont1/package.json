@@ -1,0 +1,40 @@
+{
+  "name": "cortico-world-draw-alont1",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "本地生图：调 MOSS-Image（ComfyUI）画图，默认二次元日漫风格。画完把图存到自己的 dir，也能直接看",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "image-generation",
+    "comfyui",
+    "moss"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "画图",
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "ENV_PROMPT.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

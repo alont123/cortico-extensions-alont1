@@ -1,0 +1,65 @@
+{
+  "tools": [
+    {
+      "name": "draw_image",
+      "description": "画一张图（本地 MOSS-Image 模型）。默认二次元日漫风格，也可以指定 chibi/real/watercolor/ink。画完图会存到本扩展的数据目录，并作为附件返回。画一张要等一会儿，别连着重画同一张。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "画什么。写清楚主体、动作、场景、光线；中英文都行（英文效果更好）。"
+          },
+          "style": {
+            "type": "string",
+            "description": "风格：anime（默认·二次元日漫）/ chibi / real / watercolor / ink。"
+          },
+          "width": {
+            "type": "integer",
+            "description": "宽，默认 1024，要 16 的倍数。"
+          },
+          "height": {
+            "type": "integer",
+            "description": "高，默认 1024。"
+          },
+          "steps": {
+            "type": "integer",
+            "description": "步数，默认 30，越高越细也越慢（推荐 30-50）。"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "种子，想复现同一张再画就填同一个数。"
+          }
+        },
+        "required": [
+          "prompt"
+        ]
+      },
+      "tags": [
+        "write"
+      ],
+      "summary": {
+        "zh": "本地生图画一张",
+        "en": "Draw an image locally"
+      }
+    },
+    {
+      "name": "draw_status",
+      "description": "看看画图服务（ComfyUI）在不在、显存多少、有没有任务在排队。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "tags": [
+        "read"
+      ],
+      "summary": {
+        "zh": "画图服务状态",
+        "en": "Image service status"
+      }
+    }
+  ],
+  "events": []
+}

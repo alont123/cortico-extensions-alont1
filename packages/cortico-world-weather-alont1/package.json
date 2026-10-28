@@ -1,0 +1,37 @@
+{
+  "name": "cortico-world-weather-alont1",
+  "version": "0.1.2",
+  "type": "module",
+  "description": "天气 World：查现在天气、体感、湿度和风，给出带伞/穿衣的提醒。免 API key（wttr.in），无依赖",
+  "license": "MIT",
+  "author": "ALonT1",
+  "keywords": [
+    "cortico-world",
+    "cortico",
+    "weather",
+    "desktop-pet"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "main": "./src/index.ts",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "describe": "describe.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "describe.json"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,15 @@
+name: 需求/建议
+description: 想加的功能或用法
+labels: [enhancement]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: 相关扩展（没有可不填）
+  - type: textarea
+    id: need
+    attributes:
+      label: 使用场景与需求
+      description: 想解决什么问题，期望怎么用。
+    validations:
+      required: true
